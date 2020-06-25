@@ -1,6 +1,7 @@
 ---
 title: "Kotlin For Java Developers"
 date: 2021-03-16
+main: true
 tags: ["certificate"]
 cover:
   image: /kotlin-for-java-developer-cover.png
