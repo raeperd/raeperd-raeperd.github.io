@@ -1,0 +1,85 @@
+baseURL: 'https://raeperd.github.io/'
+title: raeperd.github.io
+paginate: 8
+theme: hugo-PaperMod
+
+enableRobotsTXT: true
+buildDrafts: false
+buildFuture: false
+buildExpired: false
+
+disqusShortname: github-page-raeperd
+googleAnalytics: UA-168674186-1
+
+minify:
+  disableXML: true
+  minifyOutput: true
+
+DefaultContentLanguage: korean
+languages:
+  korean:
+    weight: 1
+    title: PaperModL2
+    menu:
+        main:
+          - name: Archives
+            url: /archives/
+            weight: 5
+          - name: Tags
+            url: /tags/
+            weight: 10
+
+  english:
+    weight: 2
+    menu:
+      main:
+        - name: Archives
+          url: /archives/
+          weight: 5
+        - name: Tags
+          url: /tags/
+          weight: 10
+  
+params:
+  env: production # to enable google analytics, opengraph, twitter-cards and schema.
+  title: raeperd.github.io
+  description: 'ExampleSite description'
+  author: raeperd
+  # author: ["Me", "You"] # multiple authors
+
+  images: "<link or path of image for opengraph, twitter-cards>"
+
+  ShowShareButtons: true
+  comments: true
+  defaultTheme: auto
+  disableThemeToggle : false
+  disableSpecial1stPost : false
+
+  assets:
+    favicon: '<path / external url>'
+
+  label:
+    text: "raeperd.github.io"
+    icon: /apple-touch-icon.png
+    iconHeight: 35
+
+  # profile-mode
+  profileMode:
+    enabled: false # needs to be explicitly set
+    title: raeperd.github.io
+    # imageUrl: '<img location>'
+    # imageTitle: my image
+    buttons:
+      - name: Posts
+        url: posts
+      - name: Tags
+        url: tags
+
+  # home-info mode
+  homeInfoParams:
+    Title: "Hi there \U0001F44B"
+    Content: Welcome to my blog
+
+  socialIcons:
+    - name: github
+      url: 'https://github.com/raeperd'
