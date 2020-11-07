@@ -19,7 +19,6 @@ DefaultContentLanguage: korean
 languages:
   korean:
     weight: 1
-    title: PaperModL2
     menu:
         main:
           - name: Archives
@@ -56,7 +55,7 @@ params:
   disableSpecial1stPost : false
 
   assets:
-    favicon: '<path / external url>'
+    favicon: ''
 
   label:
     text: "raeperd.github.io"
@@ -77,8 +76,8 @@ params:
 
   # home-info mode
   homeInfoParams:
-    Title: "Hi there \U0001F44B"
-    Content: Welcome to my blog
+    Title: "Hello universe \U0001F44B"
+    Content: Welcome
 
   socialIcons:
     - name: github
