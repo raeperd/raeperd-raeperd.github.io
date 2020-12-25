@@ -15,21 +15,16 @@ minify:
   disableXML: true
   minifyOutput: true
 
-DefaultContentLanguage: korean
-languages:
-  korean:
-    weight: 1
-    menu:
-        main:
-          - name: Archives
-            url: /archives/
-            weight: 5
-          - name: Tags
-            url: /tags/
-            weight: 10
+outputs:
+    home:
+        - HTML
+        - RSS
+        - JSON # is necessary
 
+DefaultContentLanguage: english
+languages:
   english:
-    weight: 2
+    weight: 1
     menu:
       main:
         - name: Archives
@@ -38,7 +33,28 @@ languages:
         - name: Tags
           url: /tags/
           weight: 10
+        - name: Search
+          url: /search
+          weight: 10
   
+  korean:
+    weight: 1
+    title: raeperd.github.io
+    homeInfoParams:
+      Title: "Hello universe \U0001F44B"
+      Content: Welcome
+    menu:
+      main:
+        - name: Archives
+          url: /archives/
+          weight: 5
+        - name: Tags
+          url: /tags/
+          weight: 10
+        - name: Search
+          url: /search
+          weight: 10
+
 params:
   env: production # to enable google analytics, opengraph, twitter-cards and schema.
   title: raeperd.github.io
@@ -54,14 +70,25 @@ params:
   disableThemeToggle : false
   disableSpecial1stPost : false
 
+  fuseOpts:
+
   assets:
     favicon: ''
+    disableFingerprinting: true
 
   label:
     text: "raeperd.github.io"
     icon: /apple-touch-icon.png
     iconHeight: 35
 
+  # home-info mode
+  homeInfoParams:
+    Title: "Hello universe \U0001F44B"
+    Content: Welcome
+  socialIcons:
+    - name: github
+      url: 'https://github.com/raeperd'
+  
   # profile-mode
   profileMode:
     enabled: false # needs to be explicitly set
@@ -73,12 +100,3 @@ params:
         url: posts
       - name: Tags
         url: tags
-
-  # home-info mode
-  homeInfoParams:
-    Title: "Hello universe \U0001F44B"
-    Content: Welcome
-
-  socialIcons:
-    - name: github
-      url: 'https://github.com/raeperd'
