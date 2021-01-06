@@ -14,7 +14,6 @@ jobs:
           submodules: true  # Fetch Hugo themes (true OR recursive)
           fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
       - run: git submodule update --init --recursive
-      - run: git submodule update --remote --merge
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
         with:
@@ -29,3 +28,4 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN  }}
           publish_dir: ./public
           publish_branch: master
+          force_orphan: true
