@@ -21,22 +21,8 @@ outputs:
         - RSS
         - JSON # is necessary
 
-DefaultContentLanguage: english
-languages:
-  english:
-    weight: 1
-    menu:
-      main:
-        - name: Archives
-          url: /archives/
-          weight: 5
-        - name: Tags
-          url: /tags/
-          weight: 10
-        - name: Search
-          url: /search
-          weight: 10
-  
+DefaultContentLanguage: korean
+languages:  
   korean:
     weight: 1
     title: raeperd.github.io
@@ -62,7 +48,7 @@ params:
   author: raeperd
   # author: ["Me", "You"] # multiple authors
 
-  images: "<link or path of image for opengraph, twitter-cards>"
+  images: ["papermod-cover.png"]
 
   ShowShareButtons: true
   comments: true
@@ -73,13 +59,10 @@ params:
   fuseOpts:
 
   assets:
-    favicon: 'favicon.ico'
     disableFingerprinting: true
 
   label:
     text: "raeperd.github.io"
-    icon: /apple-touch-icon.png
-    iconHeight: 35
 
   # home-info mode
   homeInfoParams:
