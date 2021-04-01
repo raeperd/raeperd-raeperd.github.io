@@ -40,6 +40,9 @@ languages:
         - name: Search
           url: /search
           weight: 10
+        - name: About
+          url: /about
+          weight: 15
 
 params:
   env: production # to enable google analytics, opengraph, twitter-cards and schema.
