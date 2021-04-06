@@ -74,7 +74,13 @@ params:
   socialIcons:
     - name: github
       url: 'https://github.com/raeperd'
-  
+    - name: linkedin
+      url: https://www.linkedin.com/in/%EB%9E%98%EC%B2%A0-%EB%B0%95-4089b8203/
+    - name: email
+      url: raeperd117@gmail.com
+    - name: other
+      url: https://www.notion.so/raeperd/raeperd-13616f5ebff2454084995161831837a9
+
   # profile-mode
   profileMode:
     enabled: false # needs to be explicitly set
