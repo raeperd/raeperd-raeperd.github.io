@@ -48,6 +48,14 @@
       {{ .Title }}
       {{- if .Draft }}<div class="entry-isdraft"><sup>&nbsp;&nbsp;[draft]</sup></div>{{- end }}
     </h2>
+    <br>
+    {{- if .Params.tags }}
+      <ul class="post-tags">
+      {{- range (.GetTerms "tags") }}
+        <li><a href="{{ .Permalink }}">{{ .LinkTitle }}</a></li>
+      {{- end }}
+      </ul>
+    {{- end }}
   </header>
   {{- if (ne (.Param "hideSummary") true)}}
   <section class="entry-content">
