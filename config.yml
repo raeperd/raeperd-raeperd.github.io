@@ -27,8 +27,7 @@ languages:
     weight: 1
     title: raeperd.github.io
     homeInfoParams:
-      Title: "Hello universe \U0001F44B"
-      Content: Welcome
+      Title: "Hello Universe \U0001FA90"
     menu:
       main:
         - name: Archives
@@ -40,9 +39,6 @@ languages:
         - name: Search
           url: /search
           weight: 10
-        - name: About
-          url: /about
-          weight: 15
 
 params:
   env: production # to enable google analytics, opengraph, twitter-cards and schema.
