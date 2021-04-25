@@ -31,15 +31,21 @@ languages:
       Content: Welcome
     menu:
       main:
+        - name: Tags
+          url: /tags/
+          weight: 1
+        - name: Articles
+          url: /article
+          weight: 2
+        - name: Notes
+          url: /note
+          weight: 3
+        - name: Search
+          url: /search
+          weight: 4
         - name: Archives
           url: /archives/
           weight: 5
-        - name: Tags
-          url: /tags/
-          weight: 10
-        - name: Search
-          url: /search
-          weight: 10
 
 params:
   env: production # to enable google analytics, opengraph, twitter-cards and schema.
@@ -49,6 +55,9 @@ params:
   # author: ["Me", "You"] # multiple authors
 
   images: ["papermod-cover.png"]
+
+  mainSections:
+    - article
 
   ShowShareButtons: true
   comments: true
