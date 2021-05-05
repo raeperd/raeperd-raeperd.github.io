@@ -28,7 +28,6 @@ languages:
     title: raeperd.github.io
     homeInfoParams:
       Title: "Hello Universe \U0001FA90"
-      Content: Welcome
     menu:
       main:
         - name: Tags
