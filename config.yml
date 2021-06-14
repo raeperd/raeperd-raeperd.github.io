@@ -26,8 +26,6 @@ languages:
   korean:
     weight: 1
     title: raeperd.github.io
-    homeInfoParams:
-      Title: "Hello Universe \U0001FA90"
     menu:
       main:
         - name: Tags
@@ -49,7 +47,7 @@ languages:
 params:
   env: production # to enable google analytics, opengraph, twitter-cards and schema.
   title: raeperd.github.io
-  description: 'ExampleSite description'
+  description: 'Better programmer'
   author: raeperd
   # author: ["Me", "You"] # multiple authors
 
@@ -74,8 +72,8 @@ params:
 
   # home-info mode
   homeInfoParams:
-    Title: "Hello universe \U0001F44B"
-    Content: Welcome
+    Title: "Hello universe \U0001FA90"
+    Content: Better programmer
   socialIcons:
     - name: github
       url: 'https://github.com/raeperd'
@@ -89,11 +87,3 @@ params:
   # profile-mode
   profileMode:
     enabled: false # needs to be explicitly set
-    title: raeperd.github.io
-    # imageUrl: '<img location>'
-    # imageTitle: my image
-    buttons:
-      - name: Posts
-        url: posts
-      - name: Tags
-        url: tags

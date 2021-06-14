@@ -1,0 +1,19 @@
+{{- with $.Site.Params.homeInfoParams }}
+<article class="first-entry home-info">
+    <div class="entry">
+        <img class="entry-profile " src="https://avatars.githubusercontent.com/u/41039751?s=400&v=4" height="180" ,
+            width="180">
+    </div>
+    <div class="entry">
+        <header class="entry-header">
+            <h1>{{- .Title | markdownify }}</h1>
+        </header>
+        <section class="entry-content">
+            <p>{{- .Content | markdownify }}</p>
+        </section>
+        <footer class="entry-footer">
+            {{- partial "social_icons.html" $.Site.Params.socialIcons -}}
+        </footer>
+    </div>
+</article>
+{{- end}}
