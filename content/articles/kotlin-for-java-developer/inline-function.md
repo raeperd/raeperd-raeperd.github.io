@@ -1,8 +1,7 @@
 ---
 title: "Inline function in Kotlin"
 date: 2021-03-18T19:58:54+09:00
-categories: ["Programming"]
-tags: ["kotlin", "kotlin-for-java-developer"]
+tags: ["kotlin"]
 ---
 
 # Library functions looking like built-in constructs

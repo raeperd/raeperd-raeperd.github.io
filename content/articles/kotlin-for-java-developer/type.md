@@ -1,7 +1,7 @@
 ---
 title: "Type in Kotlin"
 date: 2021-04-06T19:58:54+09:00
-tags: ["kotlin", "kotlin-for-java-developer"]
+tags: ["kotlin"]
 categories: ["Programming"]
 ---
 
@@ -32,8 +32,8 @@ public static final Integer foo() {
 ```
 
 ## Primitive & wrapper types
-![](/Type/download.jpg)
-![](/Type/download%202.jpg)
+![](https://i.ibb.co/GFn8yTB/primitive-and-wrapper-types.jpg)
+![](https://i.ibb.co/WDQwQFv/arrays-of-primitive-types.jpg)
 
 ## `String`
 - Kotlin `String` hides some confusing methods
@@ -41,7 +41,7 @@ public static final Integer foo() {
 ## `Any`
 - `Any` in Kotlin is a super type for all non-nullable types. 
 
-![](/Type/download%203.jpg)
+![](https://i.ibb.co/tc6bsB9/any.jpg)
 - Unlike `Object`, `Any` is not only super type for reference types, but it’s also super type for types like `Int` corresponding to primitives. 
 
 ``` kotlin
@@ -60,7 +60,7 @@ fun log(i: Int) {
 
 
 ## Function 
-![](/Type/download%204.jpg)
+![](https://i.ibb.co/4jjMG1v/function-types.jpg)
 
 ## `Array`
 ``` java
@@ -83,9 +83,9 @@ println(ints1.contentEquals(ints2) // true
 	- `MutableList` is Java util `ArrayList` under the hood. `ArrayList` is very close to array in terms of performance. So, prefer `List` to `Array` by default and avoid the necessity to remember the right way to compare arrays.
 
 # Kotlin type hierachy
-![](/Type/download%205.jpg)
+![](https://i.ibb.co/mDL1JX5/type-hierachy.jpg)
 
-![](/Type/download%206.jpg)
+![](https://i.ibb.co/9wc5jYC/unit-vs-nothing-vs-void.jpg)
 
 ## `Unit`
 - A type that allows only ::one value:: and thus can hold no information
@@ -98,13 +98,13 @@ println(ints1.contentEquals(ints2) // true
 - This function never returns, only throws exceptions
 
 ## Why `Nothing` needs in kotlin 
-![](/Type/download%207.jpg)
-![](/Type/download%208.jpg)
+![](https://i.ibb.co/VH41XRr/when-fail-function-return-unit.jpg)
+![](https://i.ibb.co/dG37ccx/now-fail-function-returns-nothing.jpg)
 - answer should be super type of both execution result
 
 # Nullable types
-![](/Type/download%209.jpg)
-![](/Type/download%2010.jpg)
+![](https://i.ibb.co/QvXkY7b/nullability-annotations.jpg)
+![](https://i.ibb.co/41KPG72/platform-type.jpg)
 - Platform type `Type!` can be only seen in compiler error message
 - With Java code without annotation, kotlin compiler cannot infer any nullability
 
@@ -139,7 +139,7 @@ println(description?.lengh) // null
 - Read-only interface just lacks mutating methods
 - The actual list can be changed by another reference
 
-![](/Type/download%2011.jpg)
+![](https://i.ibb.co/GFnFxD0/arraylist-under-the-hood.jpg)
 
 ### Read-only interfaces improve API
 ``` kotlin

@@ -1,8 +1,7 @@
 ---
 title: "Property in Kotlin"
 date: 2021-03-15T19:58:54+09:00
-categories: ["Programming"]
-tags: ["kotlin", "kotlin-for-java-developer"]
+tags: ["kotlin"]
 ---
 
 # Properties

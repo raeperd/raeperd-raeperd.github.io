@@ -1,8 +1,7 @@
 ---
 title: "Nullability"
 date: 2021-03-10T19:58:54+09:00
-categories: ["Programming"]
-tags: ["kotlin", "kotlin-for-java-developer"]
+tags: ["kotlin"]
 ---
 
 # Nullable types
@@ -66,7 +65,7 @@ s.length // << smart cast
 	* * `Optional` without Wrapping
 	* Without trivial typecasting For performance issue
 
-![](/Nullability/list-of-nullable-vs-nullable-list.png)
+![](https://i.ibb.co/xjztKpd/list-of-nullable-vs-nullable-list.png)
 
 ## Safe cast
 * Type cast `as`

@@ -1,8 +1,7 @@
 ---
 title: "Extensions"
 date: 2021-03-03T19:58:54+09:00
-categories: ["Programming"]
-tags: ["kotlin", "kotlin-for-java-developer"]
+tags: ["kotlin"]
 ---
 
 # Extension

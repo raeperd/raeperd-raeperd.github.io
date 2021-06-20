@@ -28,14 +28,14 @@ languages:
     title: raeperd.github.io
     menu:
       main:
-        - name: Tags
+        - name: Tag
           url: /tags/
           weight: 1
-        - name: Articles
-          url: /article
+        - name: Article
+          url: /articles
           weight: 2
-        - name: Notes
-          url: /note
+        - name: Note
+          url: /notes
           weight: 3
         - name: Search
           url: /search
@@ -54,7 +54,7 @@ params:
   images: ["papermod-cover.png"]
 
   mainSections:
-    - article
+    - articles
 
   ShowShareButtons: true
   comments: true

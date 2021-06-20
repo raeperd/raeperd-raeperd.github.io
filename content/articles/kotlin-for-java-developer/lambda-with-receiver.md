@@ -1,8 +1,7 @@
 ---
 title: "Lambda with receiver"
 date: 2021-03-20T19:58:54+09:00
-categories: ["Programming"]
-tags: ["kotlin", "kotlin-for-java-developer"]
+tags: ["kotlin"]
 ---
 
 # Lambda with receiver
@@ -18,7 +17,7 @@ for (c in 'a'..'z') {
 }
 sb.toString()
 ```
- 
+
 ``` kotlin
 val sb = StringBuilder()
 with (sb) {
@@ -32,7 +31,7 @@ with (sb) {
 - it is library function not a language spec
 - To implement function like this, we need lambda with receiver
 
-![](/Lambda%20with%20receiver/download.jpg)
+![](https://i.ibb.co/ryKc20T/lambda-with-receiver.jpg)
 
 ``` kotlin
 val s: String = buildString {
@@ -45,10 +44,10 @@ val s: String = buildString {
 
 
 ## Extension function vs lambda with receiver 
-![](/Lambda%20with%20receiver/download%202.jpg)
+![](https://i.ibb.co/vvW02ds/extension-function-vs-lambda-with-receiver.jpg)
 
 ## Lambda vs lambda with receiver
-![](/Lambda%20with%20receiver/download%203.jpg)
+![](https://i.ibb.co/ZMbCkW0/lambda-vs-lambda-with-receiver.jpg)
 
 # More useful library functions 
 ## `with`
@@ -96,7 +95,7 @@ val mainWindow =
 ```
 
 ## Summary
-![](/Lambda%20with%20receiver/download%204.jpg)
+![](https://i.ibb.co/mXMTtMt/this-vs-it.jpg)
 
 ## Playground: Member extensions
 ``` kotlin
@@ -120,5 +119,4 @@ fun main(args: Array<String>) {
     words.toString() eq "[one, two]"
 }
 ```
-
 

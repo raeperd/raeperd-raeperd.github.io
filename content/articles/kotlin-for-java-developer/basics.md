@@ -1,8 +1,7 @@
 ---
-title: "Kotlin Basic"
+title: "Basic"
 date: 2021-02-27T19:58:54+09:00
-categories: ["Programming"]
-tags: ["kotlin", "kotlin-for-java-developer"]
+tags: ["kotlin"]
 ---
 
 # Hello world

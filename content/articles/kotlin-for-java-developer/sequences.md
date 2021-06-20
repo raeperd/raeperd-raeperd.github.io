@@ -1,8 +1,7 @@
 ---
 title: "Sequence"
 date: 2021-03-18T19:58:54+09:00
-categories: ["Programming"]
-tags: ["kotlin", "kotlin-for-java-developer"]
+tags: ["kotlin"]
 ---
 
 # Collections vs Sequences 
@@ -19,11 +18,11 @@ tags: ["kotlin", "kotlin-for-java-developer"]
 
 
 # More about Sequences 
-![](/Sequences/download.jpg)
+![](https://i.ibb.co/2y1n5Zg/collections-vs-sequences.jpg)
 
-![](/Sequences/download%202.jpg)
+![](https://i.ibb.co/0J95Mby/collections-vs-sequences-2.jpg)
 
-![](/Sequences/download%203.jpg)
+![](https://i.ibb.co/n8XVwpw/order-of-operation-is-important.jpg)
 
 
 # Create Sequences 
@@ -33,7 +32,7 @@ interface Sequence<out T> {
 }
 ```
 
-![](/Sequences/download%204.jpg)
+![](https://i.ibb.co/fxZ0V7W/collections-vs-sequences-3.jpg)
 - Two ways to use iterator, eager and lazy
 
 ## `generateSequence`
@@ -110,5 +109,4 @@ Consider,
  - `groupBy` return `Map` straightaway
 - `groupingBy`  create a Grouping to be used later 
 	- `eachCount`
-
 
