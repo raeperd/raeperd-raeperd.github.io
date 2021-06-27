@@ -28,9 +28,6 @@ languages:
     title: raeperd.github.io
     menu:
       main:
-        - name: Tag
-          url: /tags/
-          weight: 1
         - name: Article
           url: /articles
           weight: 2

@@ -1,0 +1,12 @@
+<ul class="terms-tags">
+    {{range $index, $tag := .Site.Taxonomies.tags.ByCount}}
+    {{ $name := .Name }}
+    {{ $count := .Count }}
+    {{ with $.Site.GetPage (printf "/tags/%s" $name) }}
+    <li>
+        <a href="{{ .Permalink }}">{{ $name }} <sup><strong><sup>{{ $count }}</sup></strong></sup> </a>
+    </li>
+    {{end}}
+    {{end}}
+</ul>
+<br>
