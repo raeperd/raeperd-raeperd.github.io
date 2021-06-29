@@ -24,8 +24,6 @@ outputs:
 DefaultContentLanguage: korean
 languages:  
   korean:
-    weight: 1
-    title: raeperd.github.io
     menu:
       main:
         - name: Article
@@ -43,12 +41,8 @@ languages:
 
 params:
   env: production # to enable google analytics, opengraph, twitter-cards and schema.
-  title: raeperd.github.io
-  description: 'Better programmer'
   author: raeperd
   # author: ["Me", "You"] # multiple authors
-
-  images: ["papermod-cover.png"]
 
   mainSections:
     - articles
@@ -63,9 +57,6 @@ params:
 
   assets:
     disableFingerprinting: true
-
-  label:
-    text: "raeperd.github.io"
 
   # home-info mode
   homeInfoParams:
