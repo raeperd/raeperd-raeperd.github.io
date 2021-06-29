@@ -1,8 +1,8 @@
 ---
 title: "Difference Between `malloc` and `new`"
 date: 2020-03-25
-author: raeperd
 tags: ["cpp", "c"]
+draft: true
 cover: 
     image: malloc-vs-new.png
 ---

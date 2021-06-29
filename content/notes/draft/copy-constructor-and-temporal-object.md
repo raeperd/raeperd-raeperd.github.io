@@ -1,7 +1,7 @@
 ---
 title: "Copy constructor and temporal obejcts"
 date: 2019-02-25
-author: raeperd
+draft: true
 tags: ["c", "cpp"]
 ---
 

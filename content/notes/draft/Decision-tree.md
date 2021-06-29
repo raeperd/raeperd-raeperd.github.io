@@ -1,7 +1,6 @@
 ---
 title: "Decision tree"
 date: 2019-10-25
-author: raeperd
 tags: ["machine-learning"]
 draft: true
 ---

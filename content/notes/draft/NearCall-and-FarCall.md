@@ -1,7 +1,7 @@
 ---
 title: "NearCall and FarCall"
 date: 2019-10-25
-author: raeperd
+draft: true
 tags: ["assembly", "computer-architecture"]
 ---
 

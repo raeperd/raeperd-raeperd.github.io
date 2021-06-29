@@ -1,7 +1,7 @@
 ---
 title: "NLP Basic"
 date: 2019-08-25
-author: raeperd
+draft: true
 tags: ["machine-learning"]
 cover:
    image: /cover/nlp.jpeg

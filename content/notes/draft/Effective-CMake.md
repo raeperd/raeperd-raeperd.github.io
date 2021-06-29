@@ -1,7 +1,7 @@
 ---
 title: "Effective CMake"
 date: 2020-08-07
-author: raeperd
+draft: true
 tags: ["cpp", "cmake"]
 Showtoc: true
 cover:

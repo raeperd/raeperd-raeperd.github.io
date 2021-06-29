@@ -1,7 +1,7 @@
 ---
 title: "Implements Cpp Using C"
 date: 2019-10-25
-author: raeperd
+draft: true
 tags: ["cpp", "c", "oop", "design-pattern"]
 ---
 

@@ -1,8 +1,7 @@
 ---
 title: "CSS Basic"
 date: 2020-10-30
-author: raeperd
-tags: ["web", "html", "css"]
+tags: ["html", "css"]
 cover:
   image: /cover/css-basic.png
 ---

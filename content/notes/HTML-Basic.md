@@ -1,8 +1,7 @@
 ---
 title: "HTML Basic"
 date: 2020-10-25
-author: raeperd
-tags: ["web", "html"]
+tags: ["html"]
 cover:
   image: /cover/html-basic.png
 ---

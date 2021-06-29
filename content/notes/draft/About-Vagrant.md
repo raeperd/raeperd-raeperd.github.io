@@ -1,8 +1,8 @@
 ---
 title: "About Vagrant"
 date: 2019-10-25
-author: raeperd
 tags: ["settings"]
+draft: true
 cover:
   image: /cover/vagrant.png
 ---

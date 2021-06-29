@@ -1,7 +1,7 @@
 ---
 title: "Transaction in bitcoin"
 date: 2020-03-25
-author: raeperd
+draft: true
 tags: ["blockchain", "cryptography"]
 cover:
   image: /cover/blockchain.png

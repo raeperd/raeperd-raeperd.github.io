@@ -3,6 +3,7 @@ title: "Bitcoint key format"
 date: 2020-03-25
 author: raeperd
 tags: ["blockchain", "cryptography"]
+draft: true
 cover:
     image: /cover/bitcoin.png
 ---
