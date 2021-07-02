@@ -1,8 +1,7 @@
 ---
-title: "Implements Cpp Using C"
 date: 2019-10-25
 draft: true
-tags: ["cpp", "c", "oop", "design-pattern"]
+tags: ["cpp"]
 ---
 
 # Motivation 
@@ -10,8 +9,8 @@ tags: ["cpp", "c", "oop", "design-pattern"]
  프로그래밍을 배우면 자연스럽게 **객체지향**(OOP: Object Oriented Programming)이라는 말을 듣게 된다. 필요하고 중요한 개념이지만 학교에서 처음 객체지향에 대해 알게 되었을때는 그 필요성이 와닿지 않았다. 실무에서 쓰이는 코드를 만들다보니 이제는 좀 와닿는 것 같다. 그런데 누군가 나에게 객체지향이 왜 필요하냐고 물어보면 또 잘 설명할 자신이 없었다. 객체지향의 필요성을 강조하는 자료는 구글링을 조금만 해봐도 많이 나오지만, 대부분 객체지향을 사용하는 사람들이야 공감하는 내용이지 프로그래밍 경험이 적은 사람들이 쉽게 와닿게 잘 설명된 자료는 없는 것 같다. 이럴때 C에서 C++ 로 넘어가는 과정을 이해하면 좀 더 객체지향에 대해 더 잘 이해할 수 있다. C++ 강의를 참 많이 들어봤지만 직접 C++ 의 클래스의 일부를 구현해보는 것 만큼 와닿는 설명이나 예제는 없는 것 같다.
 
 
-
-# Before OOP
+# Contents
+## Before OOP
 
 대부분의 경우에 프로그램의 핵심 논리를 구현하는 사람과 사용하는 사람은 다르다. USERDATA 라는 구조체를 활용해서 이름이랑 나이를 저장하는 간단한 프로그램을 만든다고 할때, 기존의 C, 절차지향 프로그래밍을 사용한 프로그램은 대략 아래와 같은 방식으로 구현할 수 있다.
 
@@ -39,9 +38,9 @@ tags: ["cpp", "c", "oop", "design-pattern"]
 * **즉, 제작자는 편하지만 사용자는 불편한 상황이 발생한다.**
 이런 문제점들을 아래와 같이 개선할 수 있다.
 
-# Toward OOP
+## Toward OOP
 
-## 첫번째 개선 - sturct as parameter
+### 첫번째 개선 - sturct as parameter
 
 ``` c
  #include <stdio.h>
@@ -75,7 +74,7 @@ tags: ["cpp", "c", "oop", "design-pattern"]
 
   
 
-## 두번째 개선 - function pointer
+### 두번째 개선 - function pointer
 
 ``` c
  #include <stdio.h>
@@ -107,7 +106,7 @@ C 에서는 이를 문법적으로 해결할 방법이 없다. (적어도 내가
 
  
 
-## 세번째 개선 - class
+### 세번째 개선 - class
 
 ``` cpp
  #incldue <iostream>

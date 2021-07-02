@@ -1,11 +1,8 @@
 ---
 title: "Effective CMake"
 date: 2020-08-07
-draft: true
-tags: ["cpp", "cmake"]
+tags: ["cpp"]
 Showtoc: true
-cover:
-    image: https://raw.githubusercontent.com/toeb/cmakepp/master/logo.png
 ---
 
 

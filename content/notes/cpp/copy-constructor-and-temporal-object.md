@@ -1,8 +1,7 @@
 ---
 title: "Copy constructor and temporal obejcts"
 date: 2019-02-25
-draft: true
-tags: ["c", "cpp"]
+tags: ["cpp"]
 ---
 
 # 복사 생성자

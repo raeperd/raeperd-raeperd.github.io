@@ -1,15 +1,10 @@
 ---
-title: "Implements function contianer for hooking engine"
+title: "function container for hooking engine"
 date: 2020-01-13
-draft: true
-tags: ["c", "cpp"]
+tags: ["cpp"]
 ---
 
-# 모든 함수를 담을 수 있는 function container 구현하기
-
----
-
-## Intro
+# Motivation
 
 임의의 모든 Windows API 함수를 후킹하는 방법을 찾아보다가 모든 함수를 담는 container 가 있으면 일일이 후킹하는 코드를 작성하는 것이 아니라 간단하게 구현할 수 있지 않을까 생각해 봤었다.
 
@@ -21,6 +16,7 @@ tags: ["c", "cpp"]
 
 <br>
 
+# Contents
 ## Function pointer in C
 
 ```C++

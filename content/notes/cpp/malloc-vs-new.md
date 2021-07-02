@@ -1,10 +1,7 @@
 ---
-title: "Difference Between `malloc` and `new`"
+title: "malloc vs new"
 date: 2020-03-25
-tags: ["cpp", "c"]
-draft: true
-cover: 
-    image: malloc-vs-new.png
+tags: ["cpp"]
 ---
 
 
@@ -87,7 +84,7 @@ C에서의 동적할당을 생각해보자
 `malloc` 은 메모리 할당에 실패할 경우 NULL 을 return 한다. 그래서 실제로 `malloc` 을 사용하는 코드에서도 매번 반환되는 값이 NULL 인지 확인하는 코드가 필요하다.
 `new` 의 경우 `std::bad_alloc` 의 예외를 던진다. 예외를 던지기 때문에 `new` 를 사용하는 코드에서는 따로 추가적인 확인이 필요 없지만 어디에서든 분명 `catch` 를 통해 처리를 해줘야 한다. 예외가 발생하는 부분과 처리하는 부분의 코드가 물리적으로 떨어져 있을 수도 있기 때문에 이런 불규칙적인 흐름변화가 코드의 가독성을 떨어뜨릴 수 있다.
 
-**std::nothow 를 이용하면 예의를 던지지 않도록 설정할 수도 있다.**
+<mark>std::nothow 를 이용하면 예의를 던지지 않도록 설정할 수도 있다.</mark>
 
  
 

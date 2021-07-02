@@ -2,7 +2,7 @@
 title: "NearCall and FarCall"
 date: 2019-10-25
 draft: true
-tags: ["assembly", "computer-architecture"]
+tags: ["assembly"]
 ---
 
 # Motivation
@@ -13,7 +13,7 @@ printf 함수를 어셈블리 레벨에서 볼 일이 있었는데, 그 과정�
 
  
 
-# **CONTENTS**
+# CONTENTS
 
 ## prtinf 함수의 본모습
 
