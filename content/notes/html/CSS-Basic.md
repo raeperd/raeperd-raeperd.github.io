@@ -2,8 +2,6 @@
 title: "CSS Basic"
 date: 2020-10-30
 tags: ["html", "css"]
-cover:
-  image: /cover/css-basic.png
 ---
 
 [HTML Basic](https://reyzy.github.io/web/2019/08/17/HTML-basic/ ) 과 같은 맥락으로 블로그를 만들면서 CSS 에 대해 공부한 내용을 정리한다. 생활코딩 덕분에 간단하게 정리할 수 있었음 ! 다보고 나니 Javascript 까지 봐야 본격적으로 블로그를 만져볼 수 있겠다는 걸 알게되었다. 
