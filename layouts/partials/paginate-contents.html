@@ -1,8 +1,7 @@
 {{- $pages := union .RegularPages .Sections }}
 
-{{ $paginator := .Paginate $pages }}
+{{ $paginator := .Paginate $pages.ByDate.Reverse }}
 
-{{ $term := .Data.Term}}
 {{- range $index, $page := $paginator.Pages }}
 
 <article class="post-entry">
