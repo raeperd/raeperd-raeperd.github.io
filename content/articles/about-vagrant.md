@@ -1,27 +1,23 @@
 ---
 title: "About Vagrant"
 date: 2019-10-25
-tags: ["settings"]
-draft: true
+main: true
+tags: ["devops"]
 cover:
-  image: /cover/vagrant.png
+  image: https://i.ibb.co/Pgs3sgs/6c2c517f-2fc6-4c65-b342-92774b7e361c.png
 ---
 
-# INTRO
+# Motivation
 
- 최근에 제가 맡은 https://seculetter.atlassian.net/browse/MARS-476  의 경우 CentOS8 뿐만 아니라 CentOS6 (기존 환경) 에서도 slcli 의 동작을 확인할 필요가 있습니다. 기존 환경의 경우 설치스크립트를 이용해 초기화를 진행하는데 CentOS8 의 경우 아직 설치 스크립트가 없기 때문에 처음부터 설치 스크립트를 작성하면서 환경을 구성해야 합니다. 
+ 최근에  CentOS8 뿐만 아니라 CentOS6 (기존 환경) 에서도 동작가능한 C++ 프로그램을 개발할 필요가 있었습니다. 기존 환경의 경우 설치스크립트를 이용해 초기화를 진행하는데 CentOS8 의 경우 아직 설치 스크립트가 없기 때문에 처음부터 설치 스크립트를 작성하면서 환경을 구성해야 합니다. 
 
- 개발과 빌드를 하면서 OS의 설치 스크립트를 같이 관리하는 것은 여러므로 귀찮은 일이라 처음에는 Docker를 적용하려 했습니다. 하지만 이렇게 되면 로컬에서 Virtual Box 를 실행하지 못하기 떄문에 로컬에서 엔진 관련된 테스트를 진행할 수 없습니다. 
+ 개발과 빌드를 하면서 OS의 설치 스크립트를 같이 관리하는 것은 여러므로 귀찮은 일이라 처음에는 Docker를 적용하려 했습니다. 가능하다면 이 방법이 최선이겠지만, Virtual Machine 에 의존성을 가지고 있는 실행프로그램이기 때문에 대안을 찾아야만 했습니다. 
 
  이 과정에서 Vagrant 를 알게 되었고 현재는 Vagrant 를 활용해 개발 환경을 구성했습니다. 그 과정에 대해 공유 드리려 합니다.
-
-
 
 # CONTENTS
 
 ## Vagrant
-
-![6c2c517f-2fc6-4c65-b342-92774b7e361c](.images/6c2c517f-2fc6-4c65-b342-92774b7e361c.png)
 
  가상머신을 활용하기 위해서는 기본적으로 가상 머신 툴을 이용해 VM 을 생성하고 해당 VM에 OS 를 설치하는 반복적인 작업을 거쳐야 합니다. 설치 과정에서 생기는 여러 오류들을 구글링하고 수정하는 과정은 꽤 오랜 시간을 잡아먹게 되는데, Vagrant 를 활용하면 몇가지 간단한 명령어를 이용해 이를 쉽게 할 수 있습니다. 
 
@@ -31,7 +27,7 @@ cover:
 
 
 
- vagrant 는 backend 로 virtaul box 또는 vmware 를 사용할 수 있습니다. 여기서는 virtual box 를 예로 들겠습니다. 
+ Vagrant 는 backend 로 virtaul box 또는 vmware 를 사용할 수 있습니다. 여기서는 virtual box 를 예로 들겠습니다. 
 
 
 
@@ -59,8 +55,8 @@ end
 
 4.  스크립트가 있는 경로에서 vagrant up 실행 
 
-```
-vagrant up
+```shell
+$ vagrant up
 ```
 
 최초에 실행할때는 이미지를 받아오는 과정을 포함해서 시간이 좀 걸립니다. 
@@ -69,17 +65,17 @@ vagrant up
 
 5. vagrant ssh 로 ssh 접속
 
-```
-vagrant ssh
+```shell
+$ vagrant ssh
 ```
 
 
 
 6. exit 을 이용해 ssh  를 빠져나올 수 있으며, vagrant halt 로 가상머신을 종료합니다.
 
-```
-exit
-vagrant halt
+```shell
+$ exit
+$ vagrant halt
 ```
 
 
@@ -98,8 +94,8 @@ virtual box 를 통해서 직접 가상머신에 접근할 수 있고 접근을 
 
 1. Vagrant vbguest 설치
 
-```
-vagrant plugin install vagrant-vbguest
+```shell
+$ vagrant plugin install vagrant-vbguest
 ```
 
 
@@ -125,10 +121,10 @@ end
 
 3. Vagrant up
 
-```
-vagrant up
-vagrant vbguest 
-vagrant relaod
+```shell
+$ vagrant up
+$ vagrant vbguest 
+$ vagrant relaod
 ```
 
 위의 명령을 차례대로 입력합니다. vagrant reload 는 단순히 vagrant halt 와 vagrant up 을 실행합니다. 처음 실행할 경우 오래 걸릴 수도 있습니다. 자세한 내용은 [여기](https://github.com/dotless-de/vagrant-vbguest)를 참고하시면 됩니다. 
@@ -179,14 +175,14 @@ end
 
 3. vagrant provision 명령 실행
 
+```shell
+$ vagrant up
+$ vagrant provision 
 ```
-vagrant up
-vagrant provision 
-```
 
 
 
-## ssh 설정 가져오기 
+## ssh 설정 가져오기
 
 vagrant ssh-config를 이용하면  vagrant up 이 실행되어 있는 상황에서 ssh 로 접속할 수 있는 설정 파일을 쉽게 가져올 수 있습니다.
 
@@ -231,7 +227,7 @@ vagrant snapshot resotre SNAPSHOT_NAME    # snapshot 으로 복귀
 
 
 
-## 장단점 
+# 결론 
 
 장점 
 - 간단하게 가상머신을 설치하고 실행할 수 있다.
@@ -242,19 +238,19 @@ vagrant snapshot resotre SNAPSHOT_NAME    # snapshot 으로 복귀
 - 최초에 실행하는데 오래 걸린다. 
 - 설정 파일 문법. (Ruby 기반이고, 직관적이지 않다고 생각함) 
 
- Docker 와 유사한 인터페이스로 가상머신을 조작할 수 있는데 단점들은 모두 Docker 에 비한 단점이고 기술적으로 발생할 수 밖에 없는 불편함이라고 생각합니다. **다른 모든 부분에서 Docker가 더 좋다고 생각하지만, Docker 를 사용할 수 없는 환경에서 Vagrant는 사용하지 않을 이유가 없는 것 같습니다.**  윈도우 agent 도 Vagrant 로 관리할 수 있다면 더 좋을 것 같습니다. 
+ Docker 와 유사한 인터페이스로 가상머신을 조작할 수 있는데 단점들은 모두 Docker 에 비한 단점이고 기술적으로 발생할 수 밖에 없는 불편함이라고 생각합니다. <mark>다른 모든 부분에서 Docker가 더 좋다고 생각하지만, Docker 를 사용할 수 없는 환경에서 Vagrant는 사용하지 않을 이유가 없는 것 같습니다.</mark>  윈도우 agent 도 Vagrant 로 관리할 수 있다면 더 좋을 것 같습니다. 
+
+
 
 ## 설치 오류 경험담
 
  저는 호스트 윈도우 10, vagrant 의 backend 로 virtualbox를 사용했습니다. 
 
-**virtual box 5.1 버전에서 공유폴더 설정이 잘 안됬습니다.** 
-
-→ 5.2 로 올리고서 깔끔하게 해결 
-
-**centos6 를 ssh 원격 개발하기** 
-
- centos6 는 ssh 원격 개발을 지원하지 않습니다. vscode 로 개발하려면 guest 에 vscode-server 가 자동으로 설치되는데 centos6 에서는 이 과정이 잘 되지 않습니다. CentOS8 에서의 code intellisense 와 크게 다르지는 않아 빌드와 테스트만 따로 진행하면 됩니다. 
+- virtual box 5.1 버전에서 공유폴더 설정이 잘 안됬습니다.
+  → 5.2 로 올리고서 깔끔하게 해결 
+- centos6 를 ssh 원격 개발하기
+  - centos6 는 ssh 원격 개발을 지원하지 않습니다. 
+  - vscode 로 개발하려면 guest 에 vscode-server 가 자동으로 설치되는데 centos6 에서는 이 과정이 잘 되지 않습니다. CentOS8 에서의 code intellisense 와 크게 다르지는 않아 빌드와 테스트만 따로 진행하면 됩니다. 
 
 → centos6 에서는 원격 개발을 하지 않고 빌드와 유닛테스트만 진행
 
