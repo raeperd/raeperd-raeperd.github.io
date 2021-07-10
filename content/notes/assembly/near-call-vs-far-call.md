@@ -1,7 +1,6 @@
 ---
 title: "NearCall and FarCall"
 date: 2019-10-25
-draft: true
 tags: ["assembly"]
 ---
 
