@@ -61,7 +61,7 @@ int euclidean(int a, int b) {
 ![./image/Untitled5.png](https://i.ibb.co/y4BhqKV/Untitled5.png)
 
 - 목적은 위를 만족하는 s와 t를 찾는 것이다.
-- Euclidean Algorihm을 거꾸로 타고 올라가면 된다.
+- Euclidean Algorithm을 거꾸로 타고 올라가면 된다.
 
 ## 방법이 자주 해깔렸는데,
 

@@ -33,7 +33,7 @@ tags: ["os"]
 2. Error Exit (자발적)
 3. Fatal Error
     - 프로그램의 에러에 의한 종료
-4. Killed by anoter process
+4. Killed by another process
 
 ## Process Hierarchies
 - 프로세스는 오직 하나의 부모만을 가진다. (리눅스)

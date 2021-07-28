@@ -7,6 +7,11 @@ cover:
 ---
 
 # Contents
+
+## NLP vs Text Mining
+
+![](https://i.imgur.com/tTURpgC.png)
+
 ## Text mining
 - 비정형 데이터에서의 텍스트 데이터의 패턴과 관계를 추출하여 의미있는 정보를 추출하는 마이닝 기법
 - 비정형 자료의 수치형 자료로 변환하는 기법이 필요  

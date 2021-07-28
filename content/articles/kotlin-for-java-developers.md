@@ -3,7 +3,7 @@ title: "Kotlin For Java Developers"
 date: 2021-03-16
 main: true
 cover:
-  image: /kotlin-for-java-developer-cover.png
+  image: https://i.imgur.com/ZIfY4me.png
 ---
 
 # Motivation 
