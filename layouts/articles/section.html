@@ -1,13 +1,9 @@
 {{- define "main" }}
 
-{{ if .Content }}
-    {{- partial "article.html" . -}}
-{{ else }}
-    <header class="page-header">
-        {{- partial "breadcrumbs.html" . }}
-        <h1>{{ .Title }}</h1>
-    </header>
-    {{- partial "paginate-contents.html" . }}
-{{- end }}
+<header class="page-header">
+    {{- partial "breadcrumbs.html" . }}
+    <h1>{{ .Title }}</h1>
+</header>
+{{- partial "paginate-contents.html" . }}
 
 {{- end }}{{- /* end main */ -}}

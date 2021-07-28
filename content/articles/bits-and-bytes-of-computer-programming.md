@@ -18,16 +18,16 @@ cover:
 
 어디가서 네트워크 잘 모른다는 소리만 안듣게 공부를 시작하려고 했는데, 잘 정리된 네트워크 강의가 생각보다 잘 없다. 프로그래밍 언어에 대한 입문 강의는 참 많은데 네트워크에 대해서는 사람들이 많이 궁금해 하지는 않는 것 같다. coursera 에서 구글이 제공해주는 강의가 있는 것을 확인했고 이걸 끝까지 완주해보기로 했다. 이전에 머신러닝 강의를 너무 잘 들어서 coursera 강의면 일단 신뢰가 잘 간다. 코딩으로 테스트를 보는 과정까지 있었으면 좋았겠지만 아쉽게도 그런 과정은 없는 것으로 보인다. 
 
-## Note  
-1. [TCP/IP 5Layer Model](./tcp-ip-5-layer-model)
-2. [The Basics of Networking Devices](./the-basics-of-networking-devices)
-3. [The Data Link Layer](./the-data-link-layer)
-4. [The Network Layer](./the-network-layer) 
-5. [IP](./internet-protocol)
-6. [Subnetting](./subnetting)
-7. [The Transport and Application Layer](./the-transport-and-application-layer)
-8. [Network Services](./network-services)
-9. [Introduction to Troubleshooting and the Future of the Networking](./introduction-to-troubleshooting-and-the-future-of-the-networking)
+## Note 
+1. [TCP/IP 5Layer Model](../notes/network/tcp-ip-5-layer-model)
+2. [The Basics of Networking Devices](../notes/network/the-basics-of-networking-devices)
+3. [The Data Link Layer](../notes/network/the-data-link-layer)
+4. [The Network Layer](../notes/network/the-network-layer) 
+5. [IP](../notes/network/internet-protocol)
+6. [Subnetting](../notes/network/subnetting)
+7. [The Transport and Application Layer](../notes/network/the-transport-and-application-layer)
+8. [Network Services](../notes/network/network-services)
+9. [Introduction to Troubleshooting and the Future of the Networking](../notes/network/introduction-to-troubleshooting-and-the-future-of-the-networking)
 
 
 

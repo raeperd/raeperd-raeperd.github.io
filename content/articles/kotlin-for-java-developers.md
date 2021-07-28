@@ -107,16 +107,16 @@ Java에 이미 `Optional` 이 있기 때문에 큰 차별점이라고 보기는 
 
  그외에도 많은 좋은 점들이 있는데, 굳이 일일이 나열해가면서 설명하고 싶지는 않다. 다른 자세한 특징들은 구글의 레퍼런스나 강의를 참고하면 좋을 것 같다. 아래의 내용들이 내가 강의를 보면서 요약한 내용들이다.
 
-1. [Basics](./basics)  
-2. [Extnsions](extensions)  
-3. [Nullability](nullability)  
-4. [Functional Programming](functional-programming)  
-5. [Properties](properties)  
-6. [Conventions](conventions)  
-7. [Inline functions](inline-function)  
-8. [Sequences](sequences)  
-9. [Lambda with Receiver](lambda-with-receiver)  
-10. [Types](type)
+1. [Basics](../notes/programming/kotlin/basics)  
+2. [Extnsions](../notes/programming/kotlin/extensions)  
+3. [Nullability](../notes/programming/kotlin/nullability)  
+4. [Functional Programming](../notes/programming/kotlin/functional-programming)  
+5. [Properties](../notes/programming/kotlin/properties)  
+6. [Conventions](../notes/programming/kotlin/conventions)  
+7. [Inline functions](../notes/programming/kotlin/inline-function)  
+8. [Sequences](../notes/programming/kotlin/sequences)  
+9. [Lambda with Receiver](../notes/programming/kotlin/lambda-with-receiver)  
+10. [Types](../notes/programming/kotlin/type)
 
 # Review 
 
