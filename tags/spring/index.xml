@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>spring on raeperd.github.io</title>
+    <link>https://raeperd.github.io/tags/spring/</link>
+    <description>Recent content in spring on raeperd.github.io</description>
+    <image>
+      <url>https://raeperd.github.io/papermod-cover.png</url>
+      <link>https://raeperd.github.io/papermod-cover.png</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Fri, 20 Nov 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://raeperd.github.io/tags/spring/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>No Converter Found for Return Value of Type</title>
+      <link>https://raeperd.github.io/notes/programming/java/no-converter-found-for-return-value-of-type/</link>
+      <pubDate>Fri, 20 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://raeperd.github.io/notes/programming/java/no-converter-found-for-return-value-of-type/</guid>
+      <description>RestController 의 메소드에서 인자와 반환값을 json 으로 Serialize / Desiriallize 가 불가능할 때 나타나는 에러다.
+Getter와 생성자만 적절하게 존재하면 가능하다
+대충 이런식
+import lombok.Getter; import lombok.NoArgsConstructor; import lombok.AllArgsConstructor; @Getter @NoArgsConstructor @AllArgsConstructor public class ScanRequest { private String url; } @RequestBody 가 json Serializable 하려면 NoArgsConstructor 가 필요하다.
+테스트를 위해서는 @AllArgConstructor도 필요할 것 프래임 워크가 가져와주는 것이라 필드들을 열어놔야 한다.
+그런데 Controller 의 Return 이 되는 경우에는 생성자를 제공할 필요가 없다. Getter만 있으면 된다.</description>
+    </item>
+    
+    <item>
+      <title>Where to Declar Spring Annotation</title>
+      <link>https://raeperd.github.io/notes/programming/java/where-to-declar-spring-annotation/</link>
+      <pubDate>Mon, 02 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://raeperd.github.io/notes/programming/java/where-to-declar-spring-annotation/</guid>
+      <description>@WebMvcTest 어노테이션만 선언했는데 Jpa Auditing 이 정상동작 하지 않는 문제를 발견했다.
+원래 annotation을 붙일때 크게 생각을 하지 않고 붙였는데, @WebMvcTest 를 선언하면서 src 폴더를 기준으로 spring이 component를 스캔하는 과정에서 main 클래스를 읽으면서 오류가 발생한듯 하다.
+@SpringBootApplication 과 같이 다른 설정을 읽으려다가 오류가 나는 것으로 보인다. (annotation의 위치를 옮기면 정상 동작했다. 이 경우는 @EnableJpaAuditoring 이었다.)
+이 과정에서 괜한 annotation까지 읽게 되면서 테스트 환경에서 문제가 발생한다. 단 한줄의 annotation이라도 따로 @Configuration 클래스를 만들어서 따로 관리하는 것이 옳다.</description>
+    </item>
+    
+    <item>
+      <title>Query Did Not Return a Result 2</title>
+      <link>https://raeperd.github.io/notes/programming/java/query-did-not-return-a-result-2/</link>
+      <pubDate>Tue, 21 Jul 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://raeperd.github.io/notes/programming/java/query-did-not-return-a-result-2/</guid>
+      <description>현상 JpaRepsotiroy 에서 기본적으로 제공하는 인터페이스를 사용할떄, query 결과가 여럿 일 수 있는데 반환형을 하나의 엔티티만 담을 수 있게 하면 아래와 같은 오류를 만나게 된다.
+query did not return a unique result: 2 해결과정 제일 외부에서 확인할 수 있는 예외는 심지어 UnknownHostException 이었는데 원인이 여기있다는 것을 알게 되기 까지 꽤나 오랜 시간이 필요했다.
+Entitiy를 만들 떄 unique constraint를 줬기 때문에 이런 오류가 발생할 리가 없다고 생각했었다. constraint를 pair로 만들었기 때문에 단일 컬럼은 충분히 여러 값이 나올 수 있는 거였음</description>
+    </item>
+    
+  </channel>
+</rss>

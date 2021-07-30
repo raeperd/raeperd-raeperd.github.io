@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>docker on raeperd.github.io</title>
+    <link>https://raeperd.github.io/tags/docker/</link>
+    <description>Recent content in docker on raeperd.github.io</description>
+    <image>
+      <url>https://raeperd.github.io/papermod-cover.png</url>
+      <link>https://raeperd.github.io/papermod-cover.png</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Mon, 02 Nov 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://raeperd.github.io/tags/docker/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Command Clear Not Found in Container</title>
+      <link>https://raeperd.github.io/notes/programming/command-clear-not-found-in-container/</link>
+      <pubDate>Mon, 02 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://raeperd.github.io/notes/programming/command-clear-not-found-in-container/</guid>
+      <description>간단하게 테스트 해보고 싶어서 centos8 컨테이너 하나를 올렸다.
+docker run --name pure-centos8 --rm -v D:\git:/git -ti centos:centos8 /bin/bash $ clear bash: clear: command not found 너무 황당해서 말도 안나오는 오류;;
+/usr/bin 경로에 clear가 있어야 할 것 같지만, 기본 컨테이너는 이마저도 가지고 있지 않다.
+설치를 해줘야하는데, 아래 처럼 간단하게 해결할 수 있다.
+$ yum whatprovides /bin/clear Last metadata expiration check: 0:00:29 ago on Thu 11 Jun 2020 02:31:26 AM UTC. ncurses-6.1-7.20180224.el8.x86_64 : Ncurses support utilities Repo : BaseOS Matched from: Filename : /usr/bin/clear 물론 yum update 는 해줘야 잘 찾을 것</description>
+    </item>
+    
+    <item>
+      <title>Log Flood Stage Disk Watermark Exceeded</title>
+      <link>https://raeperd.github.io/notes/database/log-flood-stage-disk-watermark-exceeded/</link>
+      <pubDate>Thu, 22 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://raeperd.github.io/notes/database/log-flood-stage-disk-watermark-exceeded/</guid>
+      <description>현상 Log flood stage disk watermark [95%] exceeded on – How To Solve Related Issues 해결방안 df 명령을 쳐보면 어디에 쓰고 있는지 보인다.
+raecheol-park@dev:~/docker-elk$ df -h Filesystem Size Used Avail Use% Mounted on udev 16G 0 16G 0% /dev tmpfs 3.2G 339M 2.8G 11% /run /dev/sda2 438G 398G 18G 96% / tmpfs 16G 0 16G 0% /dev/shm tmpfs 5.0M 0 5.0M 0% /run/lock tmpfs 16G 0 16G 0% /sys/fs/cgroup /dev/md0 1.</description>
+    </item>
+    
+    <item>
+      <title>Updates for This Repository Will Not Be Applied</title>
+      <link>https://raeperd.github.io/notes/programming/updates-for-this-repository-will-not-be-applied/</link>
+      <pubDate>Tue, 21 Jul 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://raeperd.github.io/notes/programming/updates-for-this-repository-will-not-be-applied/</guid>
+      <description>apt-get update 를 하는데 특정 주소에서 아래와 같은 에러가 뜨기 시작했다.
+Hit:1 ubuntu bionic InRelease Ign:3 linux/chrome/deb stable InRelease Get:2 /ubuntu bionic-updates InRelease [88.7 kB] Get:5 /linux/chrome/deb stable Release [943 B] Get:6 http://dl.google.com/linux/chrome/deb stable Release.gpg [819 B] Get:4 http://us.archive.ubuntu.com/ubuntu bionic-backports InRelease [74.6 kB] Get:7 http://security.ubuntu.com/ubuntu bionic-security InRelease [83.2 kB] Reading package lists... Done E: Release file for http://dl.google.com/linux/chrome/deb/dists/stable/Release is not valid yet (invalid for another 2h 45min 28s). Updates for this repository will not be applied.</description>
+    </item>
+    
+  </channel>
+</rss>

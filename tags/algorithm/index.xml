@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>algorithm on raeperd.github.io</title>
+    <link>https://raeperd.github.io/tags/algorithm/</link>
+    <description>Recent content in algorithm on raeperd.github.io</description>
+    <image>
+      <url>https://raeperd.github.io/papermod-cover.png</url>
+      <link>https://raeperd.github.io/papermod-cover.png</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sat, 24 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://raeperd.github.io/tags/algorithm/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Fibonacci numbers</title>
+      <link>https://raeperd.github.io/notes/algorithm/fibonacci-numbers/</link>
+      <pubDate>Sat, 24 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://raeperd.github.io/notes/algorithm/fibonacci-numbers/</guid>
+      <description>Fibonacci numbers #cs/algorithm #algorithmic-toolbox
+ Recursive call makes this algorithm too slow !   Computing same thing over and over again  Implementation 1 Fibonacci naive fun calculateFibonacciNaive(n: Long): Long { return if (n &amp;lt;= 1) n else calculateFibonacciNaive(n - 1) + calculateFibonacciNaive(n - 2) } correct fun calculateFibonacci(n: Long): Long { if (n &amp;lt; 2) { return n } val fibonacciArray = LongArray(n.toInt() + 1) { it.toLong() } for (index in 2.</description>
+    </item>
+    
+    <item>
+      <title>Greatest Common Divisor</title>
+      <link>https://raeperd.github.io/notes/algorithm/greatest-common-divisor/</link>
+      <pubDate>Sat, 24 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://raeperd.github.io/notes/algorithm/greatest-common-divisor/</guid>
+      <description>Greatest Common Divisor Euclidean algorithm fun euclideanGCD(a, b) { if (b == 0) reutrn a return euclideanGCD(b, a % b) }  Each step reduces the size of numbers by about a factor of 2 Takes about log(ab) steps GCDs of 100 digit numbers takes about 600 steps Each step a single division  Summary  Naive algorithm is too slow The correct algorithm is much better Finding the correct algorithm requires something interesting about the problem  Implementation GCD naive fun gcdNaive(a: Int, b: Int): Int { var currentGcd = 1 var d = 2 while (d &amp;lt;= a &amp;amp;&amp;amp; d &amp;lt;= b) { if (a % d == 0 &amp;amp;&amp;amp; b % d == 0 &amp;amp;&amp;amp; currentGcd &amp;lt; d) { currentGcd = d } ++d } return currentGcd } correct fun gcdEuclideanMethod(a: Int, b: Int): Int { if (b == 0) { return a } return gcdEuclideanMethod(b, a % b) }  Second parameter always less then equal to first parameter by definition of remainder  LCM naive fun lcmNaive(a: Int, b: Int): Long { for (l in 1.</description>
+    </item>
+    
+    <item>
+      <title>Greedy Algorithm</title>
+      <link>https://raeperd.github.io/notes/algorithm/greedy-algorithm/</link>
+      <pubDate>Sat, 24 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://raeperd.github.io/notes/algorithm/greedy-algorithm/</guid>
+      <description>Greedy Algorithm Main Ingredients  Safe Move Prove safety Solve subproblem Estimate running time  Safe Move  A greedy choice is a safe move if there is an optimal solution consistent with this first move.  Optimization  Assume everything is somehow sorted Which sort order is convenient? Greedy move can be faster after sorting  General Strategy  Make a greedy choice Prove that it is a safe move Reduce to a subproblem Solve the subproblem  Problem Maximum Salary This is probably the most important problem in this course :).</description>
+    </item>
+    
+    <item>
+      <title>Short Circuit Evaluation</title>
+      <link>https://raeperd.github.io/notes/algorithm/short-circuit-evaluation/</link>
+      <pubDate>Sat, 24 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://raeperd.github.io/notes/algorithm/short-circuit-evaluation/</guid>
+      <description>Short Circuit Evaluation  어떤 프로그래밍 언어에서 AND 혹은 OR 의 연산에 있어서 앞선 연산만으로 전체 연산의 결과를 유추할 수 있을때, 뒤의 연산을 수행하지 않는 연산 방식 C++, JAVA, Kotlin, Python 등 대부분의 언어에서 지원함  Short-circuit evaluation - Wikipedia   AND  AND 연산의 경우에 false 가 우선 나와버리면 AND 뒤에 나오는 연산은 생략.  OR  OR 연산의 경우에 true 가 우선 나와버리면 OR 뒤에 나오는 연산은 생략.</description>
+    </item>
+    
+    <item>
+      <title>Decision tree</title>
+      <link>https://raeperd.github.io/notes/algorithm/decision-tree/</link>
+      <pubDate>Fri, 25 Oct 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://raeperd.github.io/notes/algorithm/decision-tree/</guid>
+      <description>Motivation 데이터를 다른 그룹으로 분류하는 문제를 풀 때, 가장 기본적으로 생각할 수 있는 방법은 여러개의 if~ else~ 문을 반복하는 것입니다. 날씨가 좋고, 평일이 아니면 놀기 좋은날이다! 와 같이 생각할 수 있습니다. 하지만 충분히 많은 데이터를 올바르게 분류하는 if~ else~ 코드는 직접 작성하기에 어려운 부분이 많이 있습니다.
+Decision tree는 이런 if~ else~ 문을 자동으로 만들어 내는 알고리즘이라고 할 수 있습니다. 예를 들어 아래와 같은 데이터가 있을때 어떤 조건이 심장병을 성공적으로 분류 할 수 있는지 알아보겠습니다.</description>
+    </item>
+    
+    <item>
+      <title>Euclidean Algorhtim</title>
+      <link>https://raeperd.github.io/notes/algorithm/euclidean-algorithm/</link>
+      <pubDate>Tue, 25 Jul 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://raeperd.github.io/notes/algorithm/euclidean-algorithm/</guid>
+      <description>Base Algorithm int euclidean(int a, int b) { int r1 = a; int r2 = b; int q,r; while (r2 &amp;gt; 0) { q = r1/r2; r = r1%r2; r1 = r2; r2 = r; } return r1; } Algorithm (Recursive) int euclidean(int a, int b) { if (b==0) return a; else return euclidean(b,a%b); } Example 조금 더 직관적인 계산 방법 추가 예제)  손으로 해보면 금방 감옴!  Complexity of Euclidean Algorithm Extended Euclidean Algorithm 원리  목적은 위를 만족하는 s와 t를 찾는 것이다.</description>
+    </item>
+    
+  </channel>
+</rss>

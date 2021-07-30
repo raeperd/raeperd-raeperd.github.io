@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>linux on raeperd.github.io</title>
+    <link>https://raeperd.github.io/tags/linux/</link>
+    <description>Recent content in linux on raeperd.github.io</description>
+    <image>
+      <url>https://raeperd.github.io/papermod-cover.png</url>
+      <link>https://raeperd.github.io/papermod-cover.png</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sat, 07 Nov 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://raeperd.github.io/tags/linux/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Vim Cheat Sheet</title>
+      <link>https://raeperd.github.io/notes/programming/vim-cheat-sheet/</link>
+      <pubDate>Sat, 07 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://raeperd.github.io/notes/programming/vim-cheat-sheet/</guid>
+      <description>shortcut edit  dd 현재 줄 잘라내기 dw 단어 잘라내기 yy 현재 줄 복사하기 p 붙혀넣기 r 현재 글자 교체하기 u Undo Ctrl + R 현재 글자 지우기 X 앞의 글자 지우기 &amp;gt; 들여쓰기 &amp;lt; 내어쓰기 . 이전 명령어를 다시 실행  exit  :w 문서 저장하기 :q 현재 문서 닫기 :q! 저장하지 않고 닫기 :wq 저장하고 닫기  visual  v 비쥬얼모드(비쥬얼 모드에서 커서 이동해서 블럭지정 가능) y 복사하기 c 잘라내기 cw 단어 잘라내기 J 다음 라인을 현재 줄의 끝으로 이어 붙힘 ~ 선택 문자 대소문자 변경 Ctrl + A 숫자를 증가시키기 Ctrl + X 숫자를 감소시키기  insert  i - 현재 커서 위치에 Insert 하기 I - 현재 줄 맨앞에 Insert 하기 a - 현재 커서 다음칸에 Insert 하기 A - 현재 줄 맨뒤에 Insert 하기 O - 윗줄에 Insert 하기 o - 아랫줄에 Insert 하기  navigation   h, j, k, l - 좌,하,상,우 커서이동</description>
+    </item>
+    
+  </channel>
+</rss>

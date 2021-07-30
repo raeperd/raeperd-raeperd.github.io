@@ -1,0 +1,700 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Notes on raeperd.github.io</title>
+    <link>https://raeperd.github.io/notes/</link>
+    <description>Recent content in Notes on raeperd.github.io</description>
+    <image>
+      <url>https://raeperd.github.io/papermod-cover.png</url>
+      <link>https://raeperd.github.io/papermod-cover.png</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Tue, 27 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://raeperd.github.io/notes/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Operating System Introduction</title>
+      <link>https://raeperd.github.io/notes/os/operating-system-introduction/</link>
+      <pubDate>Tue, 27 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://raeperd.github.io/notes/os/operating-system-introduction/</guid>
+      <description>Motivation  운영체제의 역할을 사용자 프로그램에게 더 간단하고 깨긋한 인터페이스를 제공하고, 하드웨어 자원들을 관리하는 것이다. 다른 프로그램과 다르게, 운영체제의 일부를 사용자가 변경할 수 없다.  kernel mode (or supercisor mode)  이 모드에서 운영체제는 모든 하드웨어에 대한 완전한 접근이 가능하고, 프로세서가 수행할 수 있는 모든 명령을 시행할 수 있다.  user mode  이 모드에서는 오직 명령의 일부분만을 사용할 수 있다.  1.1 WHAT IS AN OPERATING SYSTEM? 1.1.1 The operating system as an Extended machine  운영체제의 역할을 사용자에게 좋은 추상화를 제공하고 그 추상화된 객체들을 잘 관리하는 것이다.</description>
+    </item>
+    
+    <item>
+      <title>Process</title>
+      <link>https://raeperd.github.io/notes/os/process/</link>
+      <pubDate>Tue, 27 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://raeperd.github.io/notes/os/process/</guid>
+      <description>프로세스는 실행중인 파일에 대한 추상화다. 하나의 CPU는 한 순간에 하나의 프로세스 만을 실행한다. 모든 프로세스는 각자의 스택을 가지고 있다.  The Process Model  시스템을 이해하기 위해서는 여러 프로세스가 병렬적으로 실행된다고 생각하는 것보다 CPU가 어떻게 프로세스 단위로 Context Switching 을 하는지 따라가는 것이 좋을 것이다. 이런 전환들을 multiprogramming 이라고 한다. 프로세스는 프로그램과 입력, 출력과 상태를 가지고 있는 활동이다. 프로그램은 반면에 디스크에 저장되어 있는 어떤 것으로 아무런 활동을 하지 않는다.  Process Creation 프로세스가 생성되는 경우</description>
+    </item>
+    
+    <item>
+      <title>Thread</title>
+      <link>https://raeperd.github.io/notes/os/thread/</link>
+      <pubDate>Tue, 27 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://raeperd.github.io/notes/os/thread/</guid>
+      <description>Thread Usage  한 프로세스 내에 주소공간과 모든 자원을 공유하는 병렬적 실행 주체 프로세스 보다 쉽게 만들고 없앨 수 있다. 실제로 병렬과정이 가능한 멀티 프로세서 환경에서 효과가 좋음 Dispatcher thread: 메인 쓰레드 Worker thread:: 일하는 쓰레드     Model Characteristics     Threads Parallelism, blocking system calls   Single-threaded process No parallelism, blocking system calls   Finite-state machine Parallelism, nonblocking system calls, interrupts    The Classical Thread Model  프로세스 모델은 resource grouping과 execution의 두 독립적 개념에 기반해 만들어 졌다.</description>
+    </item>
+    
+    <item>
+      <title>Big O Notation</title>
+      <link>https://raeperd.github.io/notes/algorithm/big-o-notation/</link>
+      <pubDate>Sat, 24 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://raeperd.github.io/notes/algorithm/big-o-notation/</guid>
+      <description>Big-O Notation All of these issues can multiply runtimes by (large) constants. So measure runtime in a way that ignores constant multiples
+Problem Unfortunately, 1 second, 1 hour, 1 year only differ by constant multiples
+ Classifies Growth Rate Cleans up Notation Can Ignore Complicated Details  Warning
+ Using Big-O loses important information about constant multiples Big-O is only asymptotic   Asymptotic notation (article) | Algorithms | Khan Academy</description>
+    </item>
+    
+    <item>
+      <title>Fibonacci numbers</title>
+      <link>https://raeperd.github.io/notes/algorithm/fibonacci-numbers/</link>
+      <pubDate>Sat, 24 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://raeperd.github.io/notes/algorithm/fibonacci-numbers/</guid>
+      <description>Fibonacci numbers #cs/algorithm #algorithmic-toolbox
+ Recursive call makes this algorithm too slow !   Computing same thing over and over again  Implementation 1 Fibonacci naive fun calculateFibonacciNaive(n: Long): Long { return if (n &amp;lt;= 1) n else calculateFibonacciNaive(n - 1) + calculateFibonacciNaive(n - 2) } correct fun calculateFibonacci(n: Long): Long { if (n &amp;lt; 2) { return n } val fibonacciArray = LongArray(n.toInt() + 1) { it.toLong() } for (index in 2.</description>
+    </item>
+    
+    <item>
+      <title>Greatest Common Divisor</title>
+      <link>https://raeperd.github.io/notes/algorithm/greatest-common-divisor/</link>
+      <pubDate>Sat, 24 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://raeperd.github.io/notes/algorithm/greatest-common-divisor/</guid>
+      <description>Greatest Common Divisor Euclidean algorithm fun euclideanGCD(a, b) { if (b == 0) reutrn a return euclideanGCD(b, a % b) }  Each step reduces the size of numbers by about a factor of 2 Takes about log(ab) steps GCDs of 100 digit numbers takes about 600 steps Each step a single division  Summary  Naive algorithm is too slow The correct algorithm is much better Finding the correct algorithm requires something interesting about the problem  Implementation GCD naive fun gcdNaive(a: Int, b: Int): Int { var currentGcd = 1 var d = 2 while (d &amp;lt;= a &amp;amp;&amp;amp; d &amp;lt;= b) { if (a % d == 0 &amp;amp;&amp;amp; b % d == 0 &amp;amp;&amp;amp; currentGcd &amp;lt; d) { currentGcd = d } ++d } return currentGcd } correct fun gcdEuclideanMethod(a: Int, b: Int): Int { if (b == 0) { return a } return gcdEuclideanMethod(b, a % b) }  Second parameter always less then equal to first parameter by definition of remainder  LCM naive fun lcmNaive(a: Int, b: Int): Long { for (l in 1.</description>
+    </item>
+    
+    <item>
+      <title>Greedy Algorithm</title>
+      <link>https://raeperd.github.io/notes/algorithm/greedy-algorithm/</link>
+      <pubDate>Sat, 24 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://raeperd.github.io/notes/algorithm/greedy-algorithm/</guid>
+      <description>Greedy Algorithm Main Ingredients  Safe Move Prove safety Solve subproblem Estimate running time  Safe Move  A greedy choice is a safe move if there is an optimal solution consistent with this first move.  Optimization  Assume everything is somehow sorted Which sort order is convenient? Greedy move can be faster after sorting  General Strategy  Make a greedy choice Prove that it is a safe move Reduce to a subproblem Solve the subproblem  Problem Maximum Salary This is probably the most important problem in this course :).</description>
+    </item>
+    
+    <item>
+      <title>Short Circuit Evaluation</title>
+      <link>https://raeperd.github.io/notes/algorithm/short-circuit-evaluation/</link>
+      <pubDate>Sat, 24 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://raeperd.github.io/notes/algorithm/short-circuit-evaluation/</guid>
+      <description>Short Circuit Evaluation  어떤 프로그래밍 언어에서 AND 혹은 OR 의 연산에 있어서 앞선 연산만으로 전체 연산의 결과를 유추할 수 있을때, 뒤의 연산을 수행하지 않는 연산 방식 C++, JAVA, Kotlin, Python 등 대부분의 언어에서 지원함  Short-circuit evaluation - Wikipedia   AND  AND 연산의 경우에 false 가 우선 나와버리면 AND 뒤에 나오는 연산은 생략.  OR  OR 연산의 경우에 true 가 우선 나와버리면 OR 뒤에 나오는 연산은 생략.</description>
+    </item>
+    
+    <item>
+      <title>OAuth Basic</title>
+      <link>https://raeperd.github.io/notes/network/oauth/</link>
+      <pubDate>Fri, 23 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://raeperd.github.io/notes/network/oauth/</guid>
+      <description>WEB2 - OAuth 2.0 : 1.수업소개 - YouTube
+용어정리  User is Resource Owner My Service is Client Resource Server  Google, Facebook, Twitter   Authorization Server  등록 Resource Ownwer 의 승인  Resource Owner 가 URL 로 접근하면, Resource Server가 이 요청의 유효성을 검사한다. 특정 권한을 허용할 것인지에 대해 Resource Owner 가 승인한다.  Resource Server의 승인  Resource Server 는 응답에 authorization code 를 포함시켜 사용자를 redirection 시킨다.</description>
+    </item>
+    
+    <item>
+      <title>OpenID Connect vs Oauth</title>
+      <link>https://raeperd.github.io/notes/network/openid-connect-vs-oauth/</link>
+      <pubDate>Fri, 23 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://raeperd.github.io/notes/network/openid-connect-vs-oauth/</guid>
+      <description>OpenID Connect - OAuth 2.0 Simplified  OAuth 2.0 does not provide a mechanism to say who a user is or how they authenticated, it just says that a user delegated an application to act on their behalf. OpenID Connect takes the OAuth 2.0 framework and adds an identity layer on top. It provides information about the user, as well as enables clients to establish login sessions.  Authorization vs Authentication - OAuth 2.</description>
+    </item>
+    
+    <item>
+      <title>Type in Kotlin</title>
+      <link>https://raeperd.github.io/notes/programming/kotlin/type/</link>
+      <pubDate>Tue, 06 Apr 2021 19:58:54 +0900</pubDate>
+      
+      <guid>https://raeperd.github.io/notes/programming/kotlin/type/</guid>
+      <description>Basic Type  kotlin doesn’t have primitive type Int or Int?  Int in bytecode fun foo(): Int = 1 public static final int foo() { return 1; } Int? in bytecode fun bar(): Int? = 1 public static final Integer foo() { return 1; } Primitive &amp;amp; wrapper types String  Kotlin String hides some confusing methods  Any  Any in Kotlin is a super type for all non-nullable types.</description>
+    </item>
+    
+    <item>
+      <title>Curl Verbose Option</title>
+      <link>https://raeperd.github.io/notes/programming/curl-verbose-option/</link>
+      <pubDate>Sun, 28 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://raeperd.github.io/notes/programming/curl-verbose-option/</guid>
+      <description>같은 명령인데 CentOS에서는 되고 우분투에서는 안되는 문제가 발생
+curl --location --request POST &amp;#39;https://api.ai-gsp.com/tidb/hash&amp;#39; \ --form &amp;#39;api-key=&amp;#34;146ae893-944a-407c-adfe-9ad14ace212d&amp;#34;&amp;#39; \ --form &amp;#39;timestamp=&amp;#34;2021-03-01 11:00:00&amp;#34;&amp;#39; form 을 전달할때 &amp;quot; 를 포함했을때, CentOS에서는 정상 동작했고, Ubuntu에서는 동작을 안했다.
+&amp;quot; 을 제거하니 우분투에서 정상동작 확인
+Cent 에서도 마찬가지로 정상동작 됨
+ curl 요청에 form 을 포함할때는 `&#34;` 를 포함하지 않아야 한다. </description>
+    </item>
+    
+    <item>
+      <title>Lambda with receiver</title>
+      <link>https://raeperd.github.io/notes/programming/kotlin/lambda-with-receiver/</link>
+      <pubDate>Sat, 20 Mar 2021 19:58:54 +0900</pubDate>
+      
+      <guid>https://raeperd.github.io/notes/programming/kotlin/lambda-with-receiver/</guid>
+      <description>Lambda with receiver  Extension Function &amp;amp; Lambda =&amp;gt; Lambda with receiver a.k.a. Extension lambda  with val sb = StringBuilder() sb.appendln(&amp;#34;something&amp;#34;) for (c in &amp;#39;a&amp;#39;..&amp;#39;z&amp;#39;) { sb.append(c) } sb.toString() val sb = StringBuilder() with (sb) { appendln(&amp;#34;something&amp;#34;) for (c in &amp;#39;a&amp;#39;..&amp;#39;z&amp;#39;) { append(c) } toString() }  it is library function not a language spec To implement function like this, we need lambda with receiver  val s: String = buildString { appendln(&amp;#34;something&amp;#34;) for (c in &amp;#39;a&amp;#39;.</description>
+    </item>
+    
+    <item>
+      <title>Inline function in Kotlin</title>
+      <link>https://raeperd.github.io/notes/programming/kotlin/inline-function/</link>
+      <pubDate>Thu, 18 Mar 2021 19:58:54 +0900</pubDate>
+      
+      <guid>https://raeperd.github.io/notes/programming/kotlin/inline-function/</guid>
+      <description>Library functions looking like built-in constructs run val foo = run { println(&amp;#34;do something...&amp;#34;) &amp;#34;foo&amp;#34; }  runs the block of code (lambda) and returns the last expression as the result  let fun getMail(): Email? val email = getEmail() if (email != null) sendMailTo(email) email?.let { e -&amp;gt; sendEmailTo(e) } getEmail()?.let { sendEmailTo(it) }  allows to check the arguments for being non-null, not only the receiver Its name comes from functional programming, where let is used to introduce a new variable.</description>
+    </item>
+    
+    <item>
+      <title>Sequence</title>
+      <link>https://raeperd.github.io/notes/programming/kotlin/sequences/</link>
+      <pubDate>Thu, 18 Mar 2021 19:58:54 +0900</pubDate>
+      
+      <guid>https://raeperd.github.io/notes/programming/kotlin/sequences/</guid>
+      <description>Collections vs Sequences Operation on collections  lambdas are inlined (no performance overhead) but: intermediate collections are created for chained calls Operations on collections are inlined. That works great for simple cases, but creates a significant performance overhead for chained calls, because intermediate collections are created Sequences solved this problem by storing operations to be performed, and evaluating them in a lazy manner. Operations on sequences mainly duplicate operations on collections.</description>
+    </item>
+    
+    <item>
+      <title>Kotlin Conventions</title>
+      <link>https://raeperd.github.io/notes/programming/kotlin/conventions/</link>
+      <pubDate>Tue, 16 Mar 2021 19:58:54 +0900</pubDate>
+      
+      <guid>https://raeperd.github.io/notes/programming/kotlin/conventions/</guid>
+      <description>operator overloading a + b a.plus(b) operator fun Point.plus(other: Point): Point { return Point(x + other.x, y + other.y) }    expression function name     a + b plus   a - b minus   a * b times   a / b div   a % b mod    Unary operations -a a.unaryMinus()    expression function name     +a unaryPlus   -a unaryMinus   !</description>
+    </item>
+    
+    <item>
+      <title>Property in Kotlin</title>
+      <link>https://raeperd.github.io/notes/programming/kotlin/properties/</link>
+      <pubDate>Mon, 15 Mar 2021 19:58:54 +0900</pubDate>
+      
+      <guid>https://raeperd.github.io/notes/programming/kotlin/properties/</guid>
+      <description>Properties  Unlike java its language feature in kotlin access property without getter and setter but internal implementation is same val -&amp;gt; gettter var -&amp;gt; getter setter  properties without field class Rectangle(val height: Int, val width: Int) { val isSquare: Boolean get() { return height == width } }   everytime getter is called, operation is calculated
+  access field in getter or setter
+  inside the class the calls are optimised</description>
+    </item>
+    
+    <item>
+      <title>Functional Programming in Kotlin</title>
+      <link>https://raeperd.github.io/notes/programming/kotlin/functional-programming/</link>
+      <pubDate>Fri, 12 Mar 2021 19:58:54 +0900</pubDate>
+      
+      <guid>https://raeperd.github.io/notes/programming/kotlin/functional-programming/</guid>
+      <description>Functional Programming Lambdas {x: Int, y: Int -&amp;gt; x + y } // always need curly braces  list.any({i : Int -&amp;gt; i &amp;gt; 0}) list.any() {i : Int -&amp;gt; i &amp;gt; 0} list.any {i : Int -&amp;gt; i &amp;gt; 0} list.any {i -&amp;gt; i &amp;gt; 0} list.any {it &amp;gt; 0} list.any { print(it) it &amp;gt; 0 }  You can move Lambda out with parentheses, if the Lambda is the last argument, if the parentheses are empty, you can omit them If the type of the argument can be inferred, if it&amp;rsquo;s clear from the context, it can be omitted.</description>
+    </item>
+    
+    <item>
+      <title>Nullability</title>
+      <link>https://raeperd.github.io/notes/programming/kotlin/nullability/</link>
+      <pubDate>Wed, 10 Mar 2021 19:58:54 +0900</pubDate>
+      
+      <guid>https://raeperd.github.io/notes/programming/kotlin/nullability/</guid>
+      <description>Nullable types  Answer for NullPointerException Modern approach to make NPE compile time error, not run-time error  val s1: String = &amp;#34;always String&amp;#34; val s2: String? = null s1.length // fine s2.length // compile error Dealing with Nullable types if (s != null) { s.length } s?.legnth Safe access  return null if value was null  Nullability operators val s: String? val length: Int = if (s != null) s.</description>
+    </item>
+    
+    <item>
+      <title>Extensions</title>
+      <link>https://raeperd.github.io/notes/programming/kotlin/extensions/</link>
+      <pubDate>Wed, 03 Mar 2021 19:58:54 +0900</pubDate>
+      
+      <guid>https://raeperd.github.io/notes/programming/kotlin/extensions/</guid>
+      <description>Extension Extension functions fun String.lastChar() = this.get(this.length - 1) fun String.lastChar() = get(length - 1) val c: Char = &amp;#34;abc.lastChar()  String as receiver this can be omitted import explicitly to use in anther file Under the hood extension function is static function  Calling Extension Functions from java code  As functions, extension function is static function in java code By importing static function, java code can use extension function  Examples from the standard library  Kotlin standard lib = java standard lib + extension in Kotlin No kotlin SDKs  small runtime jar file easy java interpolation    Exampels  joinToString getOrNull withIndex until  infix function 1.</description>
+    </item>
+    
+    <item>
+      <title>Basic</title>
+      <link>https://raeperd.github.io/notes/programming/kotlin/basics/</link>
+      <pubDate>Sat, 27 Feb 2021 19:58:54 +0900</pubDate>
+      
+      <guid>https://raeperd.github.io/notes/programming/kotlin/basics/</guid>
+      <description>Hello world package intro fun main(args: Array&amp;lt;String&amp;gt;) { val name = if (args.size &amp;gt; 0) args[0] else &amp;#34;Kotlin&amp;#34; prinln(&amp;#34;Hello, $name!&amp;#34;) }  Without class Without args if is an expression String templates  ”…$variable...&amp;quot; ”…${functioncall(variable)}...&amp;quot;   Kotlin String is Java String  fun main() { println(&amp;#34;First ${foo()}Secnd ${foo()}&amp;#34;) }  No magic, just call foo twice  Variables  val  value final var in Java read only reference not object   var  variable Mutable variable    Compiler infers type from context</description>
+    </item>
+    
+    <item>
+      <title>Unable to Access Path Data</title>
+      <link>https://raeperd.github.io/notes/database/unable-to-access-path-data/</link>
+      <pubDate>Sun, 21 Feb 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://raeperd.github.io/notes/database/unable-to-access-path-data/</guid>
+      <description>elasticsearch container 의 data path를 변경하면서 발견한 오류
+변경한 경로를 docker container 에 volumn mount 에도 설정해줘야한다.
+해당 설정을 kibana 와 공유도 해줘야함
+version: &amp;#39;3&amp;#39; services: elastic: image: docker.elastic.co/elasticsearch/elasticsearch:7.9.1 environment: #ES_HEAP_SIZE: 16g path.data: /home/raecheol-park/elastic/data path.logs: /home/raecheol-park/elastic/logs NODE_OPTIONS: --max_old_space_size=4096 ES_JAVA_OPTS: -Xms2G -Xmx2G discovery.type: single-node xpack.security.enabled: &amp;#34;true&amp;#34; ELASTIC_PASSWORD: elastic1234 ports: - &amp;#34;9201:9200&amp;#34; volumes: - esdata:/home/raecheol-park/elastic/data - eslogs:/home/raecheol-park/elastic/logs kibana: image: docker.elastic.co/kibana/kibana:7.9.1 environment: ELASTICSEARCH_HOSTS: http://elastic:9200 ELASTICSEARCH_USERNAME: elastic ELASTICSEARCH_PASSWORD: elastic1234 #xpack.reporting.csv.maxSizeBytes: 304857600 ports: - &amp;#34;5602:5601&amp;#34; volumes: esdata: eslogs:  Unable to access &amp;lsquo;path.</description>
+    </item>
+    
+    <item>
+      <title>Gradlew Permission Denied</title>
+      <link>https://raeperd.github.io/notes/programming/java/gradlew-permission-denied/</link>
+      <pubDate>Thu, 21 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://raeperd.github.io/notes/programming/java/gradlew-permission-denied/</guid>
+      <description>bamboo 에서 빌드 자동화 스크립트에서 단순히 ./gradlew clean build 를 실행하게 했더니 ./gradlew 의 실행권한이 없단다. 구체적은 오류 메시지는 아래와 같다.
+$ ./gradlew clean build -bash: ./gradlew: Permission denied bamboo agent가 git clone 을 할때 어떤 user의 어떤 permission으로 실행하는지, 혹은 directory 의 permission 등등 여러 문제가 겹쳐서 이런 문제가 생길 수 있다고 생각했다.
+bamboo agent는 권한 문제가 없는 것을 확인하고 나서는 단순히 빌드를 실행하기 전에 chmod로 실행 가능하게 권한을 주는 방법으로 수정했었고 잘 동작하는 것을 확인했다.</description>
+    </item>
+    
+    <item>
+      <title>%S vs %S</title>
+      <link>https://raeperd.github.io/notes/programming/cpp/s-vs-s/</link>
+      <pubDate>Sat, 21 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://raeperd.github.io/notes/programming/cpp/s-vs-s/</guid>
+      <description>    windows linux     %s wide character multi-byte 문자열   %S multi-byte 문자열 wide character     windows 와 linux 에서 반대로 동작한다. 양 플랫폼 모두에서 동작하게 하려면 두 문자열을 한번 wrapping 해서 사용해야한다.  </description>
+    </item>
+    
+    <item>
+      <title>No Converter Found for Return Value of Type</title>
+      <link>https://raeperd.github.io/notes/programming/java/no-converter-found-for-return-value-of-type/</link>
+      <pubDate>Fri, 20 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://raeperd.github.io/notes/programming/java/no-converter-found-for-return-value-of-type/</guid>
+      <description>RestController 의 메소드에서 인자와 반환값을 json 으로 Serialize / Desiriallize 가 불가능할 때 나타나는 에러다.
+Getter와 생성자만 적절하게 존재하면 가능하다
+대충 이런식
+import lombok.Getter; import lombok.NoArgsConstructor; import lombok.AllArgsConstructor; @Getter @NoArgsConstructor @AllArgsConstructor public class ScanRequest { private String url; } @RequestBody 가 json Serializable 하려면 NoArgsConstructor 가 필요하다.
+테스트를 위해서는 @AllArgConstructor도 필요할 것 프래임 워크가 가져와주는 것이라 필드들을 열어놔야 한다.
+그런데 Controller 의 Return 이 되는 경우에는 생성자를 제공할 필요가 없다. Getter만 있으면 된다.</description>
+    </item>
+    
+    <item>
+      <title>Duplicate Key Value Violates Unique Constraint Pkey</title>
+      <link>https://raeperd.github.io/notes/database/duplicate-key-value-violates-unique-constraint-pkey/</link>
+      <pubDate>Mon, 09 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://raeperd.github.io/notes/database/duplicate-key-value-violates-unique-constraint-pkey/</guid>
+      <description>postgres.public&amp;gt; insert into url(created_date,address,vendor_id, malicious) values(&#39;2020-11-09 04:29:46.438652&#39;,&#39;http://pim-square.com/Korea/&#39;,2, True) [2020-11-09 13:38:29] [23505] ERROR: duplicate key value violates unique constraint &amp;quot;url_pkey&amp;quot; [2020-11-09 13:38:29] Detail: Key (id)=(1351) already exists. AUTO INCREMENT로 설정된 PRIMARY KEY 는 INSERT 할 때 명시하지 않아도 알아서 삽입되어야 하는데 중복이 됬다고 오류가 발생함.
+로컬의 DB에서는 정상 동작하는 것으로 보아 query나 db constraint 같은 것이 원인은 아니는 듯 했다.
+아래 링크에서 원인을 찾을 수 있었는데, db 의 sync가 나가서 생기는 문제라고 한다.</description>
+    </item>
+    
+    <item>
+      <title>Vim Cheat Sheet</title>
+      <link>https://raeperd.github.io/notes/programming/vim-cheat-sheet/</link>
+      <pubDate>Sat, 07 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://raeperd.github.io/notes/programming/vim-cheat-sheet/</guid>
+      <description>shortcut edit  dd 현재 줄 잘라내기 dw 단어 잘라내기 yy 현재 줄 복사하기 p 붙혀넣기 r 현재 글자 교체하기 u Undo Ctrl + R 현재 글자 지우기 X 앞의 글자 지우기 &amp;gt; 들여쓰기 &amp;lt; 내어쓰기 . 이전 명령어를 다시 실행  exit  :w 문서 저장하기 :q 현재 문서 닫기 :q! 저장하지 않고 닫기 :wq 저장하고 닫기  visual  v 비쥬얼모드(비쥬얼 모드에서 커서 이동해서 블럭지정 가능) y 복사하기 c 잘라내기 cw 단어 잘라내기 J 다음 라인을 현재 줄의 끝으로 이어 붙힘 ~ 선택 문자 대소문자 변경 Ctrl + A 숫자를 증가시키기 Ctrl + X 숫자를 감소시키기  insert  i - 현재 커서 위치에 Insert 하기 I - 현재 줄 맨앞에 Insert 하기 a - 현재 커서 다음칸에 Insert 하기 A - 현재 줄 맨뒤에 Insert 하기 O - 윗줄에 Insert 하기 o - 아랫줄에 Insert 하기  navigation   h, j, k, l - 좌,하,상,우 커서이동</description>
+    </item>
+    
+    <item>
+      <title>Cannot Open Shared Object in Same Directory</title>
+      <link>https://raeperd.github.io/notes/programming/cpp/cannot-open-shared-object-in-same-directory/</link>
+      <pubDate>Mon, 02 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://raeperd.github.io/notes/programming/cpp/cannot-open-shared-object-in-same-directory/</guid>
+      <description>윈도우에서 동적라이브러리(.dll)를 사용하는 실행파일은 해당 dll이 존재하지 않으면 자신과 같은 디렉토리에 그 dll이 존재하는지 확인하고, 실행 할 수 있다. (물론 실행시켜주는 주체는 Windows일 것, implicit link에 한해)
+윈도우 환경 개발이 익숙하면, 리눅스에서도 똑같이 이런 현상이 재현될 것이라 생각할 수 있는데, 그렇지 않았다. 리눅스는 LD_LIBRARY_PATH 라는 환경변수에 따라, 라이브러리가 이 경로에 있는 경우 실행해준다.
+당장 리눅스에서도 같은 디렉토리의 동적라이브러리는 실행할 수 있으면 좋겠다면, 아래와 같이 실행하면 된다.
+$ LD_LIBRARY_PATH=. ./some_program 개발하는건 프로그래머지만 사용하는건 사용자다.</description>
+    </item>
+    
+    <item>
+      <title>Command Clear Not Found in Container</title>
+      <link>https://raeperd.github.io/notes/programming/command-clear-not-found-in-container/</link>
+      <pubDate>Mon, 02 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://raeperd.github.io/notes/programming/command-clear-not-found-in-container/</guid>
+      <description>간단하게 테스트 해보고 싶어서 centos8 컨테이너 하나를 올렸다.
+docker run --name pure-centos8 --rm -v D:\git:/git -ti centos:centos8 /bin/bash $ clear bash: clear: command not found 너무 황당해서 말도 안나오는 오류;;
+/usr/bin 경로에 clear가 있어야 할 것 같지만, 기본 컨테이너는 이마저도 가지고 있지 않다.
+설치를 해줘야하는데, 아래 처럼 간단하게 해결할 수 있다.
+$ yum whatprovides /bin/clear Last metadata expiration check: 0:00:29 ago on Thu 11 Jun 2020 02:31:26 AM UTC. ncurses-6.1-7.20180224.el8.x86_64 : Ncurses support utilities Repo : BaseOS Matched from: Filename : /usr/bin/clear 물론 yum update 는 해줘야 잘 찾을 것</description>
+    </item>
+    
+    <item>
+      <title>Dataclass Default Factory</title>
+      <link>https://raeperd.github.io/notes/programming/dataclass-default-factory/</link>
+      <pubDate>Mon, 02 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://raeperd.github.io/notes/programming/dataclass-default-factory/</guid>
+      <description>python에서 dataclass 의 초기값으로 container나 따로 정의한 class와 같이, non-literal valure 를 사용할 경우 오류가 생길 수 있다.
+default_factory를 활용해 초기화 하면 이를 피할 수 있다.
+@dataclass class CommandStruct(): Command : int = COMMAND_INIT SampleFile : str = &amp;#34;&amp;#34; MaxDynamicAnalysisCount : int = 3 PlatformType : int = PLATFORM_TYPE Ticket : Ticket= dataclasses.field(default_factory=Ticket) @dataclass class Ticket: TicketID: str = &amp;#34;&amp;#34; OriginalFileName: str = &amp;#34;&amp;#34; SampleFile: str = &amp;#34;&amp;#34; ResultDir: str = &amp;#34;&amp;#34; ReportFile: str = &amp;#34;&amp;#34; Attributes: Dict[str, Any] = dataclasses.</description>
+    </item>
+    
+    <item>
+      <title>Where to Declar Spring Annotation</title>
+      <link>https://raeperd.github.io/notes/programming/java/where-to-declar-spring-annotation/</link>
+      <pubDate>Mon, 02 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://raeperd.github.io/notes/programming/java/where-to-declar-spring-annotation/</guid>
+      <description>@WebMvcTest 어노테이션만 선언했는데 Jpa Auditing 이 정상동작 하지 않는 문제를 발견했다.
+원래 annotation을 붙일때 크게 생각을 하지 않고 붙였는데, @WebMvcTest 를 선언하면서 src 폴더를 기준으로 spring이 component를 스캔하는 과정에서 main 클래스를 읽으면서 오류가 발생한듯 하다.
+@SpringBootApplication 과 같이 다른 설정을 읽으려다가 오류가 나는 것으로 보인다. (annotation의 위치를 옮기면 정상 동작했다. 이 경우는 @EnableJpaAuditoring 이었다.)
+이 과정에서 괜한 annotation까지 읽게 되면서 테스트 환경에서 문제가 발생한다. 단 한줄의 annotation이라도 따로 @Configuration 클래스를 만들어서 따로 관리하는 것이 옳다.</description>
+    </item>
+    
+    <item>
+      <title>CSS Basic</title>
+      <link>https://raeperd.github.io/notes/programming/html/css-basic/</link>
+      <pubDate>Fri, 30 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://raeperd.github.io/notes/programming/html/css-basic/</guid>
+      <description>HTML Basic 과 같은 맥락으로 블로그를 만들면서 CSS 에 대해 공부한 내용을 정리한다. 생활코딩 덕분에 간단하게 정리할 수 있었음 ! 다보고 나니 Javascript 까지 봐야 본격적으로 블로그를 만져볼 수 있겠다는 걸 알게되었다.
+Before CSS   font 태그를 이용해서 색을 변경할 수는 있다. 스타일에 대한 요구사항이 변경된다면, 변경이 어려울 것이다. 좀 더 근본적인 해결책이 필요하다.  After CSS   &amp;lt;style&amp;gt;&amp;lt;/style&amp;gt; 브라우저야! 이 내용은 css 이니까 css 문법에 맞게 해석해!</description>
+    </item>
+    
+    <item>
+      <title>HTML Basic</title>
+      <link>https://raeperd.github.io/notes/programming/html/html-basic/</link>
+      <pubDate>Sun, 25 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://raeperd.github.io/notes/programming/html/html-basic/</guid>
+      <description>jekyll 을 이용해서 블로그를 만들기 시작하면서 HTML과 CSS 코드를 많이 보게 되었는데 원하는 기능이 있을 때마다 복사 붙여넣기로만 개발을 할 수 밖에 없었다. 복붙도 충분히 훌륭한 프로그래밍이기도 하지만 코드를 이해하지 못하고 쓴다는 답답함과 내 홈페이지에 맞도록 디테일하게 조정하는 작업을 하기 힘들어 직접 공부를 하기 시작했다.
+유료 강의 플랫폼도 많이 있겠지만, 기본적인 내용을 익히는건 생활코딩에서도 충분히 가능하다고 생각해 강의를 보기 시작했다. 처음 프로그래밍을 접하는 사람들을 위한 친절하고 자세한 설명이 참 좋았지만 내가 원하는 정보들은 아니었기에 필요없는 내용은 넘겨가면서 듣곤 했는데, 웹페이지에 동영상 강의와 같은 내용이 텍스트로 정리되었는 것을 보고 빠르게 훑어 넘겨가면서 정리를 해봤다.</description>
+    </item>
+    
+    <item>
+      <title>Log Flood Stage Disk Watermark Exceeded</title>
+      <link>https://raeperd.github.io/notes/database/log-flood-stage-disk-watermark-exceeded/</link>
+      <pubDate>Thu, 22 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://raeperd.github.io/notes/database/log-flood-stage-disk-watermark-exceeded/</guid>
+      <description>현상 Log flood stage disk watermark [95%] exceeded on – How To Solve Related Issues 해결방안 df 명령을 쳐보면 어디에 쓰고 있는지 보인다.
+raecheol-park@dev:~/docker-elk$ df -h Filesystem Size Used Avail Use% Mounted on udev 16G 0 16G 0% /dev tmpfs 3.2G 339M 2.8G 11% /run /dev/sda2 438G 398G 18G 96% / tmpfs 16G 0 16G 0% /dev/shm tmpfs 5.0M 0 5.0M 0% /run/lock tmpfs 16G 0 16G 0% /sys/fs/cgroup /dev/md0 1.</description>
+    </item>
+    
+    <item>
+      <title>When to use `ON UPDATE` and `ON DELETE`</title>
+      <link>https://raeperd.github.io/notes/database/on-update-vs-on-delete/</link>
+      <pubDate>Sat, 10 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://raeperd.github.io/notes/database/on-update-vs-on-delete/</guid>
+      <description>Foreign key constraints: When to use ON UPDATE and ON DELETE
+Let’s look at the ON UPDATE clause:
+ ON UPDATE RESTRICT : the default : if you try to update a company_id in table COMPANY the engine will reject the operation if one USER at least links on this company. ON UPDATE NO ACTION : same as RESTRICT. ON UPDATE CASCADE : the best one usually : if you update a company_id in a row of table COMPANY the engine will update it accordingly on all USER rows referencing this COMPANY (but no triggers activated on USER table, warning).</description>
+    </item>
+    
+    <item>
+      <title>SQL Basic Part 1</title>
+      <link>https://raeperd.github.io/notes/database/sql-basic-1/</link>
+      <pubDate>Fri, 25 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://raeperd.github.io/notes/database/sql-basic-1/</guid>
+      <description>Motivation SQL 문법의 아주 기본적인 것부터 정리해두면 쓸 일이 많을 것 같아 정리를 시작하게 됨
+Contents SQL&amp;rsquo;s Persistence  Over 40 years old! Questioned repeatedly  90’s: Object-Oriented DBMS (OQL, etc.) 2000’s: XML (Xquery, Xpath, XSLT) 2010’s: NoSQL &amp;amp; MapReduce   SQL keeps re-emerging as the standard  Even Hadoop, Spark etc. mostly used via SQL May not be perfect, but it is useful    SQL Pros and Cons  Declarative!</description>
+    </item>
+    
+    <item>
+      <title>SQL Basic Part 2</title>
+      <link>https://raeperd.github.io/notes/database/sql-basic-2/</link>
+      <pubDate>Fri, 25 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://raeperd.github.io/notes/database/sql-basic-2/</guid>
+      <description>SQL II 1 4
+Motivation 또 게을러지기 시작해서 안하려고 한다. DB 관련 지식은 최근에 필요하다는게 많이 느껴져서 얼른얼른 알아가야한다. 이런데서 머뭇거리면 안된다
+Contents Conceptual SQL Evaluation  FROM WHERE SELECT GROUP BY HAVING DISTINCT (ORDER BY) (LIMIT)  Putting it all together SELECT S.dept, AVG(S.gpa), COUNT(*) FROM Students S WHERE S.gender = &amp;#39;F&amp;#39; GROUP BY S.dept HAVING COUNT(*) &amp;gt;= 2 ORDER BY S.dept; 이제까지는 하나의 테이블에서만 했는데 여러 테이블에 대한 쿼리를 할 수도 있다.</description>
+    </item>
+    
+    <item>
+      <title>Constexpr in Static Library</title>
+      <link>https://raeperd.github.io/notes/programming/cpp/constexpr-in-static-library/</link>
+      <pubDate>Mon, 21 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://raeperd.github.io/notes/programming/cpp/constexpr-in-static-library/</guid>
+      <description>정적 라이브러리 내부에서 constexpr 함수를 정의할 경우 외부에서 사용하는 것이 불가능하다.
+가만 생각해보면 compile time에 가능한 연산을 미리 하는 것과, link time에 가능한 연산을 하는 것은 다른 개념이었다.
+이런 점 때문에 많은 라이브러리들이 header-only 의 형태로 배포되는 것으로 보인다.</description>
+    </item>
+    
+    <item>
+      <title>Effective CMake</title>
+      <link>https://raeperd.github.io/notes/programming/cpp/effective-cmake/</link>
+      <pubDate>Fri, 07 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://raeperd.github.io/notes/programming/cpp/effective-cmake/</guid>
+      <description>Motivation 크로스 플랫폼을 지원하지 않는 언어로 크로스 플랫폼 어플리케이션을 개발하는 일은 설계 단계부터 라이브러리 의존성, 패키징, 내부 함수 하나하나의 구현까지 고려해야 할 사항들이 너무 많다. 이런 문제들을 잘 해결해보고자 하는 것이 CMake 인데, 풀고자 하는 문제의 복잡성 때문에 CMake 자체도 어렵고, 잘 사용하기가 어렵다.
+코드가 아닌 빌드 환경에서부터 여러 시행착오를 겪다가, CMake 를 잘 사용하는 방법에 대한 좋은 강의를 찾아서 듣고 정리해본다. 진작 알았으면 더 좋았을 것 같은데.. 새로운 기술을 사용하려면 역시 초반에 리서치를 잘 해두어야 한다.</description>
+    </item>
+    
+    <item>
+      <title>Initilization of Global Variable</title>
+      <link>https://raeperd.github.io/notes/programming/cpp/initilization-of-global-variable/</link>
+      <pubDate>Tue, 21 Jul 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://raeperd.github.io/notes/programming/cpp/initilization-of-global-variable/</guid>
+      <description>저번주에 꽤나 발견하기 어려웠던 오류 하나를 발견했는데, 전역변수와 관련된 버그였다. 결론은, 전역변수의 초기화는 변수간의 의존성에 영향을 받지 않는다는 것
+예를 들어, g_fRadius 라는 전역변수가 g_fPie 라는 변수에 의존적이고, 서로 다른 파일에서 초기화가 된다고 생각해보자.
+C++ 컴파일을 하는 과정 중에 .h .cpp 파일은 include 를 통해서 일렬로 정렬되는 과정이 포함된다. 전역 변수의 초기화 시점은 이 과정에 영향을 받아, 먼저 include 되는 파일의 전역변수가 먼저 초기화 된다.
+g_fRadius 라는 전역변수가 정의하려는 순간에, g_fPie 는 적절한 include와 extern 을 통해 참조할 수 있다.</description>
+    </item>
+    
+    <item>
+      <title>Query Did Not Return a Result 2</title>
+      <link>https://raeperd.github.io/notes/programming/java/query-did-not-return-a-result-2/</link>
+      <pubDate>Tue, 21 Jul 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://raeperd.github.io/notes/programming/java/query-did-not-return-a-result-2/</guid>
+      <description>현상 JpaRepsotiroy 에서 기본적으로 제공하는 인터페이스를 사용할떄, query 결과가 여럿 일 수 있는데 반환형을 하나의 엔티티만 담을 수 있게 하면 아래와 같은 오류를 만나게 된다.
+query did not return a unique result: 2 해결과정 제일 외부에서 확인할 수 있는 예외는 심지어 UnknownHostException 이었는데 원인이 여기있다는 것을 알게 되기 까지 꽤나 오랜 시간이 필요했다.
+Entitiy를 만들 떄 unique constraint를 줬기 때문에 이런 오류가 발생할 리가 없다고 생각했었다. constraint를 pair로 만들었기 때문에 단일 컬럼은 충분히 여러 값이 나올 수 있는 거였음</description>
+    </item>
+    
+    <item>
+      <title>Updates for This Repository Will Not Be Applied</title>
+      <link>https://raeperd.github.io/notes/programming/updates-for-this-repository-will-not-be-applied/</link>
+      <pubDate>Tue, 21 Jul 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://raeperd.github.io/notes/programming/updates-for-this-repository-will-not-be-applied/</guid>
+      <description>apt-get update 를 하는데 특정 주소에서 아래와 같은 에러가 뜨기 시작했다.
+Hit:1 ubuntu bionic InRelease Ign:3 linux/chrome/deb stable InRelease Get:2 /ubuntu bionic-updates InRelease [88.7 kB] Get:5 /linux/chrome/deb stable Release [943 B] Get:6 http://dl.google.com/linux/chrome/deb stable Release.gpg [819 B] Get:4 http://us.archive.ubuntu.com/ubuntu bionic-backports InRelease [74.6 kB] Get:7 http://security.ubuntu.com/ubuntu bionic-security InRelease [83.2 kB] Reading package lists... Done E: Release file for http://dl.google.com/linux/chrome/deb/dists/stable/Release is not valid yet (invalid for another 2h 45min 28s). Updates for this repository will not be applied.</description>
+    </item>
+    
+    <item>
+      <title>Introduction to Troubleshooting and the Future of the Networking</title>
+      <link>https://raeperd.github.io/notes/network/introduction-to-troubleshooting-and-the-future-of-the-networking/</link>
+      <pubDate>Fri, 26 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://raeperd.github.io/notes/network/introduction-to-troubleshooting-and-the-future-of-the-networking/</guid>
+      <description>INTRO 네트워크의 많은 레이어에서 에러를 감지하고 수정하려는 노력을 하지만, 여전히 네트워크 환경에서 오류는 빈번하게 일어난다. 이런 오류들을 발견했을때 어떻게 trouble shooting을 잘 하는가도 개발자로서 중요한 역량이 될 것이다.
+CONETNS Verifying Connectivity Ping: Internet Control Message Protocol ICMP(Internet Control Message Protocol)  TCP/IP에서 IP 패킷을 처리할 때 발생되는 문제를 알리거나, 진단 등과 같이 IP 계층에서 필요한 기타 기능들을 수행하기위해 사용되는 프로토콜 IP와 하나의 쌍을 이루면서 동작한다. Data section에는 IP header와 Data payload 의 첫 8바이트가 저장되어있다.</description>
+    </item>
+    
+    <item>
+      <title>Network Services</title>
+      <link>https://raeperd.github.io/notes/network/network-services/</link>
+      <pubDate>Sun, 21 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://raeperd.github.io/notes/network/network-services/</guid>
+      <description>INTRO 기초가 참 힘들다. 뭐든지 기초가 참 힘든거 같다. 퇴근하고 공부하는게 참 힘든일이긴 한데 그냥 코딩하는거면 어떻게든 재미를 찾을 수 있을 것 같은데 기초 공부라는게 되게 지루하다. 농구선수가 운동장 달리고 푸쉬업 하는 것처럼 기초는 중요하지만 귀찮고 재미없고 따분하기만 하다. 그래도 해야지 뭐 하면서 또 하게 된다. 잘 좀 하자.
+CONETNS Name Resolution Why do we need DNS? 우리가 접속해야하는 사이트마다 IP 주소를 기억해야 한다고 생각하면 참 귀찮을 것이다. 사람들은 숫자를 기억하는 것보다 단어를 더 잘 기억한다.</description>
+    </item>
+    
+    <item>
+      <title>The Transport and Application Layer</title>
+      <link>https://raeperd.github.io/notes/network/the-transport-and-application-layer/</link>
+      <pubDate>Mon, 01 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://raeperd.github.io/notes/network/the-transport-and-application-layer/</guid>
+      <description>INTRO 이제까지 배운 Network Layer 까지의 내용으로는 네트워크 상의 하나의 노드에서 다른 노드로의 통신이 어떤 원리로 이루어지는지 확인할 수 있었다. 그러나 실제로 전달되는 정보를 사용하는 것은 네트워크 기기 안에서 동작하는 프로그램들이며, 특정 프로그램이 요청한 정보는 해당 프로그램에 전달되도록 보장되어야 한다. 크롬 브라우저가 보낸 요청을 워드 프로세스가 받으면 곤란할 것 !
+이렇게 프로그램 간의 통신은 어떻게 이루어지는지 확인하지 못했는데, 이제부터 다뤄볼 Transport Layer와 Application Layer에서 이를 확인 할 수 있다. 어떻게 보면 이것이 컴퓨터 네트워크의 최종적인 목적이라 할 수 있다.</description>
+    </item>
+    
+    <item>
+      <title>The Network Layer</title>
+      <link>https://raeperd.github.io/notes/network/the-network-layer/</link>
+      <pubDate>Tue, 19 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://raeperd.github.io/notes/network/the-network-layer/</guid>
+      <description>CIDR (Classless Inter-Domain Routing) Address class를 이용해 IP 주소를 잘 나눌 수 있었다. Subnetting은 Address class로 나누어진 network 를 기존의 규칙을 유지하면서 네트워크를 더 작게 분할할 수 있게 해줬다. 그런데 인터넷이 더 커지면서 Subnetting 도 충분하지 않게 되었다.
+254 개의 호스트를 사용할 수 있는 class C 네트워크 보다는 많고 65534 개의 호스트를 사용할 수 있는 class B 네트워크는 너무 많다고 느껴지면 어떻게 할까? class C 네트워크 여러 개를 사용하는 방법이 있다.</description>
+    </item>
+    
+    <item>
+      <title>The Basics of Networking Devices</title>
+      <link>https://raeperd.github.io/notes/network/the-basics-of-networking-devices/</link>
+      <pubDate>Wed, 13 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://raeperd.github.io/notes/network/the-basics-of-networking-devices/</guid>
+      <description>프로그래밍을 하다가 네트워크 관련 문제가 발생했을 때 꼭 원인이 프로그램에 있다고 단정 지을 수는 없다. 여러가지 요인이 있을 수 있겠지만 당연하게도 하드웨어가 문제가 있을 수도 있다. 전문가 만큼은 아니더라도 간단하게 나마 어떤 하드웨어가 어떤 역할을 하는지 정도는 정리해둬서 나쁠게 없다.
+Cables Copper cable  전압의 변화로 0, 1을 구분할 수 있다. 케이블이 보통 한쌍이 엮여있는 형태인데 가장 보편적인 형태가 Cat5, Cat5e, Cat6 이다. 내부의 케이블이 어떻게 구성되어있냐에 따라 데이터의 전송 속도나 안정성에 영향을 미친다.</description>
+    </item>
+    
+    <item>
+      <title>Internet Protocol</title>
+      <link>https://raeperd.github.io/notes/network/internet-protocol/</link>
+      <pubDate>Tue, 12 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://raeperd.github.io/notes/network/internet-protocol/</guid>
+      <description>LAN 에서는 MAC 으로 기기간의 통신을 할 수 있다. 그런데 MAC 은 구조적으로 정렬된 주소는 아니다. 모든 네트워크 기기는 고유한 MAC 주소를 가지고 있지만, 특정 시점에 특정 MAC 주소를 가지는 기기가 지구상의 어디에 존재하는지는 알 방법이 없다. 분명히, 멀리 있는 기기간의 통신에서는 다른 종류의 해답이 필요하고, 이 문제를 3번째 Layer인 Network Layer에서 Internet Protocol 을 이용해 해결할 수 있다.
+IP Address 4 byte 구성된 주소
+ IP addresses belong to networks, not to the devices attached to those network</description>
+    </item>
+    
+    <item>
+      <title>Subnetting</title>
+      <link>https://raeperd.github.io/notes/network/subnetting/</link>
+      <pubDate>Tue, 12 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://raeperd.github.io/notes/network/subnetting/</guid>
+      <description>큰 네트워크를 작은 네트워크로 나누는 과정 잘못된 서브넷 셋업이 많이들 실수하는 것이라 제대로 이해하고 넘어가는게 좋다.  Address class는 IP 주소가 가질 수 있는 주소를 의미있게 구분할 수 있다. 만약 9.100.100.100 주소와 통신하고 싶다면, 인터넷 상의 core router는 9.100.100.100 주소가 9.0.0.0 class A 네트워크에 속한다는 것을 알 수 있다. 이후 core router는 이 메세지를 gateway router 에게 전달하는데 이 router 가 특정 네트워크의 입구이자 출구 역할을 한다.
+그런데 다시 앞에서 배웠던 IP Address class를 생각해보면, class A 네트워크가 가질 수 있는 호스트는 생각보다 너무 많다.</description>
+    </item>
+    
+    <item>
+      <title>TCP/IP 5 Layer Model</title>
+      <link>https://raeperd.github.io/notes/network/tcp-ip-5-layer-model/</link>
+      <pubDate>Tue, 12 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://raeperd.github.io/notes/network/tcp-ip-5-layer-model/</guid>
+      <description>보통 OSI Seven-Layer 모델과 함께 가장 많이 언급되는 모델이다. 여기서 모델이라 함은, 컴퓨터 네트워크가 어떻게 구성되어있는지를 설명하는 방법에 지나지 않는다. TCP/IP Five-Layer 모델과 OSI Seven-Layer 모델은 같은 대상을 조금 다르게 설명할 뿐 하고자 하는 일은 같다. 강의에서 TCP/IP Five-Layer 모델을 주로 하기 때문에 앞으로도 이 내용으로 정리하고자 한다.
+￼ Physical Layer  케이블의 연결이나 전원 같은 물리적으로 데이터를 전송하는 계층  Data Link Layer  a.k.a. Network Interface Layer or Network Access Layer Physical layer 의 기능들을 공통의 인터페이스로 추상화하는 단계 서로 다른 네트워크 기기들이 신호를 해석할 수 있는 약속, 프로토콜이 필요한 첫번째 Layer다.</description>
+    </item>
+    
+    <item>
+      <title>The Data Link Layer</title>
+      <link>https://raeperd.github.io/notes/network/the-data-link-layer/</link>
+      <pubDate>Tue, 12 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://raeperd.github.io/notes/network/the-data-link-layer/</guid>
+      <description>최근에 대부분의 네트워크 기기들이 무선 연결을 사용하지만 데이터 센터와 같은 곳에서는 여전이 유선 연결을 사용한다. 유선으로 연결한 대부분의 네트워크 장비들은 Ethernet 프로토콜을 따른다.
+Data-Link-Layer의 가장 주된 목적은 Physical-Layer의 구체적인 구현에 대해 추상화를 하는 것이다.
+Ethernet and MAC Address Ethernet  CSMA / CD (Carrier sense multiple access with collision detection)  통신 채널이 언제 사용가능한지 확인하고 가능할때만 데이터를 전송하게 한다. 채널에 데이터가 전송되고 있지 않으면 노드는 데이터를 보낸다. 어떤 컴퓨터가 데이터를 보내고 있다면 이를 확인하고 데이터를 보내지 않는다.</description>
+    </item>
+    
+    <item>
+      <title>Pytest Unable to Import Src</title>
+      <link>https://raeperd.github.io/notes/programming/pytest-unable-to-import-src/</link>
+      <pubDate>Tue, 21 Apr 2020 03:27:24 +0900</pubDate>
+      
+      <guid>https://raeperd.github.io/notes/programming/pytest-unable-to-import-src/</guid>
+      <description>pytest를 커맨드라인에서 실행할때 현재 경로를 PYTHONPATH에 추가하지 않기 때문에 생기는 오류다. pytest를 사용할때마다 겪는 오류 같다.
+패키지를 테스트할때는 setup.py develop 과 같은 명령으로 패키지를 설치하는 것을 강제하도록 테스트를 작성하는게 유용할 것. 하지만 간단한 작업을 하는 스크립트들은 그럴 필요가 없다.
+프로젝트 루트에 conftest.py 를 추가하는 것으로 가능하다.
+ PATH issue with pytest &amp;lsquo;ImportError: No module named YadaYadaYada&amp;rsquo;
+pycharm 같은 친구들은 자동으로 처리해줘서 테스트가 되나보다. 그래서 배포환경에서도 테스트를 한번 더 실행해볼 필요가 있는 듯</description>
+    </item>
+    
+    <item>
+      <title>malloc vs new</title>
+      <link>https://raeperd.github.io/notes/programming/cpp/malloc-vs-new/</link>
+      <pubDate>Wed, 25 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://raeperd.github.io/notes/programming/cpp/malloc-vs-new/</guid>
+      <description>Motivation C에서의 동적할당을 생각해보자
+ malloc 이 용도를 생각하지는 않는다. 좋게 말하면 자유도가 높은 것이지만 다르게 생각해보면 안전장치가 없다는 것. malloc 은 옛날 패러다임에 맞춰진 함수다. 이전의 환경과 달리 현대의 컴퓨터들은 RAM이 커지고 OS가 더 똑똑해졌다. 메모리 =&amp;gt; 가상메모리 Ring과 같은 권한 부여 시스템 OS가 메모리를 통제함으로써 할당 실패 가능성이 줄어듬  반면, C++ 에서는 동적할당을 new 로 한다. 당연히 new 는 malloc 이후의 문법이기 때문에 이런저런 단점을 극복하려 애를 썼을 것이다.</description>
+    </item>
+    
+    <item>
+      <title>`=` in bash</title>
+      <link>https://raeperd.github.io/notes/programming/bash-equal/</link>
+      <pubDate>Wed, 26 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://raeperd.github.io/notes/programming/bash-equal/</guid>
+      <description>bash 에서 대입은 띄어쓰기를 허용하지 않는다. 다 붙여써야만 한다.
+ Re-assigning (specifically, incrementing) a variable in a bash script - Unix &amp;amp; Linux Stack Exchange os detection - How to detect the OS from a Bash script? - Stack Overflow</description>
+    </item>
+    
+    <item>
+      <title>function container for hooking engine</title>
+      <link>https://raeperd.github.io/notes/programming/cpp/function-container-for-hooking-engine/</link>
+      <pubDate>Mon, 13 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://raeperd.github.io/notes/programming/cpp/function-container-for-hooking-engine/</guid>
+      <description>Motivation 임의의 모든 Windows API 함수를 후킹하는 방법을 찾아보다가 모든 함수를 담는 container 가 있으면 일일이 후킹하는 코드를 작성하는 것이 아니라 간단하게 구현할 수 있지 않을까 생각해 봤었다.
+처음에는 이런게 가능은 한가 싶었는데 찾아보니까 가능은 하더라 ..
+결과적으로는 이런 방법을 사용해서 구현하는 방법을 찾지는 못했는데 구현된 코드의 모양이 재미있기도 하고, 혹시 나중에 쓸 일이 있을까 싶어 이렇게 메모해 둠.
+혹시 이 방법으로 함수 후킹을 성공하신 분이 있으시다면 저에게도 꼭 알려주셨으면 합니다.</description>
+    </item>
+    
+    <item>
+      <title>Sizeof Long</title>
+      <link>https://raeperd.github.io/notes/programming/cpp/sizeof-long/</link>
+      <pubDate>Sat, 21 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://raeperd.github.io/notes/programming/cpp/sizeof-long/</guid>
+      <description>long 의 크기 #define SHOW_SIZEOF(x) printf(&amp;#34;sizeof(#x) is %u\n&amp;#34;, sizeof(x))  int main(int argc, char* argv) { printf(&amp;#34;Pointer size is %u \n&amp;#34;, sizeof(void*)); SHOW_SIZEOF(char); SHOW_SIZEOF(short); SHOW_SIZEOF(int); SHOW_SIZEOF(long); SHOW_SIZEOF(long long); SHOW_SIZEOF(float); SHOW_SIZEOF(double); return 0; } 64비트 윈도우에서 long 은 4바이트 지만 리눅스와 맥에서는 8바이트다. cpp 표준에서 long 은 주소를 표현하는 단위의 크기로 규정하고 있지만, DWORD의 하위 호환성을 위해 윈도우에서는 long 을 8바이트로 사용하지 못하는 것 같다. 크로스 플랫폼으로 개발한다면, long 변수의 사용은 자제해야한다.</description>
+    </item>
+    
+    <item>
+      <title>Virtualenv Not Found</title>
+      <link>https://raeperd.github.io/notes/programming/virtualenv-not-found/</link>
+      <pubDate>Sat, 21 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://raeperd.github.io/notes/programming/virtualenv-not-found/</guid>
+      <description>현상 단순히 사용자 권한으로 virtualenv 를 실행할때는 가능하고 root 권한으로 실행하니까 찾을 수 없단다. pip install virtualenv 와 같은 형식으로 설치할 경우 이런 에러를 발견했다.
+해결방안  Virtualenv Command Not Found
+virtualenv 는 기본적으로 /user/local/bin 에 위치하는데 이 경로가 $PATH 에 존재하지 않아서 sudo 로는 못찾는 거다 user 권한으로 실행하는경우에는 이게 $PATH에 있는것처럼 동작하는 것 같다.
+여튼 해결방법은 /usr/lcoal/bin 경로를 PATH 에 추가하는 것이다.
+export PATH=$PATH:새로 등록할 프로그램의 주소
+그냥 yum install -y python3-virtualenv 가 좀더 깔끔한 해결책이었다.</description>
+    </item>
+    
+    <item>
+      <title>Why Return Size T</title>
+      <link>https://raeperd.github.io/notes/programming/cpp/why-return-size-t/</link>
+      <pubDate>Thu, 21 Nov 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://raeperd.github.io/notes/programming/cpp/why-return-size-t/</guid>
+      <description>std::string.size() 와 같은 함수를 사용하면 반환되는 값은 size_t 형태이다. unsinged int 와 같은 자료형이여도 되는데 왜 하필이면 size_t 인걸까?
+사실 size_t 는 using size_t = unsinged int 정도의 자료형이라고 생각했었는데 아니다. size_t는 특정 시스템에서 이론적으로 저장할수 있는 가장 큰 사이즈를 저장할 수 있다.
+사이즈를 저장할 수 있다는 말이 해깔리는데, 그냥 32bit 환경에서는 32bit 자료형이고, 64bit 자료형에서는 64bit라는 소리다. ( cppreference - size_t)
+unsinged int와 같다는 건 32비트 환경에서만 그렇다. size_t는 64비트 환경에서는 unsinged long long과 같다.</description>
+    </item>
+    
+    <item>
+      <title>Decision tree</title>
+      <link>https://raeperd.github.io/notes/algorithm/decision-tree/</link>
+      <pubDate>Fri, 25 Oct 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://raeperd.github.io/notes/algorithm/decision-tree/</guid>
+      <description>Motivation 데이터를 다른 그룹으로 분류하는 문제를 풀 때, 가장 기본적으로 생각할 수 있는 방법은 여러개의 if~ else~ 문을 반복하는 것입니다. 날씨가 좋고, 평일이 아니면 놀기 좋은날이다! 와 같이 생각할 수 있습니다. 하지만 충분히 많은 데이터를 올바르게 분류하는 if~ else~ 코드는 직접 작성하기에 어려운 부분이 많이 있습니다.
+Decision tree는 이런 if~ else~ 문을 자동으로 만들어 내는 알고리즘이라고 할 수 있습니다. 예를 들어 아래와 같은 데이터가 있을때 어떤 조건이 심장병을 성공적으로 분류 할 수 있는지 알아보겠습니다.</description>
+    </item>
+    
+    <item>
+      <title>NearCall and FarCall</title>
+      <link>https://raeperd.github.io/notes/programming/assembly/near-call-vs-far-call/</link>
+      <pubDate>Fri, 25 Oct 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://raeperd.github.io/notes/programming/assembly/near-call-vs-far-call/</guid>
+      <description>Motivation 어셈블리 레벨에서 프로그램을 분석할 때, CALL 명령은 매우 중요한 역할을 한다. 실행 중인 프로그램의 실행 순서는 CALL 이나 JMP 와 같은 흐름을 제어하는 명령을 만나지 않는다면 기본적으로 순차적으로 진행된다. CALL 은 이런 프로그램의 진행 흐름을 변경하는 명령문으로 프로그램의 흐름을 따라가려면 당연하게도 CALL 명령어의 흐름을 따라갈 수 있어야한다.
+printf 함수를 어셈블리 레벨에서 볼 일이 있었는데, 그 과정에서 알게된 사실을 기록해둔다.
+ CONTENTS prtinf 함수의 본모습 printf 함수는 어셈블리 레벨에서 아래와 같은 코드로 구성되어 있다.</description>
+    </item>
+    
+    <item>
+      <title>Libreadline So 6 Cannot Open Shared Object File No Such File or Dir</title>
+      <link>https://raeperd.github.io/notes/programming/cpp/libreadline-so-6-cannot-open-shared-object-file-no-such-file-or-dir/</link>
+      <pubDate>Mon, 21 Oct 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://raeperd.github.io/notes/programming/cpp/libreadline-so-6-cannot-open-shared-object-file-no-such-file-or-dir/</guid>
+      <description>기본적인 해결방법은
+$ yum install -y readline-devel 설치 되고 나서도 여전히 같은 오류를 확인했다. 라이브러리를 찾아보면
+$ find / -name &amp;#39;libreadline.*&amp;#39; /usr/lib64/libreadline.so.7 /usr/lib64/libreadline.so.7.0 /usr/lib64/libreadline.so 이런식으로 결과를 찾을 수 있는데 설치되어 있는건 7 버전이지만 바이너리에서 6버전을 찾고 있다. 빌드된 환경과 배포된 환경에서 컴파일러 버전이 다르면 이런 문제가 생길 수 있다.
+ln -s /usr/lib64/libreadline.so.7 /usr/lib64/libreadline.so.6 이런식으로 링크를 만들어주면 간단하게 해결 할 수 있다.
+이후에 libhistroy.so.6 을 찾으면서 같은 오류 메세지를 만드는데, 같은 방법으로 해결할 수 있다.</description>
+    </item>
+    
+    <item>
+      <title>Error C2039 Memchar Is Not a Member of Global Namespace</title>
+      <link>https://raeperd.github.io/notes/programming/cpp/error-c2039-memchar-is-not-a-member-of-global-namespace/</link>
+      <pubDate>Wed, 28 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://raeperd.github.io/notes/programming/cpp/error-c2039-memchar-is-not-a-member-of-global-namespace/</guid>
+      <description>내가 작성하고 있는 프로그램에서 string.h 라는 파일을 사용하고 있었다.
+standard 에서 사용하는 이름은 내가 사용하면 안된다. 이런 보편적인 이름은 애초에 피하는게 좋다.
+ error C2039: &amp;lsquo;memchr&amp;rsquo; : is not a member of &amp;lsquo;`global namespace&amp;rsquo;&#39;</description>
+    </item>
+    
+    <item>
+      <title>NLP Basic</title>
+      <link>https://raeperd.github.io/notes/algorithm/nlp-basic/</link>
+      <pubDate>Sun, 25 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://raeperd.github.io/notes/algorithm/nlp-basic/</guid>
+      <description>Contents NLP vs Text Mining Text mining  비정형 데이터에서의 텍스트 데이터의 패턴과 관계를 추출하여 의미있는 정보를 추출하는 마이닝 기법 비정형 자료의 수치형 자료로 변환하는 기법이 필요
+  Text mining 기술  정보추출 정보검색 분류 클러스터링 요약   분류와 클러스터링의 차이는 지도와 비지도 학습이다. 클러스터링은 중간에 데이터를 가공할때 사용할 수 있다.
+  Text mining 응용분야  Risk Management, Customer case service Fraud Detection 비즈니스 인텔리전스 소셜미디어 분석</description>
+    </item>
+    
+    <item>
+      <title>#pragma once vs #ifndef ~ #endif</title>
+      <link>https://raeperd.github.io/notes/programming/cpp/pragma-once-vs-ifndef/</link>
+      <pubDate>Sat, 06 Apr 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://raeperd.github.io/notes/programming/cpp/pragma-once-vs-ifndef/</guid>
+      <description>Motivation 선행 처리기(preprocessor)는 원시 프로그램 내의 모든 선행 처리기 지시자를 선행 처리하여 컴파일러가 컴파일 할 수 있게 C 언어의 문장으로 바꾸어 주는 일을 합니다. 이중에서 #pragma once와 #ifndef ~ #endif 는 헤더파일의 중복 컴파일 방지를 위해 쓰이는 선행 처리기 지시자 입니다. 같은 역할을 하지만 미묘하게 차이가 있고 이 부분에 대해 궁금해 하다가 나름대로 정리를 하게 됬습니다.
+Contents #ifndef ~#endif first.h #ifndef __FIRST_H_ #define __FIRST_H__ class First { .... } #endif second.</description>
+    </item>
+    
+    <item>
+      <title>Assembly Basic</title>
+      <link>https://raeperd.github.io/notes/programming/assembly/assembly-basic/</link>
+      <pubDate>Sun, 25 Mar 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://raeperd.github.io/notes/programming/assembly/assembly-basic/</guid>
+      <description>어셈블리 기초 Assembly Basic  어셈블리는 무엇인가? 어셈블리를 잘하면 좋은점? Architecture 별 어셈블러 소개 CPU 레지스터 시스템 콜  어셈블리는 무엇인가요?  프로그래밍 언어의 하나. 기계어에서 한 단계 위의 언어이며 기계어와 함께 단 둘 뿐인 로우레벨 언어에 속한다. 기계어 한 라인에 어셈블리 한라인에 매칭이 된다. 기계어는 CPU가 채택한 ISA에 따라 다 다르기 때문에 어셈블리어의 명령어 역시 통일된 규격이 없다. 또한 문법 아키텍처에 따라서도 다르고 어셈블러의 종류에 따라서도 문법/매크로 등이 제각각이다.  실습 환경 구성  Ubuntu 16.</description>
+    </item>
+    
+    <item>
+      <title>Euclidean Algorhtim</title>
+      <link>https://raeperd.github.io/notes/algorithm/euclidean-algorithm/</link>
+      <pubDate>Tue, 25 Jul 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://raeperd.github.io/notes/algorithm/euclidean-algorithm/</guid>
+      <description>Base Algorithm int euclidean(int a, int b) { int r1 = a; int r2 = b; int q,r; while (r2 &amp;gt; 0) { q = r1/r2; r = r1%r2; r1 = r2; r2 = r; } return r1; } Algorithm (Recursive) int euclidean(int a, int b) { if (b==0) return a; else return euclidean(b,a%b); } Example 조금 더 직관적인 계산 방법 추가 예제)  손으로 해보면 금방 감옴!  Complexity of Euclidean Algorithm Extended Euclidean Algorithm 원리  목적은 위를 만족하는 s와 t를 찾는 것이다.</description>
+    </item>
+    
+  </channel>
+</rss>

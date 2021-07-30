@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>python on raeperd.github.io</title>
+    <link>https://raeperd.github.io/tags/python/</link>
+    <description>Recent content in python on raeperd.github.io</description>
+    <image>
+      <url>https://raeperd.github.io/papermod-cover.png</url>
+      <link>https://raeperd.github.io/papermod-cover.png</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Mon, 02 Nov 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://raeperd.github.io/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Dataclass Default Factory</title>
+      <link>https://raeperd.github.io/notes/programming/dataclass-default-factory/</link>
+      <pubDate>Mon, 02 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://raeperd.github.io/notes/programming/dataclass-default-factory/</guid>
+      <description>python에서 dataclass 의 초기값으로 container나 따로 정의한 class와 같이, non-literal valure 를 사용할 경우 오류가 생길 수 있다.
+default_factory를 활용해 초기화 하면 이를 피할 수 있다.
+@dataclass class CommandStruct(): Command : int = COMMAND_INIT SampleFile : str = &amp;#34;&amp;#34; MaxDynamicAnalysisCount : int = 3 PlatformType : int = PLATFORM_TYPE Ticket : Ticket= dataclasses.field(default_factory=Ticket) @dataclass class Ticket: TicketID: str = &amp;#34;&amp;#34; OriginalFileName: str = &amp;#34;&amp;#34; SampleFile: str = &amp;#34;&amp;#34; ResultDir: str = &amp;#34;&amp;#34; ReportFile: str = &amp;#34;&amp;#34; Attributes: Dict[str, Any] = dataclasses.</description>
+    </item>
+    
+    <item>
+      <title>Pytest Unable to Import Src</title>
+      <link>https://raeperd.github.io/notes/programming/pytest-unable-to-import-src/</link>
+      <pubDate>Tue, 21 Apr 2020 03:27:24 +0900</pubDate>
+      
+      <guid>https://raeperd.github.io/notes/programming/pytest-unable-to-import-src/</guid>
+      <description>pytest를 커맨드라인에서 실행할때 현재 경로를 PYTHONPATH에 추가하지 않기 때문에 생기는 오류다. pytest를 사용할때마다 겪는 오류 같다.
+패키지를 테스트할때는 setup.py develop 과 같은 명령으로 패키지를 설치하는 것을 강제하도록 테스트를 작성하는게 유용할 것. 하지만 간단한 작업을 하는 스크립트들은 그럴 필요가 없다.
+프로젝트 루트에 conftest.py 를 추가하는 것으로 가능하다.
+ PATH issue with pytest &amp;lsquo;ImportError: No module named YadaYadaYada&amp;rsquo;
+pycharm 같은 친구들은 자동으로 처리해줘서 테스트가 되나보다. 그래서 배포환경에서도 테스트를 한번 더 실행해볼 필요가 있는 듯</description>
+    </item>
+    
+    <item>
+      <title>Virtualenv Not Found</title>
+      <link>https://raeperd.github.io/notes/programming/virtualenv-not-found/</link>
+      <pubDate>Sat, 21 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://raeperd.github.io/notes/programming/virtualenv-not-found/</guid>
+      <description>현상 단순히 사용자 권한으로 virtualenv 를 실행할때는 가능하고 root 권한으로 실행하니까 찾을 수 없단다. pip install virtualenv 와 같은 형식으로 설치할 경우 이런 에러를 발견했다.
+해결방안  Virtualenv Command Not Found
+virtualenv 는 기본적으로 /user/local/bin 에 위치하는데 이 경로가 $PATH 에 존재하지 않아서 sudo 로는 못찾는 거다 user 권한으로 실행하는경우에는 이게 $PATH에 있는것처럼 동작하는 것 같다.
+여튼 해결방법은 /usr/lcoal/bin 경로를 PATH 에 추가하는 것이다.
+export PATH=$PATH:새로 등록할 프로그램의 주소
+그냥 yum install -y python3-virtualenv 가 좀더 깔끔한 해결책이었다.</description>
+    </item>
+    
+  </channel>
+</rss>

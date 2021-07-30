@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>algoritm on raeperd.github.io</title>
+    <link>https://raeperd.github.io/tags/algoritm/</link>
+    <description>Recent content in algoritm on raeperd.github.io</description>
+    <image>
+      <url>https://raeperd.github.io/papermod-cover.png</url>
+      <link>https://raeperd.github.io/papermod-cover.png</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sat, 24 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://raeperd.github.io/tags/algoritm/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Big O Notation</title>
+      <link>https://raeperd.github.io/notes/algorithm/big-o-notation/</link>
+      <pubDate>Sat, 24 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://raeperd.github.io/notes/algorithm/big-o-notation/</guid>
+      <description>Big-O Notation All of these issues can multiply runtimes by (large) constants. So measure runtime in a way that ignores constant multiples
+Problem Unfortunately, 1 second, 1 hour, 1 year only differ by constant multiples
+ Classifies Growth Rate Cleans up Notation Can Ignore Complicated Details  Warning
+ Using Big-O loses important information about constant multiples Big-O is only asymptotic   Asymptotic notation (article) | Algorithms | Khan Academy</description>
+    </item>
+    
+  </channel>
+</rss>

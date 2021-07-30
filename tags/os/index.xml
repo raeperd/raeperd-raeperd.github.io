@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>os on raeperd.github.io</title>
+    <link>https://raeperd.github.io/tags/os/</link>
+    <description>Recent content in os on raeperd.github.io</description>
+    <image>
+      <url>https://raeperd.github.io/papermod-cover.png</url>
+      <link>https://raeperd.github.io/papermod-cover.png</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Tue, 27 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://raeperd.github.io/tags/os/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Operating System Introduction</title>
+      <link>https://raeperd.github.io/notes/os/operating-system-introduction/</link>
+      <pubDate>Tue, 27 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://raeperd.github.io/notes/os/operating-system-introduction/</guid>
+      <description>Motivation  운영체제의 역할을 사용자 프로그램에게 더 간단하고 깨긋한 인터페이스를 제공하고, 하드웨어 자원들을 관리하는 것이다. 다른 프로그램과 다르게, 운영체제의 일부를 사용자가 변경할 수 없다.  kernel mode (or supercisor mode)  이 모드에서 운영체제는 모든 하드웨어에 대한 완전한 접근이 가능하고, 프로세서가 수행할 수 있는 모든 명령을 시행할 수 있다.  user mode  이 모드에서는 오직 명령의 일부분만을 사용할 수 있다.  1.1 WHAT IS AN OPERATING SYSTEM? 1.1.1 The operating system as an Extended machine  운영체제의 역할을 사용자에게 좋은 추상화를 제공하고 그 추상화된 객체들을 잘 관리하는 것이다.</description>
+    </item>
+    
+    <item>
+      <title>Process</title>
+      <link>https://raeperd.github.io/notes/os/process/</link>
+      <pubDate>Tue, 27 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://raeperd.github.io/notes/os/process/</guid>
+      <description>프로세스는 실행중인 파일에 대한 추상화다. 하나의 CPU는 한 순간에 하나의 프로세스 만을 실행한다. 모든 프로세스는 각자의 스택을 가지고 있다.  The Process Model  시스템을 이해하기 위해서는 여러 프로세스가 병렬적으로 실행된다고 생각하는 것보다 CPU가 어떻게 프로세스 단위로 Context Switching 을 하는지 따라가는 것이 좋을 것이다. 이런 전환들을 multiprogramming 이라고 한다. 프로세스는 프로그램과 입력, 출력과 상태를 가지고 있는 활동이다. 프로그램은 반면에 디스크에 저장되어 있는 어떤 것으로 아무런 활동을 하지 않는다.  Process Creation 프로세스가 생성되는 경우</description>
+    </item>
+    
+    <item>
+      <title>Thread</title>
+      <link>https://raeperd.github.io/notes/os/thread/</link>
+      <pubDate>Tue, 27 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://raeperd.github.io/notes/os/thread/</guid>
+      <description>Thread Usage  한 프로세스 내에 주소공간과 모든 자원을 공유하는 병렬적 실행 주체 프로세스 보다 쉽게 만들고 없앨 수 있다. 실제로 병렬과정이 가능한 멀티 프로세서 환경에서 효과가 좋음 Dispatcher thread: 메인 쓰레드 Worker thread:: 일하는 쓰레드     Model Characteristics     Threads Parallelism, blocking system calls   Single-threaded process No parallelism, blocking system calls   Finite-state machine Parallelism, nonblocking system calls, interrupts    The Classical Thread Model  프로세스 모델은 resource grouping과 execution의 두 독립적 개념에 기반해 만들어 졌다.</description>
+    </item>
+    
+  </channel>
+</rss>

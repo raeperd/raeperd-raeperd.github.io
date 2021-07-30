@@ -1,0 +1,283 @@
+<!doctype html><html lang=korean dir=auto>
+<head><meta charset=utf-8>
+<meta http-equiv=x-ua-compatible content="IE=edge">
+<meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no">
+<meta name=robots content="index, follow">
+<title>Vim Cheat Sheet | raeperd.github.io</title>
+<meta name=keywords content="linux">
+<meta name=description content="shortcut edit  dd 현재 줄 잘라내기 dw 단어 잘라내기 yy 현재 줄 복사하기 p 붙혀넣기 r 현재 글자 교체하기 u Undo Ctrl + R 현재 글자 지우기 X 앞의 글자 지우기 > 들여쓰기 < 내어쓰기 . 이전 명령어를 다시 실행  exit  :w 문서 저장하기 :q 현재 문서 닫기 :q! 저장하지 않고 닫기 :wq 저장하고 닫기  visual  v 비쥬얼모드(비쥬얼 모드에서 커서 이동해서 블럭지정 가능) y 복사하기 c 잘라내기 cw 단어 잘라내기 J 다음 라인을 현재 줄의 끝으로 이어 붙힘 ~ 선택 문자 대소문자 변경 Ctrl + A 숫자를 증가시키기 Ctrl + X 숫자를 감소시키기  insert  i - 현재 커서 위치에 Insert 하기 I - 현재 줄 맨앞에 Insert 하기 a - 현재 커서 다음칸에 Insert 하기 A - 현재 줄 맨뒤에 Insert 하기 O - 윗줄에 Insert 하기 o - 아랫줄에 Insert 하기  navigation   h, j, k, l - 좌,하,상,우 커서이동">
+<meta name=author content="raeperd">
+<link rel=canonical href=https://raeperd.github.io/notes/programming/vim-cheat-sheet/>
+<link href=/assets/css/stylesheet.min.css rel="preload stylesheet" as=style>
+<link rel=icon href=https://raeperd.github.io/favicon.ico>
+<link rel=icon type=image/png sizes=16x16 href=https://raeperd.github.io/favicon-16x16.png>
+<link rel=icon type=image/png sizes=32x32 href=https://raeperd.github.io/favicon-32x32.png>
+<link rel=apple-touch-icon href=https://raeperd.github.io/apple-touch-icon.png>
+<link rel=mask-icon href=https://raeperd.github.io/safari-pinned-tab.svg>
+<meta name=theme-color content="#2e2e33">
+<meta name=msapplication-TileColor content="#2e2e33">
+<meta name=generator content="Hugo 0.86.1">
+<script type=application/javascript>var doNotTrack=!1;doNotTrack||(window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga('create','UA-168674186-1','auto'),ga('send','pageview'))</script>
+<script async src=https://www.google-analytics.com/analytics.js></script>
+<meta property="og:title" content="Vim Cheat Sheet">
+<meta property="og:description" content="shortcut edit  dd 현재 줄 잘라내기 dw 단어 잘라내기 yy 현재 줄 복사하기 p 붙혀넣기 r 현재 글자 교체하기 u Undo Ctrl + R 현재 글자 지우기 X 앞의 글자 지우기 > 들여쓰기 < 내어쓰기 . 이전 명령어를 다시 실행  exit  :w 문서 저장하기 :q 현재 문서 닫기 :q! 저장하지 않고 닫기 :wq 저장하고 닫기  visual  v 비쥬얼모드(비쥬얼 모드에서 커서 이동해서 블럭지정 가능) y 복사하기 c 잘라내기 cw 단어 잘라내기 J 다음 라인을 현재 줄의 끝으로 이어 붙힘 ~ 선택 문자 대소문자 변경 Ctrl + A 숫자를 증가시키기 Ctrl + X 숫자를 감소시키기  insert  i - 현재 커서 위치에 Insert 하기 I - 현재 줄 맨앞에 Insert 하기 a - 현재 커서 다음칸에 Insert 하기 A - 현재 줄 맨뒤에 Insert 하기 O - 윗줄에 Insert 하기 o - 아랫줄에 Insert 하기  navigation   h, j, k, l - 좌,하,상,우 커서이동">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://raeperd.github.io/notes/programming/vim-cheat-sheet/"><meta property="og:image" content="https://raeperd.github.io/papermod-cover.png"><meta property="article:section" content="notes">
+<meta property="article:published_time" content="2020-11-07T00:00:00+00:00">
+<meta property="article:modified_time" content="2020-11-07T00:00:00+00:00"><meta property="og:site_name" content="raeperd.github.io">
+<meta name=twitter:card content="summary_large_image">
+<meta name=twitter:image content="https://raeperd.github.io/papermod-cover.png">
+<meta name=twitter:title content="Vim Cheat Sheet">
+<meta name=twitter:description content="shortcut edit  dd 현재 줄 잘라내기 dw 단어 잘라내기 yy 현재 줄 복사하기 p 붙혀넣기 r 현재 글자 교체하기 u Undo Ctrl + R 현재 글자 지우기 X 앞의 글자 지우기 > 들여쓰기 < 내어쓰기 . 이전 명령어를 다시 실행  exit  :w 문서 저장하기 :q 현재 문서 닫기 :q! 저장하지 않고 닫기 :wq 저장하고 닫기  visual  v 비쥬얼모드(비쥬얼 모드에서 커서 이동해서 블럭지정 가능) y 복사하기 c 잘라내기 cw 단어 잘라내기 J 다음 라인을 현재 줄의 끝으로 이어 붙힘 ~ 선택 문자 대소문자 변경 Ctrl + A 숫자를 증가시키기 Ctrl + X 숫자를 감소시키기  insert  i - 현재 커서 위치에 Insert 하기 I - 현재 줄 맨앞에 Insert 하기 a - 현재 커서 다음칸에 Insert 하기 A - 현재 줄 맨뒤에 Insert 하기 O - 윗줄에 Insert 하기 o - 아랫줄에 Insert 하기  navigation   h, j, k, l - 좌,하,상,우 커서이동">
+<script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Notes","item":"https://raeperd.github.io/notes/"},{"@type":"ListItem","position":2,"name":"Vim Cheat Sheet","item":"https://raeperd.github.io/notes/programming/vim-cheat-sheet/"}]}</script>
+<script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","headline":"Vim Cheat Sheet","name":"Vim Cheat Sheet","description":"shortcut edit  dd 현재 줄 잘라내기 dw 단어 잘라내기 yy 현재 줄 복사하기 p 붙혀넣기 r 현재 글자 교체하기 u Undo Ctrl + R 현재 글자 지우기 X 앞의 글자 지우기 \u0026gt; 들여쓰기 \u0026lt; 내어쓰기 . 이전 명령어를 다시 실행  exit  :w 문서 저장하기 :q 현재 문서 닫기 :q! 저장하지 않고 닫기 :wq 저장하고 닫기  visual  v 비쥬얼모드(비쥬얼 모드에서 커서 이동해서 블럭지정 가능) y 복사하기 c 잘라내기 cw 단어 잘라내기 J 다음 라인을 현재 줄의 끝으로 이어 붙힘 ~ 선택 문자 대소문자 변경 Ctrl + A 숫자를 증가시키기 Ctrl + X 숫자를 감소시키기  insert  i - 현재 커서 위치에 Insert 하기 I - 현재 줄 맨앞에 Insert 하기 a - 현재 커서 다음칸에 Insert 하기 A - 현재 줄 맨뒤에 Insert 하기 O - 윗줄에 Insert 하기 o - 아랫줄에 Insert 하기  navigation   h, j, k, l - 좌,하,상,우 커서이동","keywords":["linux"],"articleBody":"shortcut edit  dd 현재 줄 잘라내기 dw 단어 잘라내기 yy 현재 줄 복사하기 p 붙혀넣기 r 현재 글자 교체하기 u Undo Ctrl + R 현재 글자 지우기 X 앞의 글자 지우기  들여쓰기  내어쓰기 . 이전 명령어를 다시 실행  exit  :w 문서 저장하기 :q 현재 문서 닫기 :q! 저장하지 않고 닫기 :wq 저장하고 닫기  visual  v 비쥬얼모드(비쥬얼 모드에서 커서 이동해서 블럭지정 가능) y 복사하기 c 잘라내기 cw 단어 잘라내기 J 다음 라인을 현재 줄의 끝으로 이어 붙힘 ~ 선택 문자 대소문자 변경 Ctrl + A 숫자를 증가시키기 Ctrl + X 숫자를 감소시키기  insert  i - 현재 커서 위치에 Insert 하기 I - 현재 줄 맨앞에 Insert 하기 a - 현재 커서 다음칸에 Insert 하기 A - 현재 줄 맨뒤에 Insert 하기 O - 윗줄에 Insert 하기 o - 아랫줄에 Insert 하기  navigation   h, j, k, l - 좌,하,상,우 커서이동\n  w 단어 첫글자로 이동하기\n  W 화이트스페이스 단위로 다음 글자로 이동하기\n  b 백워드 방향으로 단어의 첫글자로 이동하기\n  B 백워드 방향으로 화이트스페이스 단위로 다음 글자로 이동하기\n  e 단어의 마지막 글자로 이동하기\n  ge 백워드 방향으로 단어의 마지막 글자로 이동하기\n  gg 문서 맨 앞으로 이동\n  G 문서 맨끝으로 이동\n  ^ 문장 맨 앞으로 이동\n  0 라인 맨 앞으로 이동\n  $ 문장 맨 뒤로 이동\n  f 문자의 위치로 이동 ; 를 누르면 계속 이동\n  F 백워드로 문자의 위치로 이동\n  t 문자의 앞위치로 이동   T 백워드방향으로 문자의 앞위치로 이동\n  :{number} 지정한 라인넘버로 이동\n  on screen  H 현재 화면의 맨 위라인으로 이동 M 현재 화면의 중간 라인으로 이동 L 현재 화면의 마지막 라인으로 이동  curly brace  ]] 포워드 방향으로 여는 컬리 블레이스( { )로 이동 [[ 백워드 방향으로 여는 컬리 블레이스( { )로 이동 ][ 포워드 방향으로 닫는 컬리 블레이스( { )로 이동 [] 백워드 방향으로 닫는 컬리 블레이스( { )로 이동 % {}나 ()에서 현재 괄호의 짝으로 이동  find  /{word} 문서에서 단어 찾기 n이나 N으로 다음/이전 찾기 * 현재 단어를 포워드 방향으로 찾기 # 현재 단어를 백워드 방향으로 찾기  window  :new 가로로 분할된 창 열기 :vs 세로로 분할된 창 열기  Ctrl + w 분할창 간에 이동하기   :tabnew 새로운 탭 열기  :gt 다음 탭으로 이동하기 :gT 이전 탭으로 이동하기   :e ./ 현재 탭에 오픈할 파일 탐색하기( ./ 는 현재위치에서 탐색 시작)  fold  zc 코드 접기(fold) zo 접힌 코드 펼치기 zd fold 지우기 zR 접힌 코드 모두 펼치기 zM 코드 모두 접기 zD 모든 fold 지우기  buffer  :buffers 현재 Vim에서 여러 파일을 열었을때 버퍼에 있는 목록 확인 :buffer {number} 버퍼 목록에 나온 숫자를 입력하면 해당 파일을 오픈함 ( :buffer 대신 :b {number} 도 가능) :bnext 버퍼에 있는 다음 파일로 이동 ( :bn 도 가능) :bprevious 버퍼에 있는 이전 파일로 이동 ( :bp 도 가능) :ball 버퍼 목록에 있는 파일들이 가로로 분할된 창에 열림  page  Ctrl + f 다음 페이지 이동 Ctrl + b 이전 페이지 이동 Ctrl + u 페이지절반만큼 다음으로 이동 Ctrl + d 페이지절반만큼 이전으로 이동  ETC  :colorscheme {schema} - VIM의 칼라스키마를 변경함(blue, desert, evening 등.. 스키마명에서 탭누르면 자동완성됨)  ","wordCount":"473","inLanguage":"korean","datePublished":"2020-11-07T00:00:00Z","dateModified":"2020-11-07T00:00:00Z","author":{"@type":"Person","name":"raeperd"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://raeperd.github.io/notes/programming/vim-cheat-sheet/"},"publisher":{"@type":"Organization","name":"raeperd.github.io","logo":{"@type":"ImageObject","url":"https://raeperd.github.io/favicon.ico"}}}</script>
+</head>
+<body id=top>
+<script>localStorage.getItem("pref-theme")==="dark"?document.body.classList.add('dark'):localStorage.getItem("pref-theme")==="light"?document.body.classList.remove('dark'):window.matchMedia('(prefers-color-scheme: dark)').matches&&document.body.classList.add('dark')</script>
+<noscript>
+<style type=text/css>#theme-toggle,.top-link{display:none}</style>
+<style>@media(prefers-color-scheme:dark){:root{--theme:#1d1e20;--entry:#2e2e33;--primary:rgba(255, 255, 255, 0.84);--secondary:rgba(255, 255, 255, 0.56);--tertiary:rgba(255, 255, 255, 0.16);--content:rgba(255, 255, 255, 0.74);--hljs-bg:#2e2e33;--code-bg:#37383e;--border:#333}.list{background:var(--theme)}.list:not(.dark)::-webkit-scrollbar-track{background:0 0}.list:not(.dark)::-webkit-scrollbar-thumb{border-color:var(--theme)}}</style>
+</noscript>
+<header class=header>
+<nav class=nav>
+<div class=logo>
+<a href=https://raeperd.github.io/ accesskey=h title="raeperd.github.io (Alt + H)">raeperd.github.io</a>
+<span class=logo-switches>
+<button id=theme-toggle accesskey=t title="(Alt + T)"><svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg><svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+</button>
+</span>
+</div>
+<ul id=menu onscroll=menu_on_scroll()>
+<li>
+<a href=https://raeperd.github.io/articles title=Article>
+<span>Article</span>
+</a>
+</li>
+<li>
+<a href=https://raeperd.github.io/notes title=Note>
+<span>Note</span>
+</a>
+</li>
+<li>
+<a href=https://raeperd.github.io/search title="Search (Alt + /)" accesskey=/>
+<span>Search</span>
+</a>
+</li>
+<li>
+<a href=https://raeperd.github.io/archives/ title=Archives>
+<span>Archives</span>
+</a>
+</li></ul>
+</nav>
+</header>
+<main class=main><article class=post-single>
+<header class=post-header>
+<h1 class=post-title>
+Vim Cheat Sheet
+</h1>
+<div class=post-meta>
+November 7, 2020&nbsp;·&nbsp;raeperd
+</div>
+<br>
+<ul class=post-tags>
+<li><a href=https://raeperd.github.io/tags/linux/>linux</a></li>
+</ul>
+</header>
+<div class=post-content>
+<h1 id=shortcut>shortcut<a hidden class=anchor aria-hidden=true href=#shortcut>#</a></h1>
+<h2 id=edit>edit<a hidden class=anchor aria-hidden=true href=#edit>#</a></h2>
+<ul>
+<li><code>dd</code>  현재 줄 잘라내기</li>
+<li><code>dw</code>  단어 잘라내기</li>
+<li><code>yy</code>  현재 줄 복사하기</li>
+<li><code>p</code>  붙혀넣기</li>
+<li><code>r</code>  현재 글자 교체하기</li>
+<li><code>u</code> Undo</li>
+<li><code>Ctrl + R</code> 현재 글자 지우기</li>
+<li><code>X</code> 앞의 글자 지우기</li>
+<li><code>></code> 들여쓰기</li>
+<li><code>&lt;</code> 내어쓰기</li>
+<li><code>.</code> 이전 명령어를 다시 실행</li>
+</ul>
+<h2 id=exit>exit<a hidden class=anchor aria-hidden=true href=#exit>#</a></h2>
+<ul>
+<li><code>:w</code> 문서 저장하기</li>
+<li><code>:q</code> 현재 문서 닫기</li>
+<li><code>:q!</code> 저장하지 않고 닫기</li>
+<li><code>:wq</code> 저장하고 닫기</li>
+</ul>
+<h2 id=visual>visual<a hidden class=anchor aria-hidden=true href=#visual>#</a></h2>
+<ul>
+<li><code>v</code> 비쥬얼모드(비쥬얼 모드에서 커서 이동해서 블럭지정 가능)</li>
+<li><code>y</code> 복사하기</li>
+<li><code>c</code> 잘라내기</li>
+<li><code>cw</code> 단어 잘라내기</li>
+<li><code>J</code> 다음 라인을 현재 줄의 끝으로 이어 붙힘</li>
+<li><code>~</code> 선택 문자 대소문자 변경</li>
+<li><code>Ctrl + A</code> 숫자를 증가시키기</li>
+<li><code>Ctrl + X</code> 숫자를 감소시키기</li>
+</ul>
+<h2 id=insert>insert<a hidden class=anchor aria-hidden=true href=#insert>#</a></h2>
+<ul>
+<li><code>i</code> - 현재 커서 위치에 Insert 하기</li>
+<li><code>I</code> - 현재 줄 맨앞에 Insert 하기</li>
+<li><code>a</code> - 현재 커서 다음칸에 Insert 하기</li>
+<li><code>A</code> - 현재 줄 맨뒤에 Insert 하기</li>
+<li><code>O</code> - 윗줄에 Insert 하기</li>
+<li><code>o</code> - 아랫줄에 Insert 하기</li>
+</ul>
+<h2 id=navigation>navigation<a hidden class=anchor aria-hidden=true href=#navigation>#</a></h2>
+<ul>
+<li>
+<p><code>h</code>, <code>j</code>, <code>k</code>, <code>l</code> - 좌,하,상,우 커서이동</p>
+</li>
+<li>
+<p><code>w</code> 단어 첫글자로 이동하기</p>
+</li>
+<li>
+<p><code>W</code> 화이트스페이스 단위로 다음 글자로 이동하기</p>
+</li>
+<li>
+<p><code>b</code> 백워드 방향으로 단어의 첫글자로 이동하기</p>
+</li>
+<li>
+<p><code>B</code> 백워드 방향으로 화이트스페이스 단위로 다음 글자로 이동하기</p>
+</li>
+<li>
+<p><code>e</code> 단어의 마지막 글자로 이동하기</p>
+</li>
+<li>
+<p><code>ge</code> 백워드 방향으로 단어의 마지막 글자로 이동하기</p>
+</li>
+<li>
+<p><code>gg</code> 문서 맨 앞으로 이동</p>
+</li>
+<li>
+<p><code>G</code> 문서 맨끝으로 이동</p>
+</li>
+<li>
+<p><code>^</code> 문장 맨 앞으로 이동</p>
+</li>
+<li>
+<p><code>0</code> 라인 맨 앞으로 이동</p>
+</li>
+<li>
+<p><code>$</code> 문장 맨 뒤로 이동</p>
+</li>
+<li>
+<p><code>f</code> 문자의 위치로 이동 ; 를 누르면 계속 이동</p>
+</li>
+<li>
+<p><code>F</code> 백워드로 문자의 위치로 이동</p>
+</li>
+<li>
+<p><code>t</code> 문자의 앞위치로 이동 </p>
+</li>
+<li>
+<p><code>T</code> 백워드방향으로 문자의 앞위치로 이동</p>
+</li>
+<li>
+<p><code>:{number}</code> 지정한 라인넘버로 이동</p>
+</li>
+</ul>
+<h3 id=on-screen>on screen<a hidden class=anchor aria-hidden=true href=#on-screen>#</a></h3>
+<ul>
+<li><code>H</code> 현재 화면의 맨 위라인으로 이동</li>
+<li><code>M</code> 현재 화면의 중간 라인으로 이동</li>
+<li><code>L</code> 현재 화면의 마지막 라인으로 이동</li>
+</ul>
+<h3 id=curly-brace>curly brace<a hidden class=anchor aria-hidden=true href=#curly-brace>#</a></h3>
+<ul>
+<li><code>]]</code> 포워드 방향으로 여는 컬리 블레이스( { )로 이동</li>
+<li><code>[[</code> 백워드 방향으로 여는 컬리 블레이스( { )로 이동</li>
+<li><code>][</code> 포워드 방향으로 닫는 컬리 블레이스( { )로 이동</li>
+<li><code>[]</code> 백워드 방향으로 닫는 컬리 블레이스( { )로 이동</li>
+<li><code>%</code> {}나 ()에서 현재 괄호의 짝으로 이동</li>
+</ul>
+<h3 id=find>find<a hidden class=anchor aria-hidden=true href=#find>#</a></h3>
+<ul>
+<li><code>/{word}</code> 문서에서 단어 찾기 n이나 N으로 다음/이전 찾기</li>
+<li><code>*</code> 현재 단어를 포워드 방향으로 찾기</li>
+<li><code>#</code> 현재 단어를 백워드 방향으로 찾기</li>
+</ul>
+<h3 id=window>window<a hidden class=anchor aria-hidden=true href=#window>#</a></h3>
+<ul>
+<li><code>:new</code> 가로로 분할된 창 열기</li>
+<li><code>:vs</code> 세로로 분할된 창 열기
+<ul>
+<li><code>Ctrl + w</code> 분할창 간에 이동하기</li>
+</ul>
+</li>
+<li><code>:tabnew</code> 새로운 탭 열기
+<ul>
+<li><code>:gt</code> 다음 탭으로 이동하기</li>
+<li><code>:gT</code> 이전 탭으로 이동하기</li>
+</ul>
+</li>
+<li><code>:e ./</code> 현재 탭에 오픈할 파일 탐색하기( ./ 는 현재위치에서 탐색 시작)</li>
+</ul>
+<h3 id=fold>fold<a hidden class=anchor aria-hidden=true href=#fold>#</a></h3>
+<ul>
+<li><code>zc</code> 코드 접기(fold)</li>
+<li><code>zo</code> 접힌 코드 펼치기</li>
+<li><code>zd</code> fold 지우기</li>
+<li><code>zR</code> 접힌 코드 모두 펼치기</li>
+<li><code>zM</code> 코드 모두 접기</li>
+<li><code>zD</code> 모든 fold 지우기</li>
+</ul>
+<h3 id=buffer>buffer<a hidden class=anchor aria-hidden=true href=#buffer>#</a></h3>
+<ul>
+<li><code>:buffers</code> 현재 Vim에서 여러 파일을 열었을때 버퍼에 있는 목록 확인</li>
+<li><code>:buffer {number}</code>  버퍼 목록에 나온 숫자를 입력하면 해당 파일을 오픈함 ( :buffer 대신 <code>:b {number}</code> 도 가능)</li>
+<li><code>:bnext</code> 버퍼에 있는 다음 파일로 이동 ( <code>:bn</code> 도 가능)</li>
+<li><code>:bprevious</code> 버퍼에 있는 이전 파일로 이동 ( <code>:bp</code> 도 가능)</li>
+<li><code>:ball</code> 버퍼 목록에 있는 파일들이 가로로 분할된 창에 열림</li>
+</ul>
+<h3 id=page>page<a hidden class=anchor aria-hidden=true href=#page>#</a></h3>
+<ul>
+<li><code>Ctrl + f </code>다음 페이지 이동</li>
+<li><code>Ctrl + b</code> 이전 페이지 이동</li>
+<li><code>Ctrl + u</code> 페이지절반만큼 다음으로 이동</li>
+<li><code>Ctrl + d</code> 페이지절반만큼 이전으로 이동</li>
+</ul>
+<h2 id=etc>ETC<a hidden class=anchor aria-hidden=true href=#etc>#</a></h2>
+<ul>
+<li><code>:colorscheme {schema}</code> - VIM의 칼라스키마를 변경함(blue, desert, evening 등.. 스키마명에서 탭누르면 자동완성됨)</li>
+</ul>
+</div>
+<footer class=post-footer>
+<div class=share-buttons>
+<a target=_blank rel="noopener noreferrer" aria-label="share Vim Cheat Sheet on twitter" href="https://twitter.com/intent/tweet/?text=Vim%20Cheat%20Sheet&url=https%3a%2f%2fraeperd.github.io%2fnotes%2fprogramming%2fvim-cheat-sheet%2f&hashtags=linux"><svg viewBox="0 0 512 512"><path d="M449.446.0C483.971.0 512 28.03 512 62.554v386.892C512 483.97 483.97 512 449.446 512H62.554c-34.524.0-62.554-28.03-62.554-62.554V62.554c0-34.524 28.029-62.554 62.554-62.554h386.892zM195.519 424.544c135.939.0 210.268-112.643 210.268-210.268.0-3.218.0-6.437-.153-9.502 14.406-10.421 26.973-23.448 36.935-38.314-13.18 5.824-27.433 9.809-42.452 11.648 15.326-9.196 26.973-23.602 32.49-40.92-14.252 8.429-30.038 14.56-46.896 17.931-13.487-14.406-32.644-23.295-53.946-23.295-40.767.0-73.87 33.104-73.87 73.87.0 5.824.613 11.494 1.992 16.858-61.456-3.065-115.862-32.49-152.337-77.241-6.284 10.881-9.962 23.601-9.962 37.088.0 25.594 13.027 48.276 32.95 61.456-12.107-.307-23.448-3.678-33.41-9.196v.92c0 35.862 25.441 65.594 59.311 72.49-6.13 1.686-12.72 2.606-19.464 2.606-4.751.0-9.348-.46-13.946-1.38 9.349 29.426 36.628 50.728 68.965 51.341-25.287 19.771-57.164 31.571-91.8 31.571-5.977.0-11.801-.306-17.625-1.073 32.337 21.15 71.264 33.41 112.95 33.41z"/></svg>
+</a>
+<a target=_blank rel="noopener noreferrer" aria-label="share Vim Cheat Sheet on linkedin" href="https://www.linkedin.com/shareArticle?mini=true&url=https%3a%2f%2fraeperd.github.io%2fnotes%2fprogramming%2fvim-cheat-sheet%2f&title=Vim%20Cheat%20Sheet&summary=Vim%20Cheat%20Sheet&source=https%3a%2f%2fraeperd.github.io%2fnotes%2fprogramming%2fvim-cheat-sheet%2f"><svg viewBox="0 0 512 512"><path d="M449.446.0C483.971.0 512 28.03 512 62.554v386.892C512 483.97 483.97 512 449.446 512H62.554c-34.524.0-62.554-28.03-62.554-62.554V62.554c0-34.524 28.029-62.554 62.554-62.554h386.892zM160.461 423.278V197.561h-75.04v225.717h75.04zm270.539.0V293.839c0-69.333-37.018-101.586-86.381-101.586-39.804.0-57.634 21.891-67.617 37.266v-31.958h-75.021c.995 21.181.0 225.717.0 225.717h75.02V297.222c0-6.748.486-13.492 2.474-18.315 5.414-13.475 17.767-27.434 38.494-27.434 27.135.0 38.007 20.707 38.007 51.037v120.768H431zM123.448 88.722C97.774 88.722 81 105.601 81 127.724c0 21.658 16.264 39.002 41.455 39.002h.484c26.165.0 42.452-17.344 42.452-39.002-.485-22.092-16.241-38.954-41.943-39.002z"/></svg>
+</a>
+<a target=_blank rel="noopener noreferrer" aria-label="share Vim Cheat Sheet on reddit" href="https://reddit.com/submit?url=https%3a%2f%2fraeperd.github.io%2fnotes%2fprogramming%2fvim-cheat-sheet%2f&title=Vim%20Cheat%20Sheet"><svg viewBox="0 0 512 512"><path d="M449.446.0C483.971.0 512 28.03 512 62.554v386.892C512 483.97 483.97 512 449.446 512H62.554c-34.524.0-62.554-28.03-62.554-62.554V62.554c0-34.524 28.029-62.554 62.554-62.554h386.892zM446 265.638c0-22.964-18.616-41.58-41.58-41.58-11.211.0-21.361 4.457-28.841 11.666-28.424-20.508-67.586-33.757-111.204-35.278l18.941-89.121 61.884 13.157c.756 15.734 13.642 28.29 29.56 28.29 16.407.0 29.706-13.299 29.706-29.701.0-16.403-13.299-29.702-29.706-29.702-11.666.0-21.657 6.792-26.515 16.578l-69.105-14.69c-1.922-.418-3.939-.042-5.585 1.036-1.658 1.073-2.811 2.761-3.224 4.686l-21.152 99.438c-44.258 1.228-84.046 14.494-112.837 35.232-7.468-7.164-17.589-11.591-28.757-11.591-22.965.0-41.585 18.616-41.585 41.58.0 16.896 10.095 31.41 24.568 37.918-.639 4.135-.99 8.328-.99 12.576.0 63.977 74.469 115.836 166.33 115.836s166.334-51.859 166.334-115.836c0-4.218-.347-8.387-.977-12.493 14.564-6.47 24.735-21.034 24.735-38.001zM326.526 373.831c-20.27 20.241-59.115 21.816-70.534 21.816-11.428.0-50.277-1.575-70.522-21.82-3.007-3.008-3.007-7.882.0-10.889 3.003-2.999 7.882-3.003 10.885.0 12.777 12.781 40.11 17.317 59.637 17.317 19.522.0 46.86-4.536 59.657-17.321 3.016-2.999 7.886-2.995 10.885.008 3.008 3.011 3.003 7.882-.008 10.889zm-5.23-48.781c-16.373.0-29.701-13.324-29.701-29.698.0-16.381 13.328-29.714 29.701-29.714 16.378.0 29.706 13.333 29.706 29.714.0 16.374-13.328 29.698-29.706 29.698zM160.91 295.348c0-16.381 13.328-29.71 29.714-29.71 16.369.0 29.689 13.329 29.689 29.71.0 16.373-13.32 29.693-29.689 29.693-16.386.0-29.714-13.32-29.714-29.693z"/></svg>
+</a>
+<a target=_blank rel="noopener noreferrer" aria-label="share Vim Cheat Sheet on facebook" href="https://facebook.com/sharer/sharer.php?u=https%3a%2f%2fraeperd.github.io%2fnotes%2fprogramming%2fvim-cheat-sheet%2f"><svg viewBox="0 0 512 512"><path d="M449.446.0C483.971.0 512 28.03 512 62.554v386.892C512 483.97 483.97 512 449.446 512H342.978V319.085h66.6l12.672-82.621h-79.272v-53.617c0-22.603 11.073-44.636 46.58-44.636H425.6v-70.34s-32.71-5.582-63.982-5.582c-65.288.0-107.96 39.569-107.96 111.204v62.971h-72.573v82.621h72.573V512h-191.104c-34.524.0-62.554-28.03-62.554-62.554V62.554c0-34.524 28.029-62.554 62.554-62.554h386.892z"/></svg>
+</a>
+<a target=_blank rel="noopener noreferrer" aria-label="share Vim Cheat Sheet on whatsapp" href="https://api.whatsapp.com/send?text=Vim%20Cheat%20Sheet%20-%20https%3a%2f%2fraeperd.github.io%2fnotes%2fprogramming%2fvim-cheat-sheet%2f"><svg viewBox="0 0 512 512"><path d="M449.446.0C483.971.0 512 28.03 512 62.554v386.892C512 483.97 483.97 512 449.446 512H62.554c-34.524.0-62.554-28.03-62.554-62.554V62.554c0-34.524 28.029-62.554 62.554-62.554h386.892zm-58.673 127.703c-33.842-33.881-78.847-52.548-126.798-52.568-98.799.0-179.21 80.405-179.249 179.234-.013 31.593 8.241 62.428 23.927 89.612l-25.429 92.884 95.021-24.925c26.181 14.28 55.659 21.807 85.658 21.816h.074c98.789.0 179.206-80.413 179.247-179.243.018-47.895-18.61-92.93-52.451-126.81zM263.976 403.485h-.06c-26.734-.01-52.954-7.193-75.828-20.767l-5.441-3.229-56.386 14.792 15.05-54.977-3.542-5.637c-14.913-23.72-22.791-51.136-22.779-79.287.033-82.142 66.867-148.971 149.046-148.971 39.793.014 77.199 15.531 105.329 43.692 28.128 28.16 43.609 65.592 43.594 105.4-.034 82.149-66.866 148.983-148.983 148.984zm81.721-111.581c-4.479-2.242-26.499-13.075-30.604-14.571-4.105-1.495-7.091-2.241-10.077 2.241-2.986 4.483-11.569 14.572-14.182 17.562-2.612 2.988-5.225 3.364-9.703 1.12-4.479-2.241-18.91-6.97-36.017-22.23C231.8 264.15 222.81 249.484 220.198 245s-.279-6.908 1.963-9.14c2.016-2.007 4.48-5.232 6.719-7.847 2.24-2.615 2.986-4.484 4.479-7.472 1.493-2.99.747-5.604-.374-7.846-1.119-2.241-10.077-24.288-13.809-33.256-3.635-8.733-7.327-7.55-10.077-7.688-2.609-.13-5.598-.158-8.583-.158-2.986.0-7.839 1.121-11.944 5.604-4.105 4.484-15.675 15.32-15.675 37.364.0 22.046 16.048 43.342 18.287 46.332 2.24 2.99 31.582 48.227 76.511 67.627 10.685 4.615 19.028 7.371 25.533 9.434 10.728 3.41 20.492 2.929 28.209 1.775 8.605-1.285 26.499-10.833 30.231-21.295 3.732-10.464 3.732-19.431 2.612-21.298-1.119-1.869-4.105-2.99-8.583-5.232z"/></svg>
+</a>
+<a target=_blank rel="noopener noreferrer" aria-label="share Vim Cheat Sheet on telegram" href="https://telegram.me/share/url?text=Vim%20Cheat%20Sheet&url=https%3a%2f%2fraeperd.github.io%2fnotes%2fprogramming%2fvim-cheat-sheet%2f"><svg viewBox="2 2 28 28"><path d="M26.49 29.86H5.5a3.37 3.37.0 01-2.47-1 3.35 3.35.0 01-1-2.47V5.48A3.36 3.36.0 013 3 3.37 3.37.0 015.5 2h21A3.38 3.38.0 0129 3a3.36 3.36.0 011 2.46V26.37a3.35 3.35.0 01-1 2.47 3.38 3.38.0 01-2.51 1.02zm-5.38-6.71a.79.79.0 00.85-.66L24.73 9.24a.55.55.0 00-.18-.46.62.62.0 00-.41-.17q-.08.0-16.53 6.11a.59.59.0 00-.41.59.57.57.0 00.43.52l4 1.24 1.61 4.83a.62.62.0 00.63.43.56.56.0 00.4-.17L16.54 20l4.09 3A.9.9.0 0021.11 23.15zM13.8 20.71l-1.21-4q8.72-5.55 8.78-5.55c.15.0.23.0.23.16a.18.18.0 010 .06s-2.51 2.3-7.52 6.8z"/></svg>
+</a>
+</div>
+</footer><div id=disqus_thread></div>
+<script>(function(){var a=document,b=a.createElement('script');b.src='https://raeperd-github-io.disqus.com/embed.js',b.setAttribute('data-timestamp',+new Date),(a.head||a.body).appendChild(b)})()</script>
+<noscript>Please enable JavaScript to view the <a href=https://disqus.com/?ref_noscript>comments powered by Disqus.</a></noscript>
+</article>
+</main><footer class=footer>
+<span>&copy; 2021 <a href=https://raeperd.github.io/>raeperd.github.io</a></span>
+<span>&#183;</span>
+<span>Powered by <a href=https://gohugo.io/ rel="noopener noreferrer" target=_blank>Hugo</a></span>
+<span>&#183;</span>
+<span>Theme <a href=https://git.io/hugopapermod rel=noopener target=_blank>PaperMod</a></span>
+</footer>
+<a href=#top aria-label="go to top" title="Go to Top (Alt + G)">
+<button class=top-link id=top-link type=button accesskey=g><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentcolor"><path d="M12 6H0l6-6z"/></svg>
+</button>
+</a>
+<script defer src=/assets/js/highlight.min.js onload=hljs.initHighlightingOnLoad()></script>
+<script>window.onload=function(){localStorage.getItem("menu-scroll-position")&&(document.getElementById('menu').scrollLeft=localStorage.getItem("menu-scroll-position"))};function menu_on_scroll(){localStorage.setItem("menu-scroll-position",document.getElementById('menu').scrollLeft)}document.querySelectorAll('a[href^="#"]').forEach(a=>{a.addEventListener("click",function(b){b.preventDefault();var a=this.getAttribute("href").substr(1);window.matchMedia('(prefers-reduced-motion: reduce)').matches?document.querySelector(`[id='${decodeURIComponent(a)}']`).scrollIntoView():document.querySelector(`[id='${decodeURIComponent(a)}']`).scrollIntoView({behavior:"smooth"}),a==="top"?history.replaceState(null,null," "):history.pushState(null,null,`#${a}`)})})</script>
+<script>var mybutton=document.getElementById("top-link");window.onscroll=function(){document.body.scrollTop>800||document.documentElement.scrollTop>800?(mybutton.style.visibility="visible",mybutton.style.opacity="1"):(mybutton.style.visibility="hidden",mybutton.style.opacity="0")}</script>
+<script>document.getElementById("theme-toggle").addEventListener("click",()=>{document.body.className.includes("dark")?(document.body.classList.remove('dark'),localStorage.setItem("pref-theme",'light')):(document.body.classList.add('dark'),localStorage.setItem("pref-theme",'dark'))})</script>
+</body>
+</html>

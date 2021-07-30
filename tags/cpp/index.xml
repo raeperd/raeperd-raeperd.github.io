@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>cpp on raeperd.github.io</title>
+    <link>https://raeperd.github.io/tags/cpp/</link>
+    <description>Recent content in cpp on raeperd.github.io</description>
+    <image>
+      <url>https://raeperd.github.io/papermod-cover.png</url>
+      <link>https://raeperd.github.io/papermod-cover.png</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sat, 21 Nov 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://raeperd.github.io/tags/cpp/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>%S vs %S</title>
+      <link>https://raeperd.github.io/notes/programming/cpp/s-vs-s/</link>
+      <pubDate>Sat, 21 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://raeperd.github.io/notes/programming/cpp/s-vs-s/</guid>
+      <description>    windows linux     %s wide character multi-byte 문자열   %S multi-byte 문자열 wide character     windows 와 linux 에서 반대로 동작한다. 양 플랫폼 모두에서 동작하게 하려면 두 문자열을 한번 wrapping 해서 사용해야한다.  </description>
+    </item>
+    
+    <item>
+      <title>Cannot Open Shared Object in Same Directory</title>
+      <link>https://raeperd.github.io/notes/programming/cpp/cannot-open-shared-object-in-same-directory/</link>
+      <pubDate>Mon, 02 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://raeperd.github.io/notes/programming/cpp/cannot-open-shared-object-in-same-directory/</guid>
+      <description>윈도우에서 동적라이브러리(.dll)를 사용하는 실행파일은 해당 dll이 존재하지 않으면 자신과 같은 디렉토리에 그 dll이 존재하는지 확인하고, 실행 할 수 있다. (물론 실행시켜주는 주체는 Windows일 것, implicit link에 한해)
+윈도우 환경 개발이 익숙하면, 리눅스에서도 똑같이 이런 현상이 재현될 것이라 생각할 수 있는데, 그렇지 않았다. 리눅스는 LD_LIBRARY_PATH 라는 환경변수에 따라, 라이브러리가 이 경로에 있는 경우 실행해준다.
+당장 리눅스에서도 같은 디렉토리의 동적라이브러리는 실행할 수 있으면 좋겠다면, 아래와 같이 실행하면 된다.
+$ LD_LIBRARY_PATH=. ./some_program 개발하는건 프로그래머지만 사용하는건 사용자다.</description>
+    </item>
+    
+    <item>
+      <title>Constexpr in Static Library</title>
+      <link>https://raeperd.github.io/notes/programming/cpp/constexpr-in-static-library/</link>
+      <pubDate>Mon, 21 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://raeperd.github.io/notes/programming/cpp/constexpr-in-static-library/</guid>
+      <description>정적 라이브러리 내부에서 constexpr 함수를 정의할 경우 외부에서 사용하는 것이 불가능하다.
+가만 생각해보면 compile time에 가능한 연산을 미리 하는 것과, link time에 가능한 연산을 하는 것은 다른 개념이었다.
+이런 점 때문에 많은 라이브러리들이 header-only 의 형태로 배포되는 것으로 보인다.</description>
+    </item>
+    
+    <item>
+      <title>Effective CMake</title>
+      <link>https://raeperd.github.io/notes/programming/cpp/effective-cmake/</link>
+      <pubDate>Fri, 07 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://raeperd.github.io/notes/programming/cpp/effective-cmake/</guid>
+      <description>Motivation 크로스 플랫폼을 지원하지 않는 언어로 크로스 플랫폼 어플리케이션을 개발하는 일은 설계 단계부터 라이브러리 의존성, 패키징, 내부 함수 하나하나의 구현까지 고려해야 할 사항들이 너무 많다. 이런 문제들을 잘 해결해보고자 하는 것이 CMake 인데, 풀고자 하는 문제의 복잡성 때문에 CMake 자체도 어렵고, 잘 사용하기가 어렵다.
+코드가 아닌 빌드 환경에서부터 여러 시행착오를 겪다가, CMake 를 잘 사용하는 방법에 대한 좋은 강의를 찾아서 듣고 정리해본다. 진작 알았으면 더 좋았을 것 같은데.. 새로운 기술을 사용하려면 역시 초반에 리서치를 잘 해두어야 한다.</description>
+    </item>
+    
+    <item>
+      <title>Initilization of Global Variable</title>
+      <link>https://raeperd.github.io/notes/programming/cpp/initilization-of-global-variable/</link>
+      <pubDate>Tue, 21 Jul 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://raeperd.github.io/notes/programming/cpp/initilization-of-global-variable/</guid>
+      <description>저번주에 꽤나 발견하기 어려웠던 오류 하나를 발견했는데, 전역변수와 관련된 버그였다. 결론은, 전역변수의 초기화는 변수간의 의존성에 영향을 받지 않는다는 것
+예를 들어, g_fRadius 라는 전역변수가 g_fPie 라는 변수에 의존적이고, 서로 다른 파일에서 초기화가 된다고 생각해보자.
+C++ 컴파일을 하는 과정 중에 .h .cpp 파일은 include 를 통해서 일렬로 정렬되는 과정이 포함된다. 전역 변수의 초기화 시점은 이 과정에 영향을 받아, 먼저 include 되는 파일의 전역변수가 먼저 초기화 된다.
+g_fRadius 라는 전역변수가 정의하려는 순간에, g_fPie 는 적절한 include와 extern 을 통해 참조할 수 있다.</description>
+    </item>
+    
+    <item>
+      <title>malloc vs new</title>
+      <link>https://raeperd.github.io/notes/programming/cpp/malloc-vs-new/</link>
+      <pubDate>Wed, 25 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://raeperd.github.io/notes/programming/cpp/malloc-vs-new/</guid>
+      <description>Motivation C에서의 동적할당을 생각해보자
+ malloc 이 용도를 생각하지는 않는다. 좋게 말하면 자유도가 높은 것이지만 다르게 생각해보면 안전장치가 없다는 것. malloc 은 옛날 패러다임에 맞춰진 함수다. 이전의 환경과 달리 현대의 컴퓨터들은 RAM이 커지고 OS가 더 똑똑해졌다. 메모리 =&amp;gt; 가상메모리 Ring과 같은 권한 부여 시스템 OS가 메모리를 통제함으로써 할당 실패 가능성이 줄어듬  반면, C++ 에서는 동적할당을 new 로 한다. 당연히 new 는 malloc 이후의 문법이기 때문에 이런저런 단점을 극복하려 애를 썼을 것이다.</description>
+    </item>
+    
+    <item>
+      <title>function container for hooking engine</title>
+      <link>https://raeperd.github.io/notes/programming/cpp/function-container-for-hooking-engine/</link>
+      <pubDate>Mon, 13 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://raeperd.github.io/notes/programming/cpp/function-container-for-hooking-engine/</guid>
+      <description>Motivation 임의의 모든 Windows API 함수를 후킹하는 방법을 찾아보다가 모든 함수를 담는 container 가 있으면 일일이 후킹하는 코드를 작성하는 것이 아니라 간단하게 구현할 수 있지 않을까 생각해 봤었다.
+처음에는 이런게 가능은 한가 싶었는데 찾아보니까 가능은 하더라 ..
+결과적으로는 이런 방법을 사용해서 구현하는 방법을 찾지는 못했는데 구현된 코드의 모양이 재미있기도 하고, 혹시 나중에 쓸 일이 있을까 싶어 이렇게 메모해 둠.
+혹시 이 방법으로 함수 후킹을 성공하신 분이 있으시다면 저에게도 꼭 알려주셨으면 합니다.</description>
+    </item>
+    
+    <item>
+      <title>Sizeof Long</title>
+      <link>https://raeperd.github.io/notes/programming/cpp/sizeof-long/</link>
+      <pubDate>Sat, 21 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://raeperd.github.io/notes/programming/cpp/sizeof-long/</guid>
+      <description>long 의 크기 #define SHOW_SIZEOF(x) printf(&amp;#34;sizeof(#x) is %u\n&amp;#34;, sizeof(x))  int main(int argc, char* argv) { printf(&amp;#34;Pointer size is %u \n&amp;#34;, sizeof(void*)); SHOW_SIZEOF(char); SHOW_SIZEOF(short); SHOW_SIZEOF(int); SHOW_SIZEOF(long); SHOW_SIZEOF(long long); SHOW_SIZEOF(float); SHOW_SIZEOF(double); return 0; } 64비트 윈도우에서 long 은 4바이트 지만 리눅스와 맥에서는 8바이트다. cpp 표준에서 long 은 주소를 표현하는 단위의 크기로 규정하고 있지만, DWORD의 하위 호환성을 위해 윈도우에서는 long 을 8바이트로 사용하지 못하는 것 같다. 크로스 플랫폼으로 개발한다면, long 변수의 사용은 자제해야한다.</description>
+    </item>
+    
+    <item>
+      <title>Why Return Size T</title>
+      <link>https://raeperd.github.io/notes/programming/cpp/why-return-size-t/</link>
+      <pubDate>Thu, 21 Nov 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://raeperd.github.io/notes/programming/cpp/why-return-size-t/</guid>
+      <description>std::string.size() 와 같은 함수를 사용하면 반환되는 값은 size_t 형태이다. unsinged int 와 같은 자료형이여도 되는데 왜 하필이면 size_t 인걸까?
+사실 size_t 는 using size_t = unsinged int 정도의 자료형이라고 생각했었는데 아니다. size_t는 특정 시스템에서 이론적으로 저장할수 있는 가장 큰 사이즈를 저장할 수 있다.
+사이즈를 저장할 수 있다는 말이 해깔리는데, 그냥 32bit 환경에서는 32bit 자료형이고, 64bit 자료형에서는 64bit라는 소리다. ( cppreference - size_t)
+unsinged int와 같다는 건 32비트 환경에서만 그렇다. size_t는 64비트 환경에서는 unsinged long long과 같다.</description>
+    </item>
+    
+    <item>
+      <title>Libreadline So 6 Cannot Open Shared Object File No Such File or Dir</title>
+      <link>https://raeperd.github.io/notes/programming/cpp/libreadline-so-6-cannot-open-shared-object-file-no-such-file-or-dir/</link>
+      <pubDate>Mon, 21 Oct 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://raeperd.github.io/notes/programming/cpp/libreadline-so-6-cannot-open-shared-object-file-no-such-file-or-dir/</guid>
+      <description>기본적인 해결방법은
+$ yum install -y readline-devel 설치 되고 나서도 여전히 같은 오류를 확인했다. 라이브러리를 찾아보면
+$ find / -name &amp;#39;libreadline.*&amp;#39; /usr/lib64/libreadline.so.7 /usr/lib64/libreadline.so.7.0 /usr/lib64/libreadline.so 이런식으로 결과를 찾을 수 있는데 설치되어 있는건 7 버전이지만 바이너리에서 6버전을 찾고 있다. 빌드된 환경과 배포된 환경에서 컴파일러 버전이 다르면 이런 문제가 생길 수 있다.
+ln -s /usr/lib64/libreadline.so.7 /usr/lib64/libreadline.so.6 이런식으로 링크를 만들어주면 간단하게 해결 할 수 있다.
+이후에 libhistroy.so.6 을 찾으면서 같은 오류 메세지를 만드는데, 같은 방법으로 해결할 수 있다.</description>
+    </item>
+    
+    <item>
+      <title>Error C2039 Memchar Is Not a Member of Global Namespace</title>
+      <link>https://raeperd.github.io/notes/programming/cpp/error-c2039-memchar-is-not-a-member-of-global-namespace/</link>
+      <pubDate>Wed, 28 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://raeperd.github.io/notes/programming/cpp/error-c2039-memchar-is-not-a-member-of-global-namespace/</guid>
+      <description>내가 작성하고 있는 프로그램에서 string.h 라는 파일을 사용하고 있었다.
+standard 에서 사용하는 이름은 내가 사용하면 안된다. 이런 보편적인 이름은 애초에 피하는게 좋다.
+ error C2039: &amp;lsquo;memchr&amp;rsquo; : is not a member of &amp;lsquo;`global namespace&amp;rsquo;&#39;</description>
+    </item>
+    
+    <item>
+      <title>#pragma once vs #ifndef ~ #endif</title>
+      <link>https://raeperd.github.io/notes/programming/cpp/pragma-once-vs-ifndef/</link>
+      <pubDate>Sat, 06 Apr 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://raeperd.github.io/notes/programming/cpp/pragma-once-vs-ifndef/</guid>
+      <description>Motivation 선행 처리기(preprocessor)는 원시 프로그램 내의 모든 선행 처리기 지시자를 선행 처리하여 컴파일러가 컴파일 할 수 있게 C 언어의 문장으로 바꾸어 주는 일을 합니다. 이중에서 #pragma once와 #ifndef ~ #endif 는 헤더파일의 중복 컴파일 방지를 위해 쓰이는 선행 처리기 지시자 입니다. 같은 역할을 하지만 미묘하게 차이가 있고 이 부분에 대해 궁금해 하다가 나름대로 정리를 하게 됬습니다.
+Contents #ifndef ~#endif first.h #ifndef __FIRST_H_ #define __FIRST_H__ class First { .... } #endif second.</description>
+    </item>
+    
+  </channel>
+</rss>

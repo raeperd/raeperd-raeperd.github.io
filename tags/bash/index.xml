@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>bash on raeperd.github.io</title>
+    <link>https://raeperd.github.io/tags/bash/</link>
+    <description>Recent content in bash on raeperd.github.io</description>
+    <image>
+      <url>https://raeperd.github.io/papermod-cover.png</url>
+      <link>https://raeperd.github.io/papermod-cover.png</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Wed, 26 Feb 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://raeperd.github.io/tags/bash/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>`=` in bash</title>
+      <link>https://raeperd.github.io/notes/programming/bash-equal/</link>
+      <pubDate>Wed, 26 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://raeperd.github.io/notes/programming/bash-equal/</guid>
+      <description>bash 에서 대입은 띄어쓰기를 허용하지 않는다. 다 붙여써야만 한다.
+ Re-assigning (specifically, incrementing) a variable in a bash script - Unix &amp;amp; Linux Stack Exchange os detection - How to detect the OS from a Bash script? - Stack Overflow</description>
+    </item>
+    
+  </channel>
+</rss>

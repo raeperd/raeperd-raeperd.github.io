@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>bug on raeperd.github.io</title>
+    <link>https://raeperd.github.io/tags/bug/</link>
+    <description>Recent content in bug on raeperd.github.io</description>
+    <image>
+      <url>https://raeperd.github.io/papermod-cover.png</url>
+      <link>https://raeperd.github.io/papermod-cover.png</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sat, 24 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://raeperd.github.io/tags/bug/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Short Circuit Evaluation</title>
+      <link>https://raeperd.github.io/notes/algorithm/short-circuit-evaluation/</link>
+      <pubDate>Sat, 24 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://raeperd.github.io/notes/algorithm/short-circuit-evaluation/</guid>
+      <description>Short Circuit Evaluation  어떤 프로그래밍 언어에서 AND 혹은 OR 의 연산에 있어서 앞선 연산만으로 전체 연산의 결과를 유추할 수 있을때, 뒤의 연산을 수행하지 않는 연산 방식 C++, JAVA, Kotlin, Python 등 대부분의 언어에서 지원함  Short-circuit evaluation - Wikipedia   AND  AND 연산의 경우에 false 가 우선 나와버리면 AND 뒤에 나오는 연산은 생략.  OR  OR 연산의 경우에 true 가 우선 나와버리면 OR 뒤에 나오는 연산은 생략.</description>
+    </item>
+    
+    <item>
+      <title>Curl Verbose Option</title>
+      <link>https://raeperd.github.io/notes/programming/curl-verbose-option/</link>
+      <pubDate>Sun, 28 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://raeperd.github.io/notes/programming/curl-verbose-option/</guid>
+      <description>같은 명령인데 CentOS에서는 되고 우분투에서는 안되는 문제가 발생
+curl --location --request POST &amp;#39;https://api.ai-gsp.com/tidb/hash&amp;#39; \ --form &amp;#39;api-key=&amp;#34;146ae893-944a-407c-adfe-9ad14ace212d&amp;#34;&amp;#39; \ --form &amp;#39;timestamp=&amp;#34;2021-03-01 11:00:00&amp;#34;&amp;#39; form 을 전달할때 &amp;quot; 를 포함했을때, CentOS에서는 정상 동작했고, Ubuntu에서는 동작을 안했다.
+&amp;quot; 을 제거하니 우분투에서 정상동작 확인
+Cent 에서도 마찬가지로 정상동작 됨
+ curl 요청에 form 을 포함할때는 `&#34;` 를 포함하지 않아야 한다. </description>
+    </item>
+    
+    <item>
+      <title>Unable to Access Path Data</title>
+      <link>https://raeperd.github.io/notes/database/unable-to-access-path-data/</link>
+      <pubDate>Sun, 21 Feb 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://raeperd.github.io/notes/database/unable-to-access-path-data/</guid>
+      <description>elasticsearch container 의 data path를 변경하면서 발견한 오류
+변경한 경로를 docker container 에 volumn mount 에도 설정해줘야한다.
+해당 설정을 kibana 와 공유도 해줘야함
+version: &amp;#39;3&amp;#39; services: elastic: image: docker.elastic.co/elasticsearch/elasticsearch:7.9.1 environment: #ES_HEAP_SIZE: 16g path.data: /home/raecheol-park/elastic/data path.logs: /home/raecheol-park/elastic/logs NODE_OPTIONS: --max_old_space_size=4096 ES_JAVA_OPTS: -Xms2G -Xmx2G discovery.type: single-node xpack.security.enabled: &amp;#34;true&amp;#34; ELASTIC_PASSWORD: elastic1234 ports: - &amp;#34;9201:9200&amp;#34; volumes: - esdata:/home/raecheol-park/elastic/data - eslogs:/home/raecheol-park/elastic/logs kibana: image: docker.elastic.co/kibana/kibana:7.9.1 environment: ELASTICSEARCH_HOSTS: http://elastic:9200 ELASTICSEARCH_USERNAME: elastic ELASTICSEARCH_PASSWORD: elastic1234 #xpack.reporting.csv.maxSizeBytes: 304857600 ports: - &amp;#34;5602:5601&amp;#34; volumes: esdata: eslogs:  Unable to access &amp;lsquo;path.</description>
+    </item>
+    
+    <item>
+      <title>Gradlew Permission Denied</title>
+      <link>https://raeperd.github.io/notes/programming/java/gradlew-permission-denied/</link>
+      <pubDate>Thu, 21 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://raeperd.github.io/notes/programming/java/gradlew-permission-denied/</guid>
+      <description>bamboo 에서 빌드 자동화 스크립트에서 단순히 ./gradlew clean build 를 실행하게 했더니 ./gradlew 의 실행권한이 없단다. 구체적은 오류 메시지는 아래와 같다.
+$ ./gradlew clean build -bash: ./gradlew: Permission denied bamboo agent가 git clone 을 할때 어떤 user의 어떤 permission으로 실행하는지, 혹은 directory 의 permission 등등 여러 문제가 겹쳐서 이런 문제가 생길 수 있다고 생각했다.
+bamboo agent는 권한 문제가 없는 것을 확인하고 나서는 단순히 빌드를 실행하기 전에 chmod로 실행 가능하게 권한을 주는 방법으로 수정했었고 잘 동작하는 것을 확인했다.</description>
+    </item>
+    
+    <item>
+      <title>%S vs %S</title>
+      <link>https://raeperd.github.io/notes/programming/cpp/s-vs-s/</link>
+      <pubDate>Sat, 21 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://raeperd.github.io/notes/programming/cpp/s-vs-s/</guid>
+      <description>    windows linux     %s wide character multi-byte 문자열   %S multi-byte 문자열 wide character     windows 와 linux 에서 반대로 동작한다. 양 플랫폼 모두에서 동작하게 하려면 두 문자열을 한번 wrapping 해서 사용해야한다.  </description>
+    </item>
+    
+    <item>
+      <title>No Converter Found for Return Value of Type</title>
+      <link>https://raeperd.github.io/notes/programming/java/no-converter-found-for-return-value-of-type/</link>
+      <pubDate>Fri, 20 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://raeperd.github.io/notes/programming/java/no-converter-found-for-return-value-of-type/</guid>
+      <description>RestController 의 메소드에서 인자와 반환값을 json 으로 Serialize / Desiriallize 가 불가능할 때 나타나는 에러다.
+Getter와 생성자만 적절하게 존재하면 가능하다
+대충 이런식
+import lombok.Getter; import lombok.NoArgsConstructor; import lombok.AllArgsConstructor; @Getter @NoArgsConstructor @AllArgsConstructor public class ScanRequest { private String url; } @RequestBody 가 json Serializable 하려면 NoArgsConstructor 가 필요하다.
+테스트를 위해서는 @AllArgConstructor도 필요할 것 프래임 워크가 가져와주는 것이라 필드들을 열어놔야 한다.
+그런데 Controller 의 Return 이 되는 경우에는 생성자를 제공할 필요가 없다. Getter만 있으면 된다.</description>
+    </item>
+    
+    <item>
+      <title>Duplicate Key Value Violates Unique Constraint Pkey</title>
+      <link>https://raeperd.github.io/notes/database/duplicate-key-value-violates-unique-constraint-pkey/</link>
+      <pubDate>Mon, 09 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://raeperd.github.io/notes/database/duplicate-key-value-violates-unique-constraint-pkey/</guid>
+      <description>postgres.public&amp;gt; insert into url(created_date,address,vendor_id, malicious) values(&#39;2020-11-09 04:29:46.438652&#39;,&#39;http://pim-square.com/Korea/&#39;,2, True) [2020-11-09 13:38:29] [23505] ERROR: duplicate key value violates unique constraint &amp;quot;url_pkey&amp;quot; [2020-11-09 13:38:29] Detail: Key (id)=(1351) already exists. AUTO INCREMENT로 설정된 PRIMARY KEY 는 INSERT 할 때 명시하지 않아도 알아서 삽입되어야 하는데 중복이 됬다고 오류가 발생함.
+로컬의 DB에서는 정상 동작하는 것으로 보아 query나 db constraint 같은 것이 원인은 아니는 듯 했다.
+아래 링크에서 원인을 찾을 수 있었는데, db 의 sync가 나가서 생기는 문제라고 한다.</description>
+    </item>
+    
+    <item>
+      <title>Cannot Open Shared Object in Same Directory</title>
+      <link>https://raeperd.github.io/notes/programming/cpp/cannot-open-shared-object-in-same-directory/</link>
+      <pubDate>Mon, 02 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://raeperd.github.io/notes/programming/cpp/cannot-open-shared-object-in-same-directory/</guid>
+      <description>윈도우에서 동적라이브러리(.dll)를 사용하는 실행파일은 해당 dll이 존재하지 않으면 자신과 같은 디렉토리에 그 dll이 존재하는지 확인하고, 실행 할 수 있다. (물론 실행시켜주는 주체는 Windows일 것, implicit link에 한해)
+윈도우 환경 개발이 익숙하면, 리눅스에서도 똑같이 이런 현상이 재현될 것이라 생각할 수 있는데, 그렇지 않았다. 리눅스는 LD_LIBRARY_PATH 라는 환경변수에 따라, 라이브러리가 이 경로에 있는 경우 실행해준다.
+당장 리눅스에서도 같은 디렉토리의 동적라이브러리는 실행할 수 있으면 좋겠다면, 아래와 같이 실행하면 된다.
+$ LD_LIBRARY_PATH=. ./some_program 개발하는건 프로그래머지만 사용하는건 사용자다.</description>
+    </item>
+    
+    <item>
+      <title>Command Clear Not Found in Container</title>
+      <link>https://raeperd.github.io/notes/programming/command-clear-not-found-in-container/</link>
+      <pubDate>Mon, 02 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://raeperd.github.io/notes/programming/command-clear-not-found-in-container/</guid>
+      <description>간단하게 테스트 해보고 싶어서 centos8 컨테이너 하나를 올렸다.
+docker run --name pure-centos8 --rm -v D:\git:/git -ti centos:centos8 /bin/bash $ clear bash: clear: command not found 너무 황당해서 말도 안나오는 오류;;
+/usr/bin 경로에 clear가 있어야 할 것 같지만, 기본 컨테이너는 이마저도 가지고 있지 않다.
+설치를 해줘야하는데, 아래 처럼 간단하게 해결할 수 있다.
+$ yum whatprovides /bin/clear Last metadata expiration check: 0:00:29 ago on Thu 11 Jun 2020 02:31:26 AM UTC. ncurses-6.1-7.20180224.el8.x86_64 : Ncurses support utilities Repo : BaseOS Matched from: Filename : /usr/bin/clear 물론 yum update 는 해줘야 잘 찾을 것</description>
+    </item>
+    
+    <item>
+      <title>Where to Declar Spring Annotation</title>
+      <link>https://raeperd.github.io/notes/programming/java/where-to-declar-spring-annotation/</link>
+      <pubDate>Mon, 02 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://raeperd.github.io/notes/programming/java/where-to-declar-spring-annotation/</guid>
+      <description>@WebMvcTest 어노테이션만 선언했는데 Jpa Auditing 이 정상동작 하지 않는 문제를 발견했다.
+원래 annotation을 붙일때 크게 생각을 하지 않고 붙였는데, @WebMvcTest 를 선언하면서 src 폴더를 기준으로 spring이 component를 스캔하는 과정에서 main 클래스를 읽으면서 오류가 발생한듯 하다.
+@SpringBootApplication 과 같이 다른 설정을 읽으려다가 오류가 나는 것으로 보인다. (annotation의 위치를 옮기면 정상 동작했다. 이 경우는 @EnableJpaAuditoring 이었다.)
+이 과정에서 괜한 annotation까지 읽게 되면서 테스트 환경에서 문제가 발생한다. 단 한줄의 annotation이라도 따로 @Configuration 클래스를 만들어서 따로 관리하는 것이 옳다.</description>
+    </item>
+    
+    <item>
+      <title>Log Flood Stage Disk Watermark Exceeded</title>
+      <link>https://raeperd.github.io/notes/database/log-flood-stage-disk-watermark-exceeded/</link>
+      <pubDate>Thu, 22 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://raeperd.github.io/notes/database/log-flood-stage-disk-watermark-exceeded/</guid>
+      <description>현상 Log flood stage disk watermark [95%] exceeded on – How To Solve Related Issues 해결방안 df 명령을 쳐보면 어디에 쓰고 있는지 보인다.
+raecheol-park@dev:~/docker-elk$ df -h Filesystem Size Used Avail Use% Mounted on udev 16G 0 16G 0% /dev tmpfs 3.2G 339M 2.8G 11% /run /dev/sda2 438G 398G 18G 96% / tmpfs 16G 0 16G 0% /dev/shm tmpfs 5.0M 0 5.0M 0% /run/lock tmpfs 16G 0 16G 0% /sys/fs/cgroup /dev/md0 1.</description>
+    </item>
+    
+    <item>
+      <title>When to use `ON UPDATE` and `ON DELETE`</title>
+      <link>https://raeperd.github.io/notes/database/on-update-vs-on-delete/</link>
+      <pubDate>Sat, 10 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://raeperd.github.io/notes/database/on-update-vs-on-delete/</guid>
+      <description>Foreign key constraints: When to use ON UPDATE and ON DELETE
+Let’s look at the ON UPDATE clause:
+ ON UPDATE RESTRICT : the default : if you try to update a company_id in table COMPANY the engine will reject the operation if one USER at least links on this company. ON UPDATE NO ACTION : same as RESTRICT. ON UPDATE CASCADE : the best one usually : if you update a company_id in a row of table COMPANY the engine will update it accordingly on all USER rows referencing this COMPANY (but no triggers activated on USER table, warning).</description>
+    </item>
+    
+    <item>
+      <title>Constexpr in Static Library</title>
+      <link>https://raeperd.github.io/notes/programming/cpp/constexpr-in-static-library/</link>
+      <pubDate>Mon, 21 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://raeperd.github.io/notes/programming/cpp/constexpr-in-static-library/</guid>
+      <description>정적 라이브러리 내부에서 constexpr 함수를 정의할 경우 외부에서 사용하는 것이 불가능하다.
+가만 생각해보면 compile time에 가능한 연산을 미리 하는 것과, link time에 가능한 연산을 하는 것은 다른 개념이었다.
+이런 점 때문에 많은 라이브러리들이 header-only 의 형태로 배포되는 것으로 보인다.</description>
+    </item>
+    
+    <item>
+      <title>Initilization of Global Variable</title>
+      <link>https://raeperd.github.io/notes/programming/cpp/initilization-of-global-variable/</link>
+      <pubDate>Tue, 21 Jul 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://raeperd.github.io/notes/programming/cpp/initilization-of-global-variable/</guid>
+      <description>저번주에 꽤나 발견하기 어려웠던 오류 하나를 발견했는데, 전역변수와 관련된 버그였다. 결론은, 전역변수의 초기화는 변수간의 의존성에 영향을 받지 않는다는 것
+예를 들어, g_fRadius 라는 전역변수가 g_fPie 라는 변수에 의존적이고, 서로 다른 파일에서 초기화가 된다고 생각해보자.
+C++ 컴파일을 하는 과정 중에 .h .cpp 파일은 include 를 통해서 일렬로 정렬되는 과정이 포함된다. 전역 변수의 초기화 시점은 이 과정에 영향을 받아, 먼저 include 되는 파일의 전역변수가 먼저 초기화 된다.
+g_fRadius 라는 전역변수가 정의하려는 순간에, g_fPie 는 적절한 include와 extern 을 통해 참조할 수 있다.</description>
+    </item>
+    
+    <item>
+      <title>Query Did Not Return a Result 2</title>
+      <link>https://raeperd.github.io/notes/programming/java/query-did-not-return-a-result-2/</link>
+      <pubDate>Tue, 21 Jul 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://raeperd.github.io/notes/programming/java/query-did-not-return-a-result-2/</guid>
+      <description>현상 JpaRepsotiroy 에서 기본적으로 제공하는 인터페이스를 사용할떄, query 결과가 여럿 일 수 있는데 반환형을 하나의 엔티티만 담을 수 있게 하면 아래와 같은 오류를 만나게 된다.
+query did not return a unique result: 2 해결과정 제일 외부에서 확인할 수 있는 예외는 심지어 UnknownHostException 이었는데 원인이 여기있다는 것을 알게 되기 까지 꽤나 오랜 시간이 필요했다.
+Entitiy를 만들 떄 unique constraint를 줬기 때문에 이런 오류가 발생할 리가 없다고 생각했었다. constraint를 pair로 만들었기 때문에 단일 컬럼은 충분히 여러 값이 나올 수 있는 거였음</description>
+    </item>
+    
+    <item>
+      <title>Updates for This Repository Will Not Be Applied</title>
+      <link>https://raeperd.github.io/notes/programming/updates-for-this-repository-will-not-be-applied/</link>
+      <pubDate>Tue, 21 Jul 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://raeperd.github.io/notes/programming/updates-for-this-repository-will-not-be-applied/</guid>
+      <description>apt-get update 를 하는데 특정 주소에서 아래와 같은 에러가 뜨기 시작했다.
+Hit:1 ubuntu bionic InRelease Ign:3 linux/chrome/deb stable InRelease Get:2 /ubuntu bionic-updates InRelease [88.7 kB] Get:5 /linux/chrome/deb stable Release [943 B] Get:6 http://dl.google.com/linux/chrome/deb stable Release.gpg [819 B] Get:4 http://us.archive.ubuntu.com/ubuntu bionic-backports InRelease [74.6 kB] Get:7 http://security.ubuntu.com/ubuntu bionic-security InRelease [83.2 kB] Reading package lists... Done E: Release file for http://dl.google.com/linux/chrome/deb/dists/stable/Release is not valid yet (invalid for another 2h 45min 28s). Updates for this repository will not be applied.</description>
+    </item>
+    
+    <item>
+      <title>Pytest Unable to Import Src</title>
+      <link>https://raeperd.github.io/notes/programming/pytest-unable-to-import-src/</link>
+      <pubDate>Tue, 21 Apr 2020 03:27:24 +0900</pubDate>
+      
+      <guid>https://raeperd.github.io/notes/programming/pytest-unable-to-import-src/</guid>
+      <description>pytest를 커맨드라인에서 실행할때 현재 경로를 PYTHONPATH에 추가하지 않기 때문에 생기는 오류다. pytest를 사용할때마다 겪는 오류 같다.
+패키지를 테스트할때는 setup.py develop 과 같은 명령으로 패키지를 설치하는 것을 강제하도록 테스트를 작성하는게 유용할 것. 하지만 간단한 작업을 하는 스크립트들은 그럴 필요가 없다.
+프로젝트 루트에 conftest.py 를 추가하는 것으로 가능하다.
+ PATH issue with pytest &amp;lsquo;ImportError: No module named YadaYadaYada&amp;rsquo;
+pycharm 같은 친구들은 자동으로 처리해줘서 테스트가 되나보다. 그래서 배포환경에서도 테스트를 한번 더 실행해볼 필요가 있는 듯</description>
+    </item>
+    
+    <item>
+      <title>`=` in bash</title>
+      <link>https://raeperd.github.io/notes/programming/bash-equal/</link>
+      <pubDate>Wed, 26 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://raeperd.github.io/notes/programming/bash-equal/</guid>
+      <description>bash 에서 대입은 띄어쓰기를 허용하지 않는다. 다 붙여써야만 한다.
+ Re-assigning (specifically, incrementing) a variable in a bash script - Unix &amp;amp; Linux Stack Exchange os detection - How to detect the OS from a Bash script? - Stack Overflow</description>
+    </item>
+    
+    <item>
+      <title>Virtualenv Not Found</title>
+      <link>https://raeperd.github.io/notes/programming/virtualenv-not-found/</link>
+      <pubDate>Sat, 21 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://raeperd.github.io/notes/programming/virtualenv-not-found/</guid>
+      <description>현상 단순히 사용자 권한으로 virtualenv 를 실행할때는 가능하고 root 권한으로 실행하니까 찾을 수 없단다. pip install virtualenv 와 같은 형식으로 설치할 경우 이런 에러를 발견했다.
+해결방안  Virtualenv Command Not Found
+virtualenv 는 기본적으로 /user/local/bin 에 위치하는데 이 경로가 $PATH 에 존재하지 않아서 sudo 로는 못찾는 거다 user 권한으로 실행하는경우에는 이게 $PATH에 있는것처럼 동작하는 것 같다.
+여튼 해결방법은 /usr/lcoal/bin 경로를 PATH 에 추가하는 것이다.
+export PATH=$PATH:새로 등록할 프로그램의 주소
+그냥 yum install -y python3-virtualenv 가 좀더 깔끔한 해결책이었다.</description>
+    </item>
+    
+    <item>
+      <title>Libreadline So 6 Cannot Open Shared Object File No Such File or Dir</title>
+      <link>https://raeperd.github.io/notes/programming/cpp/libreadline-so-6-cannot-open-shared-object-file-no-such-file-or-dir/</link>
+      <pubDate>Mon, 21 Oct 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://raeperd.github.io/notes/programming/cpp/libreadline-so-6-cannot-open-shared-object-file-no-such-file-or-dir/</guid>
+      <description>기본적인 해결방법은
+$ yum install -y readline-devel 설치 되고 나서도 여전히 같은 오류를 확인했다. 라이브러리를 찾아보면
+$ find / -name &amp;#39;libreadline.*&amp;#39; /usr/lib64/libreadline.so.7 /usr/lib64/libreadline.so.7.0 /usr/lib64/libreadline.so 이런식으로 결과를 찾을 수 있는데 설치되어 있는건 7 버전이지만 바이너리에서 6버전을 찾고 있다. 빌드된 환경과 배포된 환경에서 컴파일러 버전이 다르면 이런 문제가 생길 수 있다.
+ln -s /usr/lib64/libreadline.so.7 /usr/lib64/libreadline.so.6 이런식으로 링크를 만들어주면 간단하게 해결 할 수 있다.
+이후에 libhistroy.so.6 을 찾으면서 같은 오류 메세지를 만드는데, 같은 방법으로 해결할 수 있다.</description>
+    </item>
+    
+    <item>
+      <title>Error C2039 Memchar Is Not a Member of Global Namespace</title>
+      <link>https://raeperd.github.io/notes/programming/cpp/error-c2039-memchar-is-not-a-member-of-global-namespace/</link>
+      <pubDate>Wed, 28 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://raeperd.github.io/notes/programming/cpp/error-c2039-memchar-is-not-a-member-of-global-namespace/</guid>
+      <description>내가 작성하고 있는 프로그램에서 string.h 라는 파일을 사용하고 있었다.
+standard 에서 사용하는 이름은 내가 사용하면 안된다. 이런 보편적인 이름은 애초에 피하는게 좋다.
+ error C2039: &amp;lsquo;memchr&amp;rsquo; : is not a member of &amp;lsquo;`global namespace&amp;rsquo;&#39;</description>
+    </item>
+    
+  </channel>
+</rss>

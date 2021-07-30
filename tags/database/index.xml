@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>database on raeperd.github.io</title>
+    <link>https://raeperd.github.io/tags/database/</link>
+    <description>Recent content in database on raeperd.github.io</description>
+    <image>
+      <url>https://raeperd.github.io/papermod-cover.png</url>
+      <link>https://raeperd.github.io/papermod-cover.png</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sun, 21 Feb 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://raeperd.github.io/tags/database/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Unable to Access Path Data</title>
+      <link>https://raeperd.github.io/notes/database/unable-to-access-path-data/</link>
+      <pubDate>Sun, 21 Feb 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://raeperd.github.io/notes/database/unable-to-access-path-data/</guid>
+      <description>elasticsearch container 의 data path를 변경하면서 발견한 오류
+변경한 경로를 docker container 에 volumn mount 에도 설정해줘야한다.
+해당 설정을 kibana 와 공유도 해줘야함
+version: &amp;#39;3&amp;#39; services: elastic: image: docker.elastic.co/elasticsearch/elasticsearch:7.9.1 environment: #ES_HEAP_SIZE: 16g path.data: /home/raecheol-park/elastic/data path.logs: /home/raecheol-park/elastic/logs NODE_OPTIONS: --max_old_space_size=4096 ES_JAVA_OPTS: -Xms2G -Xmx2G discovery.type: single-node xpack.security.enabled: &amp;#34;true&amp;#34; ELASTIC_PASSWORD: elastic1234 ports: - &amp;#34;9201:9200&amp;#34; volumes: - esdata:/home/raecheol-park/elastic/data - eslogs:/home/raecheol-park/elastic/logs kibana: image: docker.elastic.co/kibana/kibana:7.9.1 environment: ELASTICSEARCH_HOSTS: http://elastic:9200 ELASTICSEARCH_USERNAME: elastic ELASTICSEARCH_PASSWORD: elastic1234 #xpack.reporting.csv.maxSizeBytes: 304857600 ports: - &amp;#34;5602:5601&amp;#34; volumes: esdata: eslogs:  Unable to access &amp;lsquo;path.</description>
+    </item>
+    
+    <item>
+      <title>Duplicate Key Value Violates Unique Constraint Pkey</title>
+      <link>https://raeperd.github.io/notes/database/duplicate-key-value-violates-unique-constraint-pkey/</link>
+      <pubDate>Mon, 09 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://raeperd.github.io/notes/database/duplicate-key-value-violates-unique-constraint-pkey/</guid>
+      <description>postgres.public&amp;gt; insert into url(created_date,address,vendor_id, malicious) values(&#39;2020-11-09 04:29:46.438652&#39;,&#39;http://pim-square.com/Korea/&#39;,2, True) [2020-11-09 13:38:29] [23505] ERROR: duplicate key value violates unique constraint &amp;quot;url_pkey&amp;quot; [2020-11-09 13:38:29] Detail: Key (id)=(1351) already exists. AUTO INCREMENT로 설정된 PRIMARY KEY 는 INSERT 할 때 명시하지 않아도 알아서 삽입되어야 하는데 중복이 됬다고 오류가 발생함.
+로컬의 DB에서는 정상 동작하는 것으로 보아 query나 db constraint 같은 것이 원인은 아니는 듯 했다.
+아래 링크에서 원인을 찾을 수 있었는데, db 의 sync가 나가서 생기는 문제라고 한다.</description>
+    </item>
+    
+    <item>
+      <title>Log Flood Stage Disk Watermark Exceeded</title>
+      <link>https://raeperd.github.io/notes/database/log-flood-stage-disk-watermark-exceeded/</link>
+      <pubDate>Thu, 22 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://raeperd.github.io/notes/database/log-flood-stage-disk-watermark-exceeded/</guid>
+      <description>현상 Log flood stage disk watermark [95%] exceeded on – How To Solve Related Issues 해결방안 df 명령을 쳐보면 어디에 쓰고 있는지 보인다.
+raecheol-park@dev:~/docker-elk$ df -h Filesystem Size Used Avail Use% Mounted on udev 16G 0 16G 0% /dev tmpfs 3.2G 339M 2.8G 11% /run /dev/sda2 438G 398G 18G 96% / tmpfs 16G 0 16G 0% /dev/shm tmpfs 5.0M 0 5.0M 0% /run/lock tmpfs 16G 0 16G 0% /sys/fs/cgroup /dev/md0 1.</description>
+    </item>
+    
+    <item>
+      <title>When to use `ON UPDATE` and `ON DELETE`</title>
+      <link>https://raeperd.github.io/notes/database/on-update-vs-on-delete/</link>
+      <pubDate>Sat, 10 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://raeperd.github.io/notes/database/on-update-vs-on-delete/</guid>
+      <description>Foreign key constraints: When to use ON UPDATE and ON DELETE
+Let’s look at the ON UPDATE clause:
+ ON UPDATE RESTRICT : the default : if you try to update a company_id in table COMPANY the engine will reject the operation if one USER at least links on this company. ON UPDATE NO ACTION : same as RESTRICT. ON UPDATE CASCADE : the best one usually : if you update a company_id in a row of table COMPANY the engine will update it accordingly on all USER rows referencing this COMPANY (but no triggers activated on USER table, warning).</description>
+    </item>
+    
+    <item>
+      <title>SQL Basic Part 1</title>
+      <link>https://raeperd.github.io/notes/database/sql-basic-1/</link>
+      <pubDate>Fri, 25 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://raeperd.github.io/notes/database/sql-basic-1/</guid>
+      <description>Motivation SQL 문법의 아주 기본적인 것부터 정리해두면 쓸 일이 많을 것 같아 정리를 시작하게 됨
+Contents SQL&amp;rsquo;s Persistence  Over 40 years old! Questioned repeatedly  90’s: Object-Oriented DBMS (OQL, etc.) 2000’s: XML (Xquery, Xpath, XSLT) 2010’s: NoSQL &amp;amp; MapReduce   SQL keeps re-emerging as the standard  Even Hadoop, Spark etc. mostly used via SQL May not be perfect, but it is useful    SQL Pros and Cons  Declarative!</description>
+    </item>
+    
+    <item>
+      <title>SQL Basic Part 2</title>
+      <link>https://raeperd.github.io/notes/database/sql-basic-2/</link>
+      <pubDate>Fri, 25 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://raeperd.github.io/notes/database/sql-basic-2/</guid>
+      <description>SQL II 1 4
+Motivation 또 게을러지기 시작해서 안하려고 한다. DB 관련 지식은 최근에 필요하다는게 많이 느껴져서 얼른얼른 알아가야한다. 이런데서 머뭇거리면 안된다
+Contents Conceptual SQL Evaluation  FROM WHERE SELECT GROUP BY HAVING DISTINCT (ORDER BY) (LIMIT)  Putting it all together SELECT S.dept, AVG(S.gpa), COUNT(*) FROM Students S WHERE S.gender = &amp;#39;F&amp;#39; GROUP BY S.dept HAVING COUNT(*) &amp;gt;= 2 ORDER BY S.dept; 이제까지는 하나의 테이블에서만 했는데 여러 테이블에 대한 쿼리를 할 수도 있다.</description>
+    </item>
+    
+  </channel>
+</rss>
