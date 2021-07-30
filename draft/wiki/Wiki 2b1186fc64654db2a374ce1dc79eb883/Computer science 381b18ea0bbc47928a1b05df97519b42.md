@@ -1,7 +1,0 @@
-# Computer science
-
-Category: OS
-Created: August 7, 2020 3:26 PM
-Created By: RaeCheol Park
-Last Edited Time: August 7, 2020 3:26 PM
-Status: TODO
